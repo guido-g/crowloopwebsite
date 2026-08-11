@@ -29,6 +29,16 @@ export function CaseStudy() {
           <h1>{t(project.nameKey)}</h1>
           <p className="case-study-header__description">{t(project.descriptionKey)}</p>
         </div>
+        {project.coverImage && (
+          <div className="container">
+            <img
+              className="case-study-header__cover"
+              src={project.coverImage}
+              alt={t(project.nameKey)}
+              loading="eager"
+            />
+          </div>
+        )}
       </section>
 
       <section className="section">
@@ -45,6 +55,14 @@ export function CaseStudy() {
             <h2>{t("caseStudy.outcome")}</h2>
             <p>{t(caseStudy.outcomeKey)}</p>
           </article>
+
+          {project.gallery && project.gallery.length > 0 && (
+            <div className="case-study-gallery">
+              {project.gallery.map((src) => (
+                <img key={src} src={src} alt="" loading="lazy" />
+              ))}
+            </div>
+          )}
 
           <p className="case-study-framing-note">{t("caseStudy.framingNote")}</p>
 

@@ -1,4 +1,4 @@
-import { useMemo, useState, type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { ProjectCard } from "../components/cards/ProjectCard";
@@ -10,20 +10,13 @@ type TypeFilter = "all" | "case-study" | "reference";
 export function Portfolio() {
   const { t } = useTranslation(["portfolio", "common"]);
   const [typeFilter, setTypeFilter] = useState<TypeFilter>("all");
-  const [audienceFilter, setAudienceFilter] = useState<string>("all");
-
-  const audiences = useMemo(
-    () => Array.from(new Set(PROJECTS.map((project) => project.tags.audience))).sort(),
-    [],
-  );
 
   const filtered = PROJECTS.filter((project) => {
-    const matchesType =
+    return (
       typeFilter === "all" ||
       (typeFilter === "case-study" && project.isCaseStudy) ||
-      (typeFilter === "reference" && project.type === "reference" && !project.isCaseStudy);
-    const matchesAudience = audienceFilter === "all" || project.tags.audience === audienceFilter;
-    return matchesType && matchesAudience;
+      (typeFilter === "reference" && project.type === "reference" && !project.isCaseStudy)
+    );
   });
 
   return (
@@ -49,18 +42,6 @@ export function Portfolio() {
                 {t("filters.reference")}
               </FilterButton>
             </div>
-
-            <label className="portfolio-filters__select">
-              <span>{t("filters.audienceLabel")}</span>
-              <select value={audienceFilter} onChange={(event) => setAudienceFilter(event.target.value)}>
-                <option value="all">{t("filters.allAudiences")}</option>
-                {audiences.map((audience) => (
-                  <option key={audience} value={audience}>
-                    {audience}
-                  </option>
-                ))}
-              </select>
-            </label>
           </div>
 
           {filtered.length > 0 ? (

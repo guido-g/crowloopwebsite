@@ -16,7 +16,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className={`project-card project-card--${project.colorway}`}>
       <div className="project-card__thumb" aria-hidden="true">
-        <span>{project.brand}</span>
+        {project.coverImage ? (
+          <img src={project.coverImage} alt="" loading="lazy" />
+        ) : (
+          <span>{project.brand}</span>
+        )}
       </div>
 
       <div className="project-card__body">

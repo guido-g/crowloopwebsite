@@ -28,6 +28,13 @@ export interface Project {
   externalUrl?: string;
   colorway: ProjectColorway;
   caseStudy?: CaseStudyContent;
+  /** Local path under /public — screenshots pulled from the original guido.graphics posts
+   * (Section 7's reference-project links), self-hosted so the site doesn't depend on that
+   * blog staying up. Falls back to the colorway gradient in ProjectCard when absent. */
+  coverImage?: string;
+  /** Extra screenshots shown on the dedicated case-study page only (Section 4.2) — not used
+   * for reference tiles, which link out instead of getting an on-site page. */
+  gallery?: string[];
 }
 
 /**
@@ -53,6 +60,13 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.ghostbusters.decision",
       outcomeKey: "projects.ghostbusters.outcome",
     },
+    coverImage: "/portfolio/ghostbusters-haunted-mansion/cover.png",
+    gallery: [
+      "/portfolio/ghostbusters-haunted-mansion/gallery-1.png",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-2.png",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-3.png",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-4.png",
+    ],
   },
   {
     slug: "cini-mini-pyramide",
@@ -70,6 +84,12 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.ciniMini.decision",
       outcomeKey: "projects.ciniMini.outcome",
     },
+    coverImage: "/portfolio/cini-mini-pyramide/cover.png",
+    gallery: [
+      "/portfolio/cini-mini-pyramide/gallery-1.png",
+      "/portfolio/cini-mini-pyramide/gallery-2.png",
+      "/portfolio/cini-mini-pyramide/gallery-3.png",
+    ],
   },
   {
     slug: "idefix-vorsicht-roemer",
@@ -87,6 +107,12 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.idefix.decision",
       outcomeKey: "projects.idefix.outcome",
     },
+    coverImage: "/portfolio/idefix-vorsicht-roemer/cover.jpg",
+    gallery: [
+      "/portfolio/idefix-vorsicht-roemer/gallery-1.png",
+      "/portfolio/idefix-vorsicht-roemer/gallery-2.png",
+      "/portfolio/idefix-vorsicht-roemer/gallery-3.png",
+    ],
   },
   {
     slug: "knights-of-fortune",
@@ -99,6 +125,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/06/15/knights-of-fortune-prototype/",
     colorway: "slate",
+    coverImage: "/portfolio/knights-of-fortune/cover.jpg",
   },
   {
     slug: "life-3-0-star-life",
@@ -111,6 +138,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2025/03/25/life-3-0-later-star-life-demo/",
     colorway: "green",
+    coverImage: "/portfolio/life-3-0-star-life/cover.jpg",
   },
   {
     slug: "sunrise-roots",
@@ -123,6 +151,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2025/01/28/sunrise-roots/",
     colorway: "orange",
+    coverImage: "/portfolio/sunrise-roots/cover.png",
   },
   {
     slug: "ninjago-turnier-der-tapferen",
@@ -135,6 +164,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/06/09/ninjago-turnier-der-tapferen/",
     colorway: "navy",
+    coverImage: "/portfolio/ninjago-turnier-der-tapferen/cover.png",
   },
   {
     slug: "dragons-das-grosse-drachenrennen",
@@ -147,6 +177,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/05/31/dragons-das-grose-drachenrennen/",
     colorway: "slate",
+    coverImage: "/portfolio/dragons-das-grosse-drachenrennen/cover.png",
   },
 ];
 
