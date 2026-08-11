@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "russelAlt": "Click Russel the crow",
+    "russelGreeting": "Hi, I'm Russel — welcome to Crow Loop Studio.",
+    "russelClicked": "Hey, that tickles!",
+    "headline": "We turn brand IP into playable HTML5 games kids actually want to play.",
+    "subhead": "A boutique studio with a decade of shipping games for LEGO Ninjago, Dragons, Ghostbusters and more — no agency overhead, no crunch."
+  },
+  "brands": {
+    "eyebrow": "Brands we've worked with"
+  },
+  "proof": {
+    "years": "10+",
+    "yearsLabel": "Years shipping games",
+    "games": "150+",
+    "gamesLabel": "Games shipped",
+    "brands": "15+",
+    "brandsLabel": "Brands worked with",
+    "team": "18",
+    "teamLabel": "Largest team led"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "From a full production to a second pair of hands",
+    "lede": "Five ways to work with us, matched to how much capacity you already have in-house.",
+    "cta": "See all services"
+  },
+  "portfolio": {
+    "eyebrow": "Selected work",
+    "title": "Games built around a design problem, not just a brand skin",
+    "lede": "Three case studies where the brief and the IP didn't agree at first — here's how we resolved that.",
+    "cta": "See the full portfolio"
+  },
+  "closingCta": {
+    "russel": "Got a brand that needs a game? Let's talk."
+  }
+}

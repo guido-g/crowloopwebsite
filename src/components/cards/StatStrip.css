@@ -1,0 +1,31 @@
+.stat-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 1rem;
+  margin: 0;
+}
+
+.stat-strip__item {
+  text-align: center;
+}
+
+.stat-strip__item dt {
+  font-family: var(--font-body);
+  font-variation-settings: "wght" 800, "wdth" 120;
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 2.75rem);
+  color: var(--accent-orange);
+}
+
+.stat-strip__item dd {
+  margin: 0.25rem 0 0;
+  font-variation-settings: "wght" 600, "wdth" 110;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 700px) {
+  .stat-strip {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

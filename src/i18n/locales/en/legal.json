@@ -1,0 +1,91 @@
+{
+  "placeholderNote": "Placeholder content for layout and testing purposes. This page will be replaced with final, lawyer-reviewed text before the site goes live publicly — it is not yet legally binding.",
+  "impressum": {
+    "title": "Impressum",
+    "sections": [
+      {
+        "heading": "Angaben gemäß § 5 TMG / § 5 DDG",
+        "body": "Crow Loop Studio — Guido Göbbels [placeholder — full business address to be added before launch]. Registration/trade details, if applicable to a solo proprietorship, to be added once confirmed."
+      },
+      {
+        "heading": "Kontakt",
+        "body": "Phone: [placeholder]. Email: [placeholder — business email to be set up before launch]. Until the business email is live, please use the Contact page form."
+      },
+      {
+        "heading": "Umsatzsteuer-ID",
+        "body": "[Placeholder — VAT ID to be added if/when applicable]."
+      },
+      {
+        "heading": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+        "body": "Guido Göbbels, [placeholder address as above]."
+      }
+    ]
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "sections": [
+      {
+        "heading": "Überblick",
+        "body": "This placeholder outlines what a final privacy policy will cover under Art. 13/14 DSGVO: what data this site collects, how it's used, and which third-party services (if any) process it. Final text is being organized separately and will be swapped in before public launch."
+      },
+      {
+        "heading": "Contact form data",
+        "body": "The Contact page collects name, company, email address, project type, budget range, timeline, and message content. This data is used solely to respond to your inquiry and is not shared with third parties beyond what's needed to send our reply."
+      },
+      {
+        "heading": "Cookies",
+        "body": "This site uses a cookie consent banner on first visit. No non-essential cookies are set until you actively opt in, per TTDSG §25. No analytics or tracking tools are active at this time; this section will be updated if that changes."
+      },
+      {
+        "heading": "Third-party embeds",
+        "body": "No third-party embeds (e.g. video, scheduling widgets) are currently in use on this site. If any are added later, they will be disclosed here before going live."
+      },
+      {
+        "heading": "Your rights",
+        "body": "[Placeholder — final text will cover your rights under the DSGVO in full: access, correction, deletion, restriction, data portability, and objection, plus the responsible contact for exercising them.]"
+      }
+    ]
+  },
+  "haftungsausschluss": {
+    "title": "Haftungsausschluss",
+    "sections": [
+      {
+        "heading": "Inhalte dieser Website",
+        "body": "[Placeholder] The content on this site has been created with care, but no guarantee is made for its accuracy, completeness, or timeliness."
+      },
+      {
+        "heading": "Links to external sites",
+        "body": "This site links out to external pages — for example, reference-project posts on guido.graphics, and brand/broadcaster sites like Toggo. We have no influence over the content of external sites and accept no liability for it. The linked sites' own operators are responsible for their content."
+      },
+      {
+        "heading": "Urheberrecht",
+        "body": "[Placeholder — final copyright notice covering site content, brand assets, and the Russel mascot artwork.]"
+      }
+    ]
+  },
+  "agb": {
+    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "sections": [
+      {
+        "heading": "Geltungsbereich",
+        "body": "[Placeholder] These terms govern service engagements arranged via the Process described on this site — from the design brief and quote through to final delivery and invoicing."
+      },
+      {
+        "heading": "Angebot und Vertragsschluss",
+        "body": "[Placeholder] A project begins once a written quote (MVP plus optional extras) is accepted and the agreed 50% deposit is received."
+      },
+      {
+        "heading": "Zahlungsbedingungen",
+        "body": "[Placeholder] 50% deposit on acceptance of the offer, remaining 50% due on delivery, per the Process page."
+      },
+      {
+        "heading": "Gewährleistung nach Auslieferung",
+        "body": "[Placeholder] Game-breaking bugs found within 3 months of launch are covered under the original contract at no extra cost, excluding issues caused by platform updates or external circumstances outside the studio's control."
+      },
+      {
+        "heading": "Schlussbestimmungen",
+        "body": "[Placeholder — final governing-law and severability clauses, to be added with the lawyer-reviewed version before public launch.]"
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "brandName": "Crow Loop Studio",
+  "russelAlt": "Russel, die Krähe – Maskottchen von Crow Loop Studio",
+  "skipToContent": "Zum Inhalt springen",
+  "nav": {
+    "home": "Start",
+    "portfolio": "Portfolio",
+    "services": "Leistungen",
+    "process": "Ablauf",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "toggleMenu": "Navigationsmenü öffnen/schließen",
+    "primaryAriaLabel": "Hauptnavigation",
+    "languageAriaLabel": "Sprache",
+    "startProject": "Projekt starten"
+  },
+  "footer": {
+    "tagline": "Crow Loop Studio verwandelt Marken-IP in spielbare HTML5-Erlebnisse.",
+    "est": "Crow Loop Studio, gegr. 2026 — Köln, Deutschland",
+    "legalAriaLabel": "Rechtliches",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutzerklärung",
+    "haftungsausschluss": "Haftungsausschluss",
+    "agb": "AGB",
+    "associationStatus": "game e.V.-Mitgliedschaft: geplant vor Launch"
+  },
+  "cookies": {
+    "ariaLabel": "Cookie-Einwilligung",
+    "message": "Wir verwenden nur notwendige Cookies, um diese Seite zu betreiben. Nicht-essenzielle Inhalte laden erst, wenn du zustimmst.",
+    "learnMore": "Mehr erfahren",
+    "necessaryOnly": "Nur notwendige",
+    "acceptAll": "Alle akzeptieren"
+  },
+  "notFound": {
+    "russel": "Hoppla. Diese Seite ist wohl weggeflogen. Lass uns dich zurückbringen.",
+    "title": "Seite nicht gefunden",
+    "cta": "Zurück zur Startseite"
+  }
+}

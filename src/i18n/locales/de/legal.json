@@ -1,0 +1,91 @@
+{
+  "placeholderNote": "Platzhalterinhalt für Layout- und Testzwecke. Diese Seite wird vor dem öffentlichen Launch durch final geprüften, anwaltlich abgestimmten Text ersetzt — sie ist noch nicht rechtsverbindlich.",
+  "impressum": {
+    "title": "Impressum",
+    "sections": [
+      {
+        "heading": "Angaben gemäß § 5 TMG / § 5 DDG",
+        "body": "Crow Loop Studio — Guido Göbbels [Platzhalter — vollständige Geschäftsadresse wird vor Launch ergänzt]. Angaben zu Register/Gewerbe, sofern für ein Einzelunternehmen zutreffend, werden nach Bestätigung ergänzt."
+      },
+      {
+        "heading": "Kontakt",
+        "body": "Telefon: [Platzhalter]. E-Mail: [Platzhalter — geschäftliche E-Mail-Adresse wird vor Launch eingerichtet]. Bis dahin bitte das Formular auf der Kontaktseite nutzen."
+      },
+      {
+        "heading": "Umsatzsteuer-ID",
+        "body": "[Platzhalter — USt-IdNr. wird ergänzt, sofern zutreffend]."
+      },
+      {
+        "heading": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
+        "body": "Guido Göbbels, [Platzhalteradresse wie oben]."
+      }
+    ]
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "sections": [
+      {
+        "heading": "Überblick",
+        "body": "Dieser Platzhalter skizziert, was eine finale Datenschutzerklärung gemäß Art. 13/14 DSGVO abdecken wird: welche Daten diese Website erhebt, wie sie verwendet werden und welche Drittanbieter-Dienste (falls vorhanden) sie verarbeiten. Der finale Text wird separat organisiert und vor dem öffentlichen Launch eingesetzt."
+      },
+      {
+        "heading": "Daten aus dem Kontaktformular",
+        "body": "Die Kontaktseite erfasst Name, Unternehmen, E-Mail-Adresse, Projektart, Budgetrahmen, Zeitrahmen und den Nachrichtentext. Diese Daten dienen ausschließlich der Beantwortung eurer Anfrage und werden nicht über das für die Antwort Notwendige hinaus weitergegeben."
+      },
+      {
+        "heading": "Cookies",
+        "body": "Diese Website zeigt beim ersten Besuch einen Cookie-Consent-Banner. Nicht-essenzielle Cookies werden erst gesetzt, wenn aktiv zugestimmt wird, gemäß TTDSG §25. Aktuell sind keine Analyse- oder Tracking-Tools aktiv; dieser Abschnitt wird bei Änderungen aktualisiert."
+      },
+      {
+        "heading": "Einbindung Dritter",
+        "body": "Aktuell werden auf dieser Website keine Inhalte Dritter eingebunden (z. B. Video, Terminbuchungs-Widgets). Sollten später welche hinzukommen, werden sie hier vor dem Live-Gang offengelegt."
+      },
+      {
+        "heading": "Eure Rechte",
+        "body": "[Platzhalter — der finale Text deckt eure Rechte nach der DSGVO vollständig ab: Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch, samt zuständiger Kontaktstelle zur Ausübung dieser Rechte.]"
+      }
+    ]
+  },
+  "haftungsausschluss": {
+    "title": "Haftungsausschluss",
+    "sections": [
+      {
+        "heading": "Inhalte dieser Website",
+        "body": "[Platzhalter] Die Inhalte dieser Website wurden mit Sorgfalt erstellt, ohne Gewähr für Richtigkeit, Vollständigkeit oder Aktualität."
+      },
+      {
+        "heading": "Links zu externen Seiten",
+        "body": "Diese Website verlinkt auf externe Seiten — etwa Referenzprojekt-Beiträge auf guido.graphics sowie Marken-/Sender-Seiten wie Toggo. Auf die Inhalte externer Seiten haben wir keinen Einfluss und übernehmen dafür keine Haftung. Für die Inhalte der verlinkten Seiten sind deren jeweilige Betreiber verantwortlich."
+      },
+      {
+        "heading": "Urheberrecht",
+        "body": "[Platzhalter — finaler Urheberrechtshinweis zu Website-Inhalten, Markenmaterial und der Illustration des Maskottchens Russel.]"
+      }
+    ]
+  },
+  "agb": {
+    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "sections": [
+      {
+        "heading": "Geltungsbereich",
+        "body": "[Platzhalter] Diese Bedingungen gelten für Auftragsverhältnisse, die über den auf dieser Website beschriebenen Ablauf zustande kommen — vom Design-Briefing und Angebot bis zur finalen Auslieferung und Rechnungsstellung."
+      },
+      {
+        "heading": "Angebot und Vertragsschluss",
+        "body": "[Platzhalter] Ein Projekt beginnt, sobald ein schriftliches Angebot (MVP plus optionale Extras) angenommen und die vereinbarte Anzahlung von 50 % eingegangen ist."
+      },
+      {
+        "heading": "Zahlungsbedingungen",
+        "body": "[Platzhalter] 50 % Anzahlung bei Annahme des Angebots, die restlichen 50 % fällig bei Auslieferung, gemäß der Ablauf-Seite."
+      },
+      {
+        "heading": "Gewährleistung nach Auslieferung",
+        "body": "[Platzhalter] Spielabbrechende Bugs, die innerhalb von 3 Monaten nach Launch auftreten, sind im ursprünglichen Vertrag ohne Mehrkosten abgedeckt — ausgenommen Probleme durch Plattform-Updates oder äußere Umstände außerhalb der Kontrolle des Studios."
+      },
+      {
+        "heading": "Schlussbestimmungen",
+        "body": "[Platzhalter — finale Regelungen zu anwendbarem Recht und Salvatorischer Klausel werden mit der anwaltlich geprüften Fassung vor dem öffentlichen Launch ergänzt.]"
+      }
+    ]
+  }
+}

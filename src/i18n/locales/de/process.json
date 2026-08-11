@@ -1,0 +1,62 @@
+{
+  "eyebrow": "Ablauf",
+  "title": "Wie ein Projekt wirklich abläuft",
+  "lede": "Neun Schritte, von der ersten Anfrage bis zur letzten Rechnung — keine Überraschungen dazwischen.",
+  "timeline": "Typische Dauer: 3 Wochen für ein Mikroprojekt, bis zu 9 Wochen für ein mittleres.",
+  "steps": {
+    "inquiry": {
+      "title": "Anfrage",
+      "description": "Ihr meldet euch mit eurer Projektidee — über das Kontaktformular, egal wie unfertig die Idee noch ist."
+    },
+    "discoveryCall": {
+      "title": "Discovery Call",
+      "description": "Wir besprechen Ziele, Wünsche, Materialien und Budget direkt miteinander — kein Formular, einfach ein Gespräch."
+    },
+    "briefQuote": {
+      "title": "Design-Briefing & Angebot",
+      "description": "Ein schriftliches Briefing, das festlegt, was enthalten ist und was nicht, mit einem Angebot als MVP plus optionale Extras, damit ihr das Projekt an euer Budget anpassen könnt."
+    },
+    "deposit": {
+      "title": "Anzahlung (50%)",
+      "description": "Fällig bei Annahme des Angebots — die Produktion startet, sobald die Anzahlung eingegangen ist."
+    },
+    "concept": {
+      "title": "Konzeptphase",
+      "description": "Erste visuelle Entwürfe für UI und Gameplay, mit einer Feedback-Runde, bevor es weitergeht."
+    },
+    "gameplay": {
+      "title": "Gameplay-Umsetzung",
+      "description": "Ein spielbarer, aber noch nicht finaler Build, mit einer Feedback-Runde zur Mechanik."
+    },
+    "polish": {
+      "title": "Feinschliff",
+      "description": "Feedback zu einem fertigen, aber noch nicht getesteten Build — Bugs können in dieser Phase noch auftreten, das ist zu erwarten."
+    },
+    "qaDelivery": {
+      "title": "QA & Auslieferung",
+      "description": "Tests auf den mit euch vereinbarten Geräten und Plattformen, dann die finale Auslieferung."
+    },
+    "finalInvoice": {
+      "title": "Schlussrechnung (verbleibende 50%)",
+      "description": "Fällig bei Auslieferung."
+    }
+  },
+  "qa": {
+    "title": "QA, offen kommuniziert",
+    "body": "Standard-QA deckt Smartphone, Tablet und Desktop über Chrome, Firefox, Edge und Safari via BrowserStack ab — damit ist die große Mehrheit realer Bugs abgedeckt. QA ist nicht die Kernspezialität des Studios, und das sagen wir offen: Braucht ein Projekt breitere Geräte- oder OS-Abdeckung, wird das über einen externen QA-Partner organisiert und schon in der Briefing-Phase ins Budget eingeplant — keine Überraschung später.",
+    "russel": "Wir kennen unsere Grenzen — und haben für die Sonderfälle schon einen Plan."
+  },
+  "ai": {
+    "title": "KI-gestützter Workflow, offen kommuniziert",
+    "body": "Moderne KI-gestützte Werkzeuge kommen gezielt in Konzeption, Art und Entwicklung zum Einsatz — das ist Teil davon, wie ein Ein-Personen-Studio Produktionsqualität auf Studio-Niveau liefert, ohne Studio-Overhead oder -Zeitpläne. Das ist eine bewusste Produktionsentscheidung, gestützt auf über 20 Jahre Handwerk ohne KI, kein Shortcut: Die Arbeit lässt sich auch vollständig ohne diese Werkzeuge liefern — der gezielte Einsatz ist es, was Festpreise realistisch hält, während ein Mensch jede echte Entscheidung trifft.",
+    "russel": "Ja, KI-Werkzeuge gehören zum Werkzeugkasten — und ja, ein Mensch (ich und mein Mensch) gestaltet trotzdem noch alles."
+  },
+  "tools": {
+    "title": "Werkzeuge",
+    "communication": "Kommunikation passt sich eurem Stack an — MS Teams, Slack, E-Mail, was euer Team schon nutzt — statt euch ein festes Tool aufzuzwingen."
+  },
+  "postDelivery": {
+    "title": "Nach der Auslieferung",
+    "body": "Die Zusammenarbeit endet normalerweise mit der Auslieferung. Spielabbrechende Bugs, die innerhalb von 3 Monaten nach dem Launch auftreten, sind im ursprünglichen Vertrag ohne Mehrkosten abgedeckt — ausgenommen Probleme durch Plattform-Updates oder äußere Umstände außerhalb der Kontrolle des Studios. Hosting und laufender Live-Ops-Support sind nicht Standard, können aber geplant und ergänzt werden — am besten schon beim Discovery Call ansprechen, damit es eingeplant ist und nicht implizit bleibt."
+  }
+}

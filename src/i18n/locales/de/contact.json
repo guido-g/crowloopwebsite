@@ -1,0 +1,43 @@
+{
+  "eyebrow": "Kontakt",
+  "title": "Projekt starten",
+  "lede": "Erzählt uns von der Marke, der Zielgruppe und grob, wo ihr steht — den Rest übernehmen wir.",
+  "fields": {
+    "name": "Name",
+    "company": "Unternehmen",
+    "email": "E-Mail",
+    "emailNote": "(hier antworten wir)",
+    "selectPlaceholder": "Bitte auswählen",
+    "projectType": "Projektart",
+    "projectTypeOther": "Unsicher / etwas anderes",
+    "budget": "Budgetrahmen",
+    "budgetOptions": {
+      "underFive": "Unter 5.000 €",
+      "fiveToFifteen": "5.000 € – 15.000 €",
+      "fifteenToForty": "15.000 € – 40.000 €",
+      "fortyPlus": "40.000 €+",
+      "notSure": "Noch unsicher / lieber besprechen"
+    },
+    "timeline": "Zeitrahmen / Deadline",
+    "timelineOptions": {
+      "asap": "So schnell wie möglich",
+      "oneToThree": "1–3 Monate",
+      "threePlus": "3+ Monate",
+      "flexible": "Flexibel"
+    },
+    "message": "Nachricht",
+    "submit": "Anfrage senden",
+    "submitting": "Wird gesendet…"
+  },
+  "responseTime": "Wir antworten innerhalb von 1–3 Werktagen.",
+  "fallback": {
+    "title": "Lieber per E-Mail?",
+    "body": "Das geschäftliche Postfach des Studios geht zum Launch online. Bis dahin ist das Formular oben der schnellste Weg zu uns — jede Anfrage geht direkt an den Gründer."
+  },
+  "confirmation": {
+    "title": "Angekommen — danke!",
+    "responseTime": "Wir melden uns innerhalb von 1–3 Werktagen bei euch.",
+    "emailSent": "Eine Bestätigungs-E-Mail ist gerade an die angegebene Adresse rausgegangen.",
+    "troubleshooting": "Nach etwa 10 Minuten noch keine E-Mail? Prüft die Adresse auf Tippfehler und schaut in den Spam-Ordner — unsere echte Antwort landet auf derselben Adresse."
+  }
+}

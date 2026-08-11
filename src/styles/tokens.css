@@ -1,0 +1,55 @@
+/* Crow Loop Studio — design tokens (Section 2 of the design doc).
+   Everything theme-related lives here so palette/type swaps never touch layout code. */
+:root {
+  /* Backgrounds */
+  --bg-slate: #4b5578;
+  --bg-navy: #1c2340;
+  --bg-navy-deep: #171924;
+  --bg-cream: #f6f5f0;
+
+  /* Text */
+  --text-cream: #f6f5f0;
+  --text-khaki: #cec9af;
+  --text-dark: #282514;
+
+  /* Highlight 01 — orange (primary action/CTA) */
+  --accent-orange: #f2803a;
+  --accent-peach: #ffd7be;
+  --accent-brown: #693719;
+
+  /* Highlight 02 — green (secondary) */
+  --accent-green: #7ac487;
+  --accent-mint: #cbe5cf;
+  --accent-forest: #13401b;
+
+  /* Russel-only accent — never use outside Russel artwork/speech-bubble UI */
+  --russel-lime: #adf403;
+
+  /* Type */
+  --font-display: "McLaren", "Segoe UI", sans-serif;
+  --font-body: "Roboto Flex Variable", "Roboto Flex", "Segoe UI", sans-serif;
+
+  /* Layout */
+  --container-max: 1200px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-standard: 300ms;
+  --dur-slow: 600ms;
+
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-standard: 1ms;
+    --dur-slow: 1ms;
+  }
+}

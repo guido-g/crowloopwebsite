@@ -1,0 +1,46 @@
+{
+  "eyebrow": "About",
+  "title": "Crow Loop Studio was founded on one idea: solve the problem, not just skin the game.",
+  "intro": "Crows are one of the few non-primate species known to use — and craft — tools to solve problems. That's the studio's namesake, and it's a more honest parallel than \"crows like shiny things.\"",
+  "story": {
+    "title": "The short version",
+    "p1": "Crow Loop Studio was founded by Guido Göbbels, a game designer and director with over a decade of experience turning licensed kids' and young-adult IP into HTML5 games that brands, broadcasters, and toy companies can actually ship. The studio is boutique by design: small enough to move fast and stay personally involved in every project, backed by a network of trusted freelancers and studio partners for anything bigger than one person can carry alone.",
+    "p2": "The name works on three levels that all genuinely apply to the work: the game loop, the core repeating unit every game is built from; the feedback loop, the collaborative process at the center of how a project actually runs; and the magic circle — Johan Huizinga's idea that play creates its own bounded space with its own rules. A small nod for anyone in the industry who catches it."
+  },
+  "flyingSheep": {
+    "title": "Before Crow Loop: Flying Sheep Studios",
+    "body": "For nearly nine years (2014–2024), Guido was at Flying Sheep Studios in Cologne — joining as the studio's first hire and leaving as Design Director. In that time the studio delivered 220+ HTML5 games for brands including LEGO, Barbie, and DreamWorks, and was acquired by iCandy Interactive in 2022. Across a career spanning 150+ projects and 120+ games for 15+ brands, Guido has led international teams of up to 18 people — team-based, large-studio delivery experience that's distinct from the freelance reference work shown in the Portfolio."
+  },
+  "superRtl": {
+    "body": "One relationship carries through both chapters: a multi-year working relationship with Super RTL / Toggo, spanning the Flying Sheep years and continuing into Crow Loop Studio's launch pipeline. It's a concrete, ongoing anchor for the kind of broadcaster-side trust this work depends on."
+  },
+  "pov": {
+    "title": "Why HTML5 games for brands",
+    "body": "HTML5 games run instantly, in a browser, on whatever device a kid happens to be holding — no app-store approval, no install friction, no platform lock-in. For a brand campaign with a launch date and a finite ad flight, that's the difference between a game people actually play and one that gets abandoned at the install prompt. It's also fast and affordable to produce well, which matters when the game is one piece of a bigger campaign, not the whole budget."
+  },
+  "inProductionEcho": "New Crow Loop Studio projects are underway ahead of the studio's official launch on 01.09.2026 — the Portfolio page has the details.",
+  "russelOrigin": "Aviator goggles for spotting good ideas from up high, a scarf because a crow needs style — that's basically the whole origin story.",
+  "stats": {
+    "years": "10+",
+    "yearsLabel": "Years in games",
+    "projects": "150+",
+    "projectsLabel": "Projects delivered",
+    "games": "120+",
+    "gamesLabel": "Games for 15+ brands",
+    "team": "18",
+    "teamLabel": "Largest team led"
+  },
+  "references": {
+    "title": "What former colleagues say",
+    "intro": "Professional references from Guido's employment history — distinct from client testimonials, which will live on the Testimonials page as Crow Loop Studio takes on its first clients.",
+    "signoffNote": "Shown here with the plan to confirm public use with both Thomas and Robert once the site is ready to share with them — before it goes live publicly.",
+    "thomasRoessig": {
+      "role": "Former Managing Director, Flying Sheep Studios",
+      "quote": "I cannot overstate how critical Mr. Göbbels was to the success of Flying Sheep over the 9 years of his tenure. Our 10-year relationship with our biggest client SUPER RTL would not have been possible without his skill at fostering long-lasting relationships."
+    },
+    "robertHeil": {
+      "role": "Head of Operations, Wegesrand GmbH & Co. KG",
+      "quote": "Exceptional creativity, strong expertise, and outstanding strategic understanding — he grasped complex requirements and turned them into precise, convincingly presented concepts."
+    }
+  }
+}

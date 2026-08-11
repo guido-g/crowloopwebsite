@@ -1,0 +1,46 @@
+{
+  "eyebrow": "Leistungen",
+  "title": "Fünf Wege, mit uns zu arbeiten",
+  "lede": "Passend zu eurer tatsächlichen Kapazität und eurem Budget — von der Komplettproduktion bis zur gezielten Lücke im eigenen Team.",
+  "labels": {
+    "whoFor": "Für wen geeignet",
+    "whatDoneLooksLike": "Was „fertig“ bedeutet"
+  },
+  "capacity": {
+    "title": "Kann ein Ein-Personen-Studio unsere Größenordnung stemmen?",
+    "body": "Kleine Projekte werden solo umgesetzt. Mittlere Projekte werden durch ein vertrauenswürdiges Freelance-Netzwerk ergänzt. Größere Produktionen werden als eingebundene Spezialist:innen innerhalb eines größeren Teams begleitet. In jedem Fall bekommt ihr Aufmerksamkeit auf Senior-Niveau — das Studio skaliert das Team ans Projekt an, nicht umgekehrt.",
+    "russel": "Das richtige Werkzeug im richtigen Moment — bauen wir zusammen etwas Cleveres?"
+  },
+  "services": {
+    "fullProduction": {
+      "title": "Komplettproduktion",
+      "summary": "Vom Konzept zum fertigen Produkt, Festpreis für kleine und mittlere HTML5-Spiele. Ihr kennt die Kosten von Anfang an.",
+      "for": "Marken und Agenturen, die ein fertiges Spiel und einen einzigen Ansprechpartner vom Kickoff bis zur Auslieferung wollen.",
+      "done": "Ein getestetes, poliertes, spielbares Spiel, ausgeliefert auf den vereinbarten Plattformen — der genaue Ablauf steht auf der Prozess-Seite."
+    },
+    "designArtUiux": {
+      "title": "Game Design, Game Art & UI/UX",
+      "summary": "Eigenständige Design-, Art- oder UI/UX-Leistungen für Teams, die bereits Entwicklungskapazität haben, aber Design- oder IP-Expertise brauchen.",
+      "for": "Teams mit Entwicklungskapazität, die eine:n Game Designer:in, Artist oder UX-Spezialist:in brauchen, die mit Markenrichtlinien umgehen können.",
+      "done": "Design-Dokumente, Art-Assets oder UI/UX-Spezifikationen, mit denen euer Team direkt weiterbauen kann."
+    },
+    "conceptFeedback": {
+      "title": "Konzept-Feedback & -Entwicklung",
+      "summary": "Fachliches Feedback zu einem bestehenden Konzept, oder ein Konzept von Grund auf für internes Buy-in oder einen Förderantrag.",
+      "for": "Teams, die eine zweite Meinung zu einem Konzept brauchen, oder eines entwickeln müssen, bevor sie in die volle Produktion gehen.",
+      "done": "Ein schriftliches Konzept oder Feedback-Report, das ihr in ein Pitch, einen Förderantrag oder ein Grünlicht-Meeting mitnehmen könnt."
+    },
+    "updatingRebranding": {
+      "title": "Update & Rebranding",
+      "summary": "Auffrischung oder Reskin eines bestehenden Spiels — neue Optik, IP-Wechsel, verlängerte Nutzungsdauer. Kein Plattform-Portierungsservice.",
+      "for": "Alle mit einem bestehenden Spiel, das noch funktioniert, aber veraltet wirkt, oder das für eine neue IP oder Kampagne reskinnt werden könnte.",
+      "done": "Dasselbe Spiel, aufgefrischt — neue Optik oder neue IP, ohne die Mechanik von Grund auf neu zu bauen."
+    },
+    "embeddedTeam": {
+      "title": "Team-Unterstützung auf Zeit",
+      "summary": "Projektbasierte Kapazität als Game Designer:in, Art Director:in, UI/UX-Designer:in oder Producer:in, um Lücken, Spitzen oder Ausfälle im Team abzudecken.",
+      "for": "Studios und Agenturen, die für einen definierten Zeitraum zusätzliche Senior-Kapazität brauchen, ohne fest einzustellen.",
+      "done": "Eine konkrete Rolle abgedeckt, nach eurem Zeitplan, so lange das Projekt es braucht."
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "brandName": "Crow Loop Studio",
+  "russelAlt": "Russel the crow, Crow Loop Studio's mascot",
+  "skipToContent": "Skip to content",
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "toggleMenu": "Toggle navigation menu",
+    "primaryAriaLabel": "Primary",
+    "languageAriaLabel": "Language",
+    "startProject": "Start a project"
+  },
+  "footer": {
+    "tagline": "Crow Loop Studio turns brand IP into playable HTML5 experiences.",
+    "est": "Crow Loop Studio, est. 2026 — Cologne, Germany",
+    "legalAriaLabel": "Legal",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutzerklärung",
+    "haftungsausschluss": "Haftungsausschluss",
+    "agb": "AGB",
+    "associationStatus": "game e.V. membership: planned before launch"
+  },
+  "cookies": {
+    "ariaLabel": "Cookie consent",
+    "message": "We use essential cookies to run this site. Nothing non-essential loads until you say yes.",
+    "learnMore": "Learn more",
+    "necessaryOnly": "Necessary only",
+    "acceptAll": "Accept all"
+  },
+  "notFound": {
+    "russel": "Huh. That page flew off somewhere. Let's get you back on track.",
+    "title": "Page not found",
+    "cta": "Back to home"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "eyebrow": "Services",
+  "title": "Five ways to work with us",
+  "lede": "Matched to your actual capacity and budget — from a full build to filling a specific gap on your own team.",
+  "labels": {
+    "whoFor": "Who it's for",
+    "whatDoneLooksLike": "What \"done\" looks like"
+  },
+  "capacity": {
+    "title": "Can a one-person studio handle our scale?",
+    "body": "Small projects are handled solo. Medium projects are supplemented with a trusted freelance network. Larger productions are joined as an embedded specialist within a bigger team. You get senior-level attention either way — the studio scales the team to the project, not the other way around.",
+    "russel": "Right tool, right moment — shall we build something clever together?"
+  },
+  "services": {
+    "fullProduction": {
+      "title": "Full-service game production",
+      "summary": "Concept to finished product, fixed-price small and medium HTML5 games. You know the cost upfront.",
+      "for": "Brands and agencies who want a finished game and a single point of accountability from kickoff to delivery.",
+      "done": "A tested, polished, playable game delivered on the agreed platforms — see the Process page for the full sequence."
+    },
+    "designArtUiux": {
+      "title": "Game design, game art & UI/UX",
+      "summary": "Standalone design, art, or UI/UX deliverables for teams that already have dev capacity but need design or IP-handling expertise.",
+      "for": "Teams with development capacity that need a game designer, artist, or UX specialist who knows how to work within brand guidelines.",
+      "done": "Design docs, art assets, or UI/UX specs your team can build from directly."
+    },
+    "conceptFeedback": {
+      "title": "Game concept feedback & development",
+      "summary": "Expert feedback on an existing concept, or a concept built from scratch for internal buy-in or a funding application.",
+      "for": "Teams that need a second opinion on a concept, or need one built before committing to full production.",
+      "done": "A written concept or feedback report you can take into a pitch, a funding application, or a green-light meeting."
+    },
+    "updatingRebranding": {
+      "title": "Updating & rebranding",
+      "summary": "Refreshing or reskinning an existing game — new visuals, an IP swap, extending its usable life. Not a platform-porting service.",
+      "for": "Anyone with an existing game that still works but looks dated, or that could be reskinned for a new IP or campaign.",
+      "done": "The same game, refreshed — new visuals or a new IP applied without rebuilding the mechanic from scratch."
+    },
+    "embeddedTeam": {
+      "title": "Embedded team support",
+      "summary": "Project-based game designer, art director, UI/UX designer, or producer capacity to cover gaps, spikes, or sickness within your team.",
+      "for": "Studios and agencies that need extra senior capacity for a defined stretch, without a permanent hire.",
+      "done": "A specific role covered, on your timeline, for as long as the project needs it."
+    }
+  }
+}

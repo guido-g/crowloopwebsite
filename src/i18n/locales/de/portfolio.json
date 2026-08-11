@@ -1,0 +1,73 @@
+{
+  "eyebrow": "Portfolio",
+  "title": "Arbeiten für Marken mit jungem Publikum",
+  "lede": "Ein Mix aus Crow-Loop-Studio-Case-Studies und Referenzarbeiten von vor der Studiogründung — klar gekennzeichnet, immer.",
+  "inProductionNote": "Neue Crow-Loop-Studio-Projekte sind aktuell in Produktion — schaut bald wieder vorbei. Alles unten ist Referenzarbeit von vor dem offiziellen Studio-Start am 01.09.2026.",
+  "filters": {
+    "typeLabel": "Nach Typ filtern",
+    "all": "Alle",
+    "caseStudies": "Case Studies",
+    "reference": "Referenzarbeiten",
+    "audienceLabel": "Zielgruppe",
+    "allAudiences": "Alle Zielgruppen",
+    "empty": "Für diese Filterkombination gibt es noch nichts — probiert eine andere Kombination."
+  },
+  "badges": {
+    "caseStudy": "Case Study",
+    "reference": "Referenzprojekt",
+    "crowloop": "Crow Loop Studio"
+  },
+  "readCaseStudy": "Case Study lesen",
+  "viewReference": "Auf guido.graphics ansehen",
+  "caseStudy": {
+    "back": "Zurück zum Portfolio",
+    "challenge": "Die Herausforderung",
+    "decision": "Die Design-Entscheidung",
+    "outcome": "Das Ergebnis",
+    "framingNote": "Ein Hinweis zu den Zahlen: Das sind Platzierungen für ein Kinderpublikum, also gibt es keine Funnel- oder Retargeting-Daten. „Meistgespielt“ ist das eigene Ranking der Plattform, keine Marketing-Kennzahl — das sagen wir lieber offen, statt es zu beschönigen.",
+    "backToPortfolio": "Zurück zum Portfolio"
+  },
+  "projects": {
+    "ghostbusters": {
+      "name": "Ghostbusters – Haunted Mansion",
+      "description": "Eine kooperative Geisterjagd mit kompetitiver Ebene obendrauf, gebaut für Playmobils Ghostbusters-Linie.",
+      "challenge": "Der Kunde wollte ein kompetitives Actionspiel — das kommt bei der Zielgruppe von Jungen um die 10 Jahre gut an. Aber die IP selbst basiert auf Teamwork: Ghostbusters jagen als Team, nicht gegeneinander.",
+      "decision": "Wir haben eine kooperative Geisterjagd mit kompetitiver Ebene entworfen: Spieler jagen gemeinsam, konkurrieren aber darum, wer die meisten Geister fängt. Das löst Briefing und IP-Wahrheit gleichzeitig, statt sich für eines zu entscheiden.",
+      "outcome": "Top 10 der meistgespielten Spiele der Woche bei Toggo. Der Erfolg war so groß, dass der Kunde eine zweite Version mit derselben Kernmechanik beauftragte — reskinnt mit Alvin and the Chipmunks. Ein Beweis, dass die Mechanik über die ursprüngliche IP hinaus funktioniert."
+    },
+    "ciniMini": {
+      "name": "Cini Mini – Pyramide",
+      "description": "Ein Stapelspiel, das Cini Minis bekannten Schabernack zum Kernhindernis macht.",
+      "challenge": "Wie nutzt man mehr als nur Grafik und Namen einer Marke? Die Cini-Mini-Figuren sind aus TV- und Print-Werbung als Rabauken bekannt, die sich gegenseitig lecken und beißen — wir wollten diese Persönlichkeit wirklich ins Gameplay einbauen, nicht nur ein generisches Spiel damit bekleben.",
+      "decision": "Ein Stapelspiel, bei dem Spieler eine Pyramide aus Cini-Mini-Figuren bauen, während sie deren eigenen Schabernack — gegenseitiges Lecken, das den Stapel zum Einsturz bringt — als Kernhindernis managen. Der Charakterzug der Marke ist die Mechanik, keine Dekoration obendrauf.",
+      "outcome": "Das Spiel lief als Microsite im Rahmen eines begrenzten Werbeflights und ging nach etwa einem Monat wieder offline — daher gibt es keine Ranking-Daten. Diese Case Study stützt sich auf die Design-Entscheidung selbst statt auf eine Kennzahl, und das ist in Ordnung, ehrlich gesagt."
+    },
+    "idefix": {
+      "name": "Idefix – Vorsicht Römer",
+      "description": "Jede Figur aus dem Toggo-Spin-off bekommt einen funktionalen Grund, im Spiel zu existieren.",
+      "challenge": "Gebaut für den Start eines Toggo-Spin-offs, für ein jüngeres Publikum als bei den anderen beiden Case Studies. Das Spiel sollte jede Figur der Serie zeigen und dabei gewaltfrei bleiben — Idefix und Freunde entkommen römischen Patrouillen mit Cleverness statt Kampf.",
+      "decision": "Die individuelle Fähigkeit jeder Figur wird zu einem Weg, die Patrouillen auszutricksen — so bekommt jede Figur einen funktionalen Grund, im Spiel zu sein, statt nur ein kosmetischer Cameo zu bleiben.",
+      "outcome": "Top 10 der meistgespielten Spiele der Woche bei Toggo, mit der längsten Verweildauer der drei hier vorgestellten Case Studies."
+    },
+    "knightsOfFortune": {
+      "name": "Knights of Fortune",
+      "description": "Ein Roguelite-Prototyp mit eigener IP, entwickelt für ein Publisher-Pitch."
+    },
+    "life30": {
+      "name": "Life 3.0 (später Star Life)",
+      "description": "Eine Life-Sim-Demo für iCandy Interactive, ausgerichtet auf Teenager und junge Erwachsene."
+    },
+    "sunriseRoots": {
+      "name": "Sunrise Roots",
+      "description": "Ein gemütliches Farming-Spiel mit eigener Team-IP, um Bandbreite jenseits von Markenarbeit zu zeigen."
+    },
+    "ninjago": {
+      "name": "Ninjago – Turnier der Tapferen",
+      "description": "Ein Turnier-Actionspiel für LEGO Ninjago über Toggo."
+    },
+    "dragons": {
+      "name": "Dragons – Das große Drachenrennen",
+      "description": "Ein Rennspiel für DreamWorks Dragons über Toggo."
+    }
+  }
+}

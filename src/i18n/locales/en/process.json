@@ -1,0 +1,62 @@
+{
+  "eyebrow": "Process",
+  "title": "How a project actually runs",
+  "lede": "Nine steps, from first inquiry to final invoice — no surprises in between.",
+  "timeline": "Typical timeline: 3 weeks for a micro project, up to 9 weeks for a medium one.",
+  "steps": {
+    "inquiry": {
+      "title": "Inquiry",
+      "description": "You reach out with your project idea — through the contact form, however rough the idea still is."
+    },
+    "discoveryCall": {
+      "title": "Discovery call",
+      "description": "We talk through goals, wishes, materials, and budget directly — no forms, just a conversation."
+    },
+    "briefQuote": {
+      "title": "Design brief & quote",
+      "description": "A written brief scoping what's in and out, with a quote structured as MVP plus optional extras, so you can scale the project to your budget."
+    },
+    "deposit": {
+      "title": "Deposit (50%)",
+      "description": "Due on accepting the offer — production begins as soon as the deposit lands."
+    },
+    "concept": {
+      "title": "Concept phase",
+      "description": "First visual drafts of UI and gameplay, with a feedback round before we move forward."
+    },
+    "gameplay": {
+      "title": "Gameplay construction",
+      "description": "A playable but non-final build, with a feedback round focused on mechanics."
+    },
+    "polish": {
+      "title": "Final polish",
+      "description": "Feedback on a finished but not-yet-tested build — bugs may still show up at this stage, and that's expected."
+    },
+    "qaDelivery": {
+      "title": "QA & delivery",
+      "description": "Testing on the devices and platforms agreed with you, then final delivery."
+    },
+    "finalInvoice": {
+      "title": "Final invoice (remaining 50%)",
+      "description": "Due on delivery."
+    }
+  },
+  "qa": {
+    "title": "QA, stated openly",
+    "body": "Standard QA covers phone, tablet, and desktop across Chrome, Firefox, Edge, and Safari via BrowserStack — that covers the large majority of real-world bugs. QA isn't the studio's core specialty, and we say so upfront: if a project needs broader device or OS coverage, that's arranged through an external QA partner and scoped into the budget at the brief stage, not discovered as a surprise later.",
+    "russel": "We know our boundaries — and we've already got a plan for the edge cases."
+  },
+  "ai": {
+    "title": "AI-assisted workflow, stated openly",
+    "body": "Modern AI-assisted tools are used selectively across concepting, art, and development — it's part of how a single-person studio delivers studio-level production without studio-level overhead or timelines. This is a deliberate production choice backed by 20+ years of non-AI craft, not a shortcut: the work can be delivered fully without these tools, and using them selectively is what keeps fixed pricing realistic while a human designer makes every real decision.",
+    "russel": "Yes, AI tools are part of the toolkit — and yes, a human (me and my human) is still doing the designing."
+  },
+  "tools": {
+    "title": "Tools",
+    "communication": "Communication adapts to your own stack — MS Teams, Slack, email, whatever your team already uses — rather than imposing a fixed tool on you."
+  },
+  "postDelivery": {
+    "title": "After delivery",
+    "body": "Engagement normally ends at delivery. Game-breaking bugs found within 3 months post-launch are covered under the original contract at no extra cost, excluding issues caused by platform updates or external circumstances outside the studio's control. Hosting and ongoing live-ops support aren't standard, but can be scoped and added — worth raising at the discovery call so it's planned for, not left implicit."
+  }
+}
