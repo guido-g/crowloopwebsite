@@ -48,7 +48,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section proof-strip">
+      <section className="section section--navy proof-strip">
         <div className="container">
           <StatStrip stats={stats} />
         </div>
