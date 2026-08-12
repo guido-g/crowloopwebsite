@@ -102,6 +102,12 @@
   width: 100%;
 }
 
+/* Beats `.site-header__nav a { padding: ... }` (higher specificity, same selector chain
+   applies to the CTA since it's an <a> inside .site-header__nav) at every breakpoint. */
+.site-header__nav .site-header__cta {
+  padding: 0.75rem 1.375rem;
+}
+
 @media (max-width: 899px) {
   .site-header__nav {
     position: absolute;
