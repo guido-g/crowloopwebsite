@@ -22,7 +22,7 @@
     "challenge": "The challenge",
     "decision": "The design decision",
     "outcome": "The outcome",
-    "framingNote": "A note on the numbers: these are kids'-audience placements, so there's no funnel or retargeting data. \"Most-played\" is the platform's own ranking, not a marketing metric — we'd rather say that plainly than dress it up.",
+    "framingNote": "A note on the numbers: these are kids'-audience placements, so there's no funnel or retargeting data. \"Most-played\" is the platform's own ranking, not a marketing metric — I'd rather say that plainly than dress it up.",
     "backToPortfolio": "Back to portfolio"
   },
   "projects": {
@@ -30,13 +30,13 @@
       "name": "Ghostbusters – Haunted Mansion",
       "description": "A cooperative ghost hunt with a competitive layer on top, built for Playmobil's Ghostbusters line.",
       "challenge": "The client wanted a competitive action game — that's what resonates with the target audience of boys around age 10. But the IP itself is built on teamwork: Ghostbusters hunt as a team, not against each other.",
-      "decision": "We designed cooperative ghost-hunting with a competitive layer on top: players hunt together, but compete over who catches the most ghosts. It resolves the brief and the IP truth at the same time, instead of picking one over the other.",
+      "decision": "I designed cooperative ghost-hunting with a competitive layer on top: players hunt together, but compete over who catches the most ghosts. It resolves the brief and the IP truth at the same time, instead of picking one over the other.",
       "outcome": "Top 10 most-played games of the week on Toggo. It performed well enough that the client commissioned a second version reusing the same core mechanic, reskinned with Alvin and the Chipmunks — proof the mechanic had value beyond the original IP."
     },
     "ciniMini": {
       "name": "Cini Mini – Pyramide",
       "description": "A stacking game that turns Cini Mini's established mischief into the core obstacle.",
-      "challenge": "How do you use more than a brand's art and name? Cini Mini's characters are established in TV and print advertising as rascals who lick and bite each other — we wanted to actually build that personality into the gameplay, not just skin a generic game with it.",
+      "challenge": "How do you use more than a brand's art and name? Cini Mini's characters are established in TV and print advertising as rascals who lick and bite each other — I wanted to actually build that personality into the gameplay, not just skin a generic game with it.",
       "decision": "A stacking game where players build a pyramid of Cini Mini characters while managing the characters' own mischief — licking each other, causing the stack to collapse — as the core obstacle. The brand's personality trait is the mechanic, not decoration on top of one.",
       "outcome": "The game ran as a microsite tied to a limited ad flight and went offline after about a month, so there's no ranking data to point to. This one rests on the design decision itself rather than a metric — which is fine, and worth saying honestly."
     },

@@ -1,15 +1,15 @@
 {
   "eyebrow": "Services",
-  "title": "Five ways to work with us",
+  "title": "Five ways to work with me",
   "lede": "Matched to your actual capacity and budget — from a full build to filling a specific gap on your own team.",
   "labels": {
     "whoFor": "Who it's for",
     "whatDoneLooksLike": "What \"done\" looks like"
   },
   "capacity": {
-    "title": "Can a one-person studio handle our scale?",
+    "title": "Can a one-person studio handle your scale?",
     "body": "Small projects are handled solo. Medium projects are supplemented with a trusted freelance network. Larger productions are joined as an embedded specialist within a bigger team. You get senior-level attention either way — the studio scales the team to the project, not the other way around.",
-    "russel": "Right tool, right moment — shall we build something clever together?"
+    "russel": "Right tool, right moment — ready to build something clever together?"
   },
   "services": {
     "fullProduction": {

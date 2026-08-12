@@ -10,7 +10,7 @@
     },
     "discoveryCall": {
       "title": "Discovery call",
-      "description": "We talk through goals, wishes, materials, and budget directly — no forms, just a conversation."
+      "description": "I talk through goals, wishes, materials, and budget directly — no forms, just a conversation."
     },
     "briefQuote": {
       "title": "Design brief & quote",
@@ -22,7 +22,7 @@
     },
     "concept": {
       "title": "Concept phase",
-      "description": "First visual drafts of UI and gameplay, with a feedback round before we move forward."
+      "description": "First visual drafts of UI and gameplay, with a feedback round before moving forward."
     },
     "gameplay": {
       "title": "Gameplay construction",
@@ -43,8 +43,8 @@
   },
   "qa": {
     "title": "QA, stated openly",
-    "body": "Standard QA covers phone, tablet, and desktop across Chrome, Firefox, Edge, and Safari via BrowserStack — that covers the large majority of real-world bugs. QA isn't the studio's core specialty, and we say so upfront: if a project needs broader device or OS coverage, that's arranged through an external QA partner and scoped into the budget at the brief stage, not discovered as a surprise later.",
-    "russel": "We know our boundaries — and we've already got a plan for the edge cases."
+    "body": "Standard QA covers phone, tablet, and desktop across Chrome, Firefox, Edge, and Safari via BrowserStack — that covers the large majority of real-world bugs. QA isn't the studio's core specialty, and I say so upfront: if a project needs broader device or OS coverage, that's arranged through an external QA partner and scoped into the budget at the brief stage, not discovered as a surprise later.",
+    "russel": "I know my boundaries — and I've already got a plan for the edge cases."
   },
   "ai": {
     "title": "AI-assisted workflow, stated openly",

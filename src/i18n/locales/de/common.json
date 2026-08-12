@@ -7,7 +7,7 @@
     "portfolio": "Portfolio",
     "services": "Leistungen",
     "process": "Ablauf",
-    "about": "Über uns",
+    "about": "Über mich",
     "contact": "Kontakt",
     "toggleMenu": "Navigationsmenü öffnen/schließen",
     "primaryAriaLabel": "Hauptnavigation",
@@ -26,13 +26,13 @@
   },
   "cookies": {
     "ariaLabel": "Cookie-Einwilligung",
-    "message": "Wir verwenden nur notwendige Cookies, um diese Seite zu betreiben. Nicht-essenzielle Inhalte laden erst, wenn du zustimmst.",
+    "message": "Ich verwende nur notwendige Cookies, um diese Seite zu betreiben. Nicht-essenzielle Inhalte laden erst, wenn du zustimmst.",
     "learnMore": "Mehr erfahren",
     "necessaryOnly": "Nur notwendige",
     "acceptAll": "Alle akzeptieren"
   },
   "notFound": {
-    "russel": "Hoppla. Diese Seite ist wohl weggeflogen. Lass uns dich zurückbringen.",
+    "russel": "Hoppla. Diese Seite ist wohl weggeflogen. Ich bringe dich zurück.",
     "title": "Seite nicht gefunden",
     "cta": "Zurück zur Startseite"
   }

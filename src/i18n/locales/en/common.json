@@ -26,7 +26,7 @@
   },
   "cookies": {
     "ariaLabel": "Cookie consent",
-    "message": "We use essential cookies to run this site. Nothing non-essential loads until you say yes.",
+    "message": "I use essential cookies to run this site. Nothing non-essential loads until you say yes.",
     "learnMore": "Learn more",
     "necessaryOnly": "Necessary only",
     "acceptAll": "Accept all"

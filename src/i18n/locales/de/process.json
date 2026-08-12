@@ -10,7 +10,7 @@
     },
     "discoveryCall": {
       "title": "Discovery Call",
-      "description": "Wir besprechen Ziele, Wünsche, Materialien und Budget direkt miteinander — kein Formular, einfach ein Gespräch."
+      "description": "Ich bespreche Ziele, Wünsche, Materialien und Budget direkt mit dir — kein Formular, einfach ein Gespräch."
     },
     "briefQuote": {
       "title": "Design-Briefing & Angebot",
@@ -43,8 +43,8 @@
   },
   "qa": {
     "title": "QA, offen kommuniziert",
-    "body": "Standard-QA deckt Smartphone, Tablet und Desktop über Chrome, Firefox, Edge und Safari via BrowserStack ab — damit ist die große Mehrheit realer Bugs abgedeckt. QA ist nicht die Kernspezialität des Studios, und das sagen wir offen: Braucht ein Projekt breitere Geräte- oder OS-Abdeckung, wird das über einen externen QA-Partner organisiert und schon in der Briefing-Phase ins Budget eingeplant — keine Überraschung später.",
-    "russel": "Wir kennen unsere Grenzen — und haben für die Sonderfälle schon einen Plan."
+    "body": "Standard-QA deckt Smartphone, Tablet und Desktop über Chrome, Firefox, Edge und Safari via BrowserStack ab — damit ist die große Mehrheit realer Bugs abgedeckt. QA ist nicht die Kernspezialität des Studios, und das sage ich offen: Braucht ein Projekt breitere Geräte- oder OS-Abdeckung, wird das über einen externen QA-Partner organisiert und schon in der Briefing-Phase ins Budget eingeplant — keine Überraschung später.",
+    "russel": "Ich kenne meine Grenzen — und habe für die Sonderfälle schon einen Plan."
   },
   "ai": {
     "title": "KI-gestützter Workflow, offen kommuniziert",
