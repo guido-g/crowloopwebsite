@@ -23,6 +23,9 @@ export function RusselHero() {
 
   return (
     <div className="russel-hero">
+      <p className="russel-hero__bubble" role="status">
+        {clicked ? t("hero.russelClicked") : t("hero.russelGreeting")}
+      </p>
       <div className="russel-hero__portrait-wrap">
         <button
           type="button"
@@ -33,9 +36,6 @@ export function RusselHero() {
           <img src={RUSSEL_POSES.pointing} alt="" width={152} height={152} />
         </button>
       </div>
-      <p className="russel-hero__bubble" role="status">
-        {clicked ? t("hero.russelClicked") : t("hero.russelGreeting")}
-      </p>
     </div>
   );
 }

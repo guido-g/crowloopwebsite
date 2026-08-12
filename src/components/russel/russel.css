@@ -80,9 +80,16 @@
 .russel-hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
+  flex: none;
   gap: 1.25rem;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .russel-hero {
+    align-items: center;
+  }
 }
 
 .russel-hero__portrait-wrap {

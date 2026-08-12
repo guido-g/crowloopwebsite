@@ -24,13 +24,16 @@ export function Home() {
   return (
     <>
       <section className="section section--navy hero">
+        <img className="hero__backdrop" src="/brand/hero/HeroImage.png" alt="" aria-hidden="true" />
         <div className="container hero__inner">
-          <RusselHero />
-          <h1>{t("hero.headline")}</h1>
-          <p className="hero__subhead">{t("hero.subhead")}</p>
+          <div className="hero__row">
+            <h1 className="hero__headline">{t("hero.headline")}</h1>
+            <RusselHero />
+          </div>
           <LocalizedLink to="/contact" className="btn btn--primary">
             {t("nav.startProject", { ns: "common" })}
           </LocalizedLink>
+          <p className="hero__subhead">{t("hero.subhead")}</p>
         </div>
       </section>
 
