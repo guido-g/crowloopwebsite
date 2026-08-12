@@ -1,0 +1,7 @@
+services:
+  crowloop-website:
+    build: .
+    container_name: crowloop-website
+    ports:
+      - "8080:80"
+    restart: unless-stopped
