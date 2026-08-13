@@ -223,10 +223,10 @@ ol {
 .tag {
   display: inline-flex;
   align-items: center;
-  font-size: 0.75rem;
+  font-size: 0.8rem; /* Label/Eyebrow */
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em; /* Label/Eyebrow */
   padding: 0.3em 0.8em;
   border-radius: var(--radius-pill);
   background: var(--accent-mint);
@@ -552,6 +552,7 @@ ol {
   flex-direction: column;
   gap: 1.25rem;
   background: #fff;
+  color: var(--text-dark);
   padding: 2rem;
   border-radius: var(--radius-md);
   box-shadow: 0 6px 20px rgba(23, 25, 36, 0.08);
@@ -562,7 +563,7 @@ ol {
   flex-direction: column;
   gap: 0.4rem;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1rem; /* Label/Button */
 }
 
 .contact-form label em {

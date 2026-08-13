@@ -1,5 +1,6 @@
 .service-card {
   background: #fff;
+  color: var(--text-dark);
   border-radius: var(--radius-md);
   padding: 1.75rem 1.6rem;
   box-shadow: 0 6px 20px rgba(23, 25, 36, 0.08);

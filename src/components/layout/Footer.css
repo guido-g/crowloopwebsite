@@ -57,6 +57,7 @@
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-sm);
   border: 1px dashed var(--text-khaki);
+  font-size: 0.85rem; /* Label/Small */
   font-weight: 700;
   text-transform: lowercase;
   color: var(--text-khaki);

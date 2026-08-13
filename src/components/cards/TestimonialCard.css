@@ -1,5 +1,6 @@
 .testimonial-card {
   background: #fff;
+  color: var(--text-dark);
   border-radius: var(--radius-md);
   padding: 1.75rem;
   box-shadow: 0 6px 20px rgba(23, 25, 36, 0.08);
@@ -27,5 +28,10 @@
 }
 
 .testimonial-card__role {
+  display: block;
   opacity: 0.7;
+  font-weight: 700; /* Label/Eyebrow */
+  font-size: 0.8rem; /* Label/Eyebrow */
+  text-transform: uppercase; /* Label/Eyebrow */
+  letter-spacing: 0.08em; /* Label/Eyebrow */
 }
