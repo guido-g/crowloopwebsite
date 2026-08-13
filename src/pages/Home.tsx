@@ -8,7 +8,7 @@ import { SectionHeading } from "../components/common/SectionHeading";
 import { LocalizedLink } from "../components/common/LocalizedLink";
 import { SERVICES } from "../data/services";
 import { getFeaturedProjects } from "../data/portfolio";
-import { BRAND_CHIPS } from "../data/references";
+import { BRAND_LOGOS } from "../data/references";
 
 export function Home() {
   const { t } = useTranslation(["home", "common"]);
@@ -41,8 +41,10 @@ export function Home() {
         <div className="container">
           <p className="eyebrow">{t("brands.eyebrow")}</p>
           <ul className="brands-strip__list">
-            {BRAND_CHIPS.map((brand) => (
-              <li key={brand.id}>{brand.name}</li>
+            {BRAND_LOGOS.map((brand) => (
+              <li key={brand.id}>
+                <img src={brand.src} alt={brand.name} />
+              </li>
             ))}
           </ul>
         </div>

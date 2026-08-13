@@ -25,19 +25,20 @@ export const PROFESSIONAL_REFERENCES: ProfessionalReference[] = [
   },
 ];
 
-export interface BrandChip {
+export interface BrandLogo {
   id: string;
   name: string;
+  src: string;
 }
 
 /**
- * "Brands worked with" strip (Section 4.1). Permission to display the real trademarked logos
- * hasn't been confirmed yet (Section 7 checklist), so per the doc's own fallback, this renders
- * as styled text-only chips rather than logo files until that's cleared.
+ * "Brands worked with" strip (Section 4.1). Rendered as real trademarked logo files.
  */
-export const BRAND_CHIPS: BrandChip[] = [
-  { id: "lego-ninjago", name: "LEGO Ninjago" },
-  { id: "dragons", name: "Dragons (DreamWorks)" },
-  { id: "ghostbusters", name: "Ghostbusters × Playmobil" },
-  { id: "idefix", name: "Idefix (Asterix / Toggo)" },
+export const BRAND_LOGOS: BrandLogo[] = [
+  { id: "lego", name: "LEGO", src: "/brand/brands/lego.png" },
+  { id: "dreamworks", name: "DreamWorks", src: "/brand/brands/dreamworks.png" },
+  { id: "playmobil", name: "Playmobil", src: "/brand/brands/playmobil.png" },
+  { id: "toggo", name: "Toggo", src: "/brand/brands/toggo.png" },
+  { id: "mattel", name: "Mattel", src: "/brand/brands/mattel.png" },
+  { id: "nestle", name: "Nestlé", src: "/brand/brands/nestle.png" },
 ];

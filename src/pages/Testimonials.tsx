@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { StatStrip } from "../components/cards/StatStrip";
 import { RusselGuide } from "../components/russel/RusselGuide";
-import { BRAND_CHIPS } from "../data/references";
+import { BRAND_LOGOS } from "../data/references";
 
 /**
  * v1 has no client testimonials yet (Section 4.6) — rather than an apologetic empty state, this
@@ -32,8 +32,10 @@ export function Testimonials() {
           <StatStrip stats={stats} />
           <p className="eyebrow mt-lg">{t("brandsEyebrow")}</p>
           <ul className="brands-strip__list">
-            {BRAND_CHIPS.map((brand) => (
-              <li key={brand.id}>{brand.name}</li>
+            {BRAND_LOGOS.map((brand) => (
+              <li key={brand.id}>
+                <img src={brand.src} alt={brand.name} />
+              </li>
             ))}
           </ul>
         </div>
