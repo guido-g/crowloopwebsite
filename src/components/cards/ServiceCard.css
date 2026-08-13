@@ -3,7 +3,7 @@
   color: var(--text-dark);
   border-radius: var(--radius-md);
   padding: 1.75rem 1.6rem;
-  box-shadow: 0 6px 20px rgba(23, 25, 36, 0.08);
+  box-shadow: 0 3px 10px rgba(23, 25, 36, 0.3); /* Shadow/Card */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

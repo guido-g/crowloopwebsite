@@ -5,7 +5,7 @@
   color: var(--text-dark);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(23, 25, 36, 0.1);
+  box-shadow: 0 3px 10px rgba(23, 25, 36, 0.3); /* Shadow/Card */
   height: 100%;
 }
 

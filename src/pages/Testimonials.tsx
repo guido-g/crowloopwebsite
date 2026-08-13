@@ -29,15 +29,19 @@ export function Testimonials() {
 
       <section className="section">
         <div className="container text-center">
-          <StatStrip stats={stats} />
-          <p className="eyebrow mt-lg">{t("brandsEyebrow")}</p>
-          <ul className="brands-strip__list">
-            {BRAND_LOGOS.map((brand) => (
-              <li key={brand.id}>
-                <img src={brand.src} alt={brand.name} />
-              </li>
-            ))}
-          </ul>
+          <div className="proof-strip">
+            <StatStrip stats={stats} />
+          </div>
+          <div className="brands-strip">
+            <p className="eyebrow mt-lg">{t("brandsEyebrow")}</p>
+            <ul className="brands-strip__list">
+              {BRAND_LOGOS.map((brand) => (
+                <li key={brand.id}>
+                  <img src={brand.src} alt={brand.name} />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
