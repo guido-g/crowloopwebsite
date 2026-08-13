@@ -4,6 +4,7 @@
   z-index: 100;
   background: var(--bg-cream);
   border-bottom: 1px solid rgba(40, 37, 20, 0.08);
+  box-shadow: 0 6px 18px rgba(23, 25, 36, 0.22); /* Shadow/Portrait */
 }
 
 .site-header__inner {
