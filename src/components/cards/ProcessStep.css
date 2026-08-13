@@ -11,7 +11,8 @@
 }
 
 .process-step__number {
-  font-family: var(--font-display);
+  font-family: var(--font-body); /* Display/H2: Roboto Flex ExtraLight */
+  font-weight: 200; /* Display/H2 */
   font-size: 2.25rem; /* Display/H2 */
   color: var(--accent-orange);
   line-height: 1;
