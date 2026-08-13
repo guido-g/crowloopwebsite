@@ -361,13 +361,13 @@ ol {
 /* --- Brands strip --- */
 .brands-strip {
   text-align: center;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 1.5625rem; /* 25px */
+  padding-bottom: 1.5625rem; /* 25px */
 }
 
 .brands-strip .eyebrow {
   display: block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.3125rem; /* 5px */
 }
 
 .brands-strip__list {
@@ -384,13 +384,14 @@ ol {
 .brands-strip__list li {
   display: flex;
   align-items: center;
-  height: 2.5rem;
+  justify-content: center;
+  width: 6.25rem; /* 100px */
+  height: 6.25rem; /* 100px */
 }
 
 .brands-strip__list img {
+  width: 100%;
   height: 100%;
-  width: auto;
-  max-width: 9rem;
   object-fit: contain;
 }
 
