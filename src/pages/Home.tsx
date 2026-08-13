@@ -50,13 +50,7 @@ export function Home() {
         </div>
       </section>
 
-      <section className="section section--navy proof-strip">
-        <div className="container">
-          <StatStrip stats={stats} />
-        </div>
-      </section>
-
-      <section className="section">
+      <section className="section section--navy">
         <div className="container">
           <SectionHeading eyebrow={t("services.eyebrow")} title={t("services.title")} lede={t("services.lede")} />
           <div className="card-grid card-grid--4">
@@ -65,10 +59,16 @@ export function Home() {
             ))}
           </div>
           <div className="section__cta">
-            <LocalizedLink to="/services" className="btn btn--ghost-dark">
+            <LocalizedLink to="/services" className="btn btn--ghost-light">
               {t("services.cta")}
             </LocalizedLink>
           </div>
+        </div>
+      </section>
+
+      <section className="section proof-strip">
+        <div className="container">
+          <StatStrip stats={stats} />
         </div>
       </section>
 
