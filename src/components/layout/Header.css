@@ -83,7 +83,9 @@
   margin: 0.75rem 0;
 }
 
-.site-header__lang a {
+/* Scoped under .site-header__nav so this beats `.site-header__nav a { padding: ... }`
+   (same specificity otherwise, and the nav-a rule comes later in the cascade). */
+.site-header__nav .site-header__lang a {
   padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
   border: 2px solid var(--text-dark);
@@ -93,7 +95,7 @@
   color: var(--text-dark);
 }
 
-.site-header__lang a.is-active {
+.site-header__nav .site-header__lang a.is-active {
   background: var(--text-dark);
   color: var(--text-cream);
 }
