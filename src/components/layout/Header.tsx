@@ -24,7 +24,7 @@ export function Header() {
     <header className="site-header">
       <div className="container site-header__inner">
         <LocalizedLink to="/" className="site-header__brand" onClick={() => setMenuOpen(false)}>
-          <img src="/brand/logo/CLS_Logo_Main.png" alt={t("brandName")} height={48} />
+          <img src="/brand/logo/CLS_Logo_Main.webp" alt={t("brandName")} height={48} />
         </LocalizedLink>
 
         <button

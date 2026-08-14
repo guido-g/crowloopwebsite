@@ -60,12 +60,12 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.ghostbusters.decision",
       outcomeKey: "projects.ghostbusters.outcome",
     },
-    coverImage: "/portfolio/ghostbusters-haunted-mansion/cover.png",
+    coverImage: "/portfolio/ghostbusters-haunted-mansion/cover.webp",
     gallery: [
-      "/portfolio/ghostbusters-haunted-mansion/gallery-1.png",
-      "/portfolio/ghostbusters-haunted-mansion/gallery-2.png",
-      "/portfolio/ghostbusters-haunted-mansion/gallery-3.png",
-      "/portfolio/ghostbusters-haunted-mansion/gallery-4.png",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-1.webp",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-2.webp",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-3.webp",
+      "/portfolio/ghostbusters-haunted-mansion/gallery-4.webp",
     ],
   },
   {
@@ -84,11 +84,11 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.ciniMini.decision",
       outcomeKey: "projects.ciniMini.outcome",
     },
-    coverImage: "/portfolio/cini-mini-pyramide/cover.png",
+    coverImage: "/portfolio/cini-mini-pyramide/cover.webp",
     gallery: [
-      "/portfolio/cini-mini-pyramide/gallery-1.png",
-      "/portfolio/cini-mini-pyramide/gallery-2.png",
-      "/portfolio/cini-mini-pyramide/gallery-3.png",
+      "/portfolio/cini-mini-pyramide/gallery-1.webp",
+      "/portfolio/cini-mini-pyramide/gallery-2.webp",
+      "/portfolio/cini-mini-pyramide/gallery-3.webp",
     ],
   },
   {
@@ -107,11 +107,11 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.idefix.decision",
       outcomeKey: "projects.idefix.outcome",
     },
-    coverImage: "/portfolio/idefix-vorsicht-roemer/cover.jpg",
+    coverImage: "/portfolio/idefix-vorsicht-roemer/cover.webp",
     gallery: [
-      "/portfolio/idefix-vorsicht-roemer/gallery-1.png",
-      "/portfolio/idefix-vorsicht-roemer/gallery-2.png",
-      "/portfolio/idefix-vorsicht-roemer/gallery-3.png",
+      "/portfolio/idefix-vorsicht-roemer/gallery-1.webp",
+      "/portfolio/idefix-vorsicht-roemer/gallery-2.webp",
+      "/portfolio/idefix-vorsicht-roemer/gallery-3.webp",
     ],
   },
   {
@@ -125,7 +125,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/06/15/knights-of-fortune-prototype/",
     colorway: "slate",
-    coverImage: "/portfolio/knights-of-fortune/cover.jpg",
+    coverImage: "/portfolio/knights-of-fortune/cover.webp",
   },
   {
     slug: "life-3-0-star-life",
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2025/03/25/life-3-0-later-star-life-demo/",
     colorway: "green",
-    coverImage: "/portfolio/life-3-0-star-life/cover.jpg",
+    coverImage: "/portfolio/life-3-0-star-life/cover.webp",
   },
   {
     slug: "sunrise-roots",
@@ -151,7 +151,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2025/01/28/sunrise-roots/",
     colorway: "orange",
-    coverImage: "/portfolio/sunrise-roots/cover.png",
+    coverImage: "/portfolio/sunrise-roots/cover.webp",
   },
   {
     slug: "ninjago-turnier-der-tapferen",
@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/06/09/ninjago-turnier-der-tapferen/",
     colorway: "navy",
-    coverImage: "/portfolio/ninjago-turnier-der-tapferen/cover.png",
+    coverImage: "/portfolio/ninjago-turnier-der-tapferen/cover.webp",
   },
   {
     slug: "dragons-das-grosse-drachenrennen",
@@ -177,7 +177,7 @@ export const PROJECTS: Project[] = [
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/05/31/dragons-das-grose-drachenrennen/",
     colorway: "slate",
-    coverImage: "/portfolio/dragons-das-grosse-drachenrennen/cover.png",
+    coverImage: "/portfolio/dragons-das-grosse-drachenrennen/cover.webp",
   },
 ];
 
