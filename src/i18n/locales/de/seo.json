@@ -1,0 +1,51 @@
+{
+  "titleSuffix": "Crow Loop Studio",
+  "home": {
+    "title": "Macht eure IP spielbar",
+    "description": "Crow Loop Studio macht aus Marken-IP spielbare HTML5-Spiele. Ein Jahrzehnt Erfahrung mit den großen Namen der Kinderunterhaltung — ohne Agentur-Overhead, ohne Umstände."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Spiele für Marken mit jungem Publikum — Ghostbusters, Idefix, Cini Mini und mehr — mit Case Studies dazu, wie jedes einzelne entstanden ist."
+  },
+  "services": {
+    "title": "Leistungen",
+    "description": "Fünf Wege, mit mir zu arbeiten: von der kompletten Spielproduktion bis zum zweiten Paar Hände für Design, Art, UI/UX oder ein Konzept-Feedback."
+  },
+  "process": {
+    "title": "Ablauf",
+    "description": "Wie ein Projekt wirklich abläuft — vom ersten Briefing bis zum Launch, mit den Punkten, an denen ihr entscheidet, wie es weitergeht."
+  },
+  "about": {
+    "title": "Über mich",
+    "description": "Crow Loop Studio wurde mit einer Idee gegründet: das Problem lösen, nicht nur das Spiel skinnen. Ein Jahrzehnt HTML5-Spiele, ansässig in Köln."
+  },
+  "testimonials": {
+    "title": "Kundenstimmen",
+    "description": "Kundenstimmen sind auf dem Weg. Bis dahin zeigen die Case Studies im Portfolio, wie jedes Projekt zugeschnitten, gestaltet und geliefert wurde."
+  },
+  "contact": {
+    "title": "Projekt starten",
+    "description": "Erzählt mir von eurer IP, eurer Zielgruppe und eurem Zeitplan — ich melde mich mit einem Vorschlag, wie ich es angehen würde und was dazugehört."
+  },
+  "impressum": {
+    "title": "Impressum",
+    "description": "Impressum und Anbieterkennzeichnung für Crow Loop Studio, Köln."
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "description": "Wie Crow Loop Studio personenbezogene Daten auf dieser Website verarbeitet."
+  },
+  "haftungsausschluss": {
+    "title": "Haftungsausschluss",
+    "description": "Haftungsausschluss für die Website von Crow Loop Studio."
+  },
+  "agb": {
+    "title": "AGB",
+    "description": "Allgemeine Geschäftsbedingungen für die Zusammenarbeit mit Crow Loop Studio."
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Diese Seite ist irgendwohin davongeflogen. Zurück zur Startseite geht es hier."
+  }
+}

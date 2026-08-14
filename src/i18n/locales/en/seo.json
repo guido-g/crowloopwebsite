@@ -1,0 +1,51 @@
+{
+  "titleSuffix": "Crow Loop Studio",
+  "home": {
+    "title": "Make your IP playable",
+    "description": "Crow Loop Studio turns brand IP into playable HTML5 games. A decade of shipping titles for the biggest names in kids' entertainment — no agency overhead, no hassle."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Games built for brands with a young audience — Ghostbusters, Idefix, Cini Mini and more — with case studies on how each one was designed and shipped."
+  },
+  "services": {
+    "title": "Services",
+    "description": "Five ways to work with me, from full-service game production to a second pair of hands on design, art, UI/UX, or a concept review."
+  },
+  "process": {
+    "title": "Process",
+    "description": "How a project actually runs — from first brief to launch, with the checkpoints where you decide what happens next."
+  },
+  "about": {
+    "title": "About",
+    "description": "Crow Loop Studio was founded on one idea: solve the problem, not just skin the game. A decade of HTML5 game work, based in Cologne, Germany."
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "description": "Client testimonials are on their way. Until then, the portfolio case studies show how each project was scoped, designed, and delivered."
+  },
+  "contact": {
+    "title": "Start a project",
+    "description": "Tell me about your IP, your audience, and your timeline — I'll come back with how I'd approach it and what it would take."
+  },
+  "impressum": {
+    "title": "Impressum",
+    "description": "Legal disclosure for Crow Loop Studio, Cologne, Germany."
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "description": "How Crow Loop Studio handles personal data on this website."
+  },
+  "haftungsausschluss": {
+    "title": "Haftungsausschluss",
+    "description": "Liability disclaimer for the Crow Loop Studio website."
+  },
+  "agb": {
+    "title": "AGB",
+    "description": "General terms and conditions for working with Crow Loop Studio."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "That page flew off somewhere. Head back to the home page to get back on track."
+  }
+}

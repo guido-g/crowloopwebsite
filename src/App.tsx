@@ -15,28 +15,36 @@ import { Haftungsausschluss } from "./pages/legal/Haftungsausschluss";
 import { AGB } from "./pages/legal/AGB";
 import { NotFound } from "./pages/NotFound";
 
+/** The route table on its own, without a router around it. Split out so the prerenderer can
+ * mount the same tree under a `StaticRouter` — one definition, two entry points. */
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<RootRedirect />} />
+      <Route path="/:lang" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="portfolio" element={<Portfolio />} />
+        <Route path="portfolio/:slug" element={<CaseStudy />} />
+        <Route path="about" element={<About />} />
+        <Route path="services" element={<Services />} />
+        <Route path="process" element={<Process />} />
+        <Route path="testimonials" element={<Testimonials />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="impressum" element={<Impressum />} />
+        <Route path="datenschutz" element={<Datenschutz />} />
+        <Route path="haftungsausschluss" element={<Haftungsausschluss />} />
+        <Route path="agb" element={<AGB />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+      <Route path="*" element={<RootRedirect />} />
+    </Routes>
+  );
+}
+
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<RootRedirect />} />
-        <Route path="/:lang" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="portfolio/:slug" element={<CaseStudy />} />
-          <Route path="about" element={<About />} />
-          <Route path="services" element={<Services />} />
-          <Route path="process" element={<Process />} />
-          <Route path="testimonials" element={<Testimonials />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="impressum" element={<Impressum />} />
-          <Route path="datenschutz" element={<Datenschutz />} />
-          <Route path="haftungsausschluss" element={<Haftungsausschluss />} />
-          <Route path="agb" element={<AGB />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-        <Route path="*" element={<RootRedirect />} />
-      </Routes>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
