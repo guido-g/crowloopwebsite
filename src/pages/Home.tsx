@@ -24,7 +24,19 @@ export function Home() {
   return (
     <>
       <section className="section section--navy hero">
-        <img className="hero__backdrop" src="/brand/hero/HeroImage.png" alt="" aria-hidden="true" />
+        {/* LCP element: eager + high priority, and the only image with a srcset — it is
+            full-bleed, so the browser picks the variant from the viewport width. */}
+        <img
+          className="hero__backdrop"
+          src="/brand/hero/hero-1920.webp"
+          srcSet="/brand/hero/hero-768.webp 768w, /brand/hero/hero-1280.webp 1280w, /brand/hero/hero-1920.webp 1920w"
+          sizes="100vw"
+          width={1920}
+          height={1080}
+          fetchPriority="high"
+          alt=""
+          aria-hidden="true"
+        />
         <div className="container hero__inner">
           <div className="hero__row">
             <h1 className="hero__headline">{t("hero.headline")}</h1>

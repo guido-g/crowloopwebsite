@@ -17,7 +17,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container site-footer__inner">
         <div className="site-footer__brand">
-          <img src="/brand/logo/CLS_Logo_white.png" alt={t("brandName")} height={40} />
+          <img src="/brand/logo/CLS_Logo_white.webp" alt={t("brandName")} height={40} />
           <p>{t("footer.tagline")}</p>
           <p className="site-footer__est">
             {t("footer.est")} · © {year}
