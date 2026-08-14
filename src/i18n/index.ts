@@ -10,6 +10,7 @@ import enProcess from "./locales/en/process.json";
 import enTestimonials from "./locales/en/testimonials.json";
 import enContact from "./locales/en/contact.json";
 import enLegal from "./locales/en/legal.json";
+import enSeo from "./locales/en/seo.json";
 
 import deCommon from "./locales/de/common.json";
 import deHome from "./locales/de/home.json";
@@ -20,6 +21,7 @@ import deProcess from "./locales/de/process.json";
 import deTestimonials from "./locales/de/testimonials.json";
 import deContact from "./locales/de/contact.json";
 import deLegal from "./locales/de/legal.json";
+import deSeo from "./locales/de/seo.json";
 
 export const SUPPORTED_LANGS = ["en", "de"] as const;
 export type SupportedLang = (typeof SUPPORTED_LANGS)[number];
@@ -27,6 +29,19 @@ export const DEFAULT_LANG: SupportedLang = "en";
 
 export function isSupportedLang(value: string | undefined): value is SupportedLang {
   return !!value && (SUPPORTED_LANGS as readonly string[]).includes(value);
+}
+
+/**
+ * The URL's `:lang` segment is the source of truth for language, so it has to be read here at
+ * init rather than corrected later in an effect: initialising with a fixed `"en"` made
+ * `/de/portfolio` paint English for one frame, and left the served `<html lang>` wrong until
+ * JS ran. Returns the default under SSR/prerender, where the renderer sets the language
+ * explicitly per route.
+ */
+function langFromPathname(): SupportedLang {
+  if (typeof window === "undefined") return DEFAULT_LANG;
+  const [, segment] = window.location.pathname.split("/");
+  return isSupportedLang(segment) ? segment : DEFAULT_LANG;
 }
 
 /** Browser-locale detection for the bare "/" entry route only — all other
@@ -51,6 +66,7 @@ void i18n.use(initReactI18next).init({
       testimonials: enTestimonials,
       contact: enContact,
       legal: enLegal,
+      seo: enSeo,
     },
     de: {
       common: deCommon,
@@ -62,9 +78,10 @@ void i18n.use(initReactI18next).init({
       testimonials: deTestimonials,
       contact: deContact,
       legal: deLegal,
+      seo: deSeo,
     },
   },
-  lng: DEFAULT_LANG,
+  lng: langFromPathname(),
   fallbackLng: DEFAULT_LANG,
   defaultNS: "common",
   ns: [
@@ -77,9 +94,16 @@ void i18n.use(initReactI18next).init({
     "testimonials",
     "contact",
     "legal",
+    "seo",
   ],
   interpolation: { escapeValue: false },
   returnEmptyString: false,
 });
+
+/** Matches `<html lang>` to the language the URL asked for before React's first paint.
+ * `Layout` keeps it in sync afterwards, when the visitor uses the language switcher. */
+if (typeof document !== "undefined") {
+  document.documentElement.lang = i18n.language;
+}
 
 export default i18n;

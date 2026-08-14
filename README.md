@@ -12,8 +12,20 @@ npm run dev
 ## Build
 
 ```bash
-npm run build   # tsc -b && vite build
+npm run build   # typecheck, bundle, prerender every route, emit sitemap.xml
 npm run preview
+```
+
+`npm run build` ends by rendering all 28 routes to `dist/<lang>/<path>/index.html`
+(`scripts/prerender.mjs`) and writing `dist/sitemap.xml`. That is what makes per-page titles
+and link previews work: scrapers like Slack and WhatsApp don't run JavaScript, so metadata
+only React can produce is invisible to them.
+
+The Open Graph card is generated separately and committed, since it changes about as often as
+the logo:
+
+```bash
+npm run og      # composes public/brand/og/og-default.png
 ```
 
 ## Structure
@@ -23,6 +35,8 @@ npm run preview
 - `src/data/` — typed content (`portfolio.ts`, `services.ts`, `process.ts`, `references.ts`) that pages render; portfolio entries are tagged `crowloop` vs `reference` per Section 4.2 of the design doc
 - `src/i18n/locales/{en,de}/*.json` — all copy, one namespace per page/section
 - `src/styles/tokens.css` — the confirmed design-token palette/type as CSS variables; `global.css` for shared layout/components
+- `src/seo/` — `routes.ts` is the one list of indexable routes (case studies derived from `PROJECTS`), `meta.ts` turns a route into head tags, `Seo.tsx` renders them in the app
+- `src/entry-server.tsx` + `scripts/` — build-time only: the SSR entry the prerenderer and sitemap generator import
 
 ## Known gaps before public launch
 
