@@ -28,6 +28,20 @@ the logo:
 npm run og      # composes public/brand/og/og-default.png
 ```
 
+## Images
+
+`assets/` holds the full-size source originals and is never served. `public/` holds only
+web-sized WebP derivatives, sized to how each image is actually laid out (doubled for 2x
+displays, never upscaled). After adding or replacing a source image:
+
+```bash
+npm run images  # regenerates every derivative in public/ from assets/ (scripts/optimize-images.mjs)
+```
+
+This does not run as part of `npm run build` — output is committed, so the size win is visible
+in the PR diff and the build itself stays fast. The hero image additionally ships three widths
+(768/1280/1920) with a `srcset` so the browser picks the right one for the viewport.
+
 ## Structure
 
 - `src/pages/` — one file per route (Home, Portfolio, CaseStudy, About, Services, Process, Testimonials, Contact, `legal/*`, NotFound)
@@ -44,8 +58,6 @@ Carried over from the design doc's Section 7 checklist — the site is fully bui
 
 - **Contact form** submits client-side only (mocked, see the `TODO(backend)` in `src/pages/Contact.tsx`) until a business email + AWS Amplify/SES backend exist.
 - **Legal pages** (Impressum, Datenschutzerklärung, Haftungsausschluss, AGB) use clearly marked placeholder text — must not go live publicly until real, lawyer-reviewed copy replaces it.
-- **"Brands worked with" strip** renders text-only chips, not real trademarked logos, until usage permission is confirmed.
-- **Portfolio/case-study thumbnails** are styled placeholder gradients, not real screenshots.
 - **German copy** is a first-pass draft, not a professionally reviewed translation.
 - **`game e.V.` footer badge** is inert/unlinked — activate only once membership is confirmed.
 - **Professional references on About** (Thomas Rössig, Robert Heil) are shown per plan, pending their sign-off before public launch.

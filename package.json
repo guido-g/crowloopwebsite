@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build && npm run build:ssr && node scripts/prerender.mjs && node scripts/generate-sitemap.mjs",
     "build:ssr": "vite build --ssr src/entry-server.tsx --outDir dist-ssr",
+    "images": "node scripts/optimize-images.mjs",
     "og": "node scripts/generate-og-image.mjs",
     "lint": "oxlint",
     "preview": "vite preview"
