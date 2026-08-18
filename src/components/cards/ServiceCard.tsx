@@ -19,6 +19,17 @@ export function ServiceCard({ service, index, compact = false }: ServiceCardProp
         {String(index + 1).padStart(2, "0")}
       </span>
       <h3>{t(service.titleKey)}</h3>
+      <div className="service-card__icon-frame">
+        <img
+          className="service-card__icon"
+          src={`/brand/icons/${service.icon}.webp`}
+          alt=""
+          aria-hidden="true"
+          width={120}
+          height={120}
+          loading="lazy"
+        />
+      </div>
       <p className="service-card__summary">{t(service.summaryKey)}</p>
 
       {!compact && (

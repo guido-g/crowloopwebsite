@@ -19,20 +19,20 @@
       "done": "A tested, polished, playable game delivered on the agreed platforms — see the Process page for the full sequence."
     },
     "designArtUiux": {
-      "title": "Game design, game art & UI/UX",
+      "title": "Modular Service",
       "summary": "Standalone design, art, or UI/UX deliverables for teams that already have dev capacity but need design or IP-handling expertise.",
       "for": "Teams with development capacity that need a game designer, artist, or UX specialist who knows how to work within brand guidelines.",
       "done": "Design docs, art assets, or UI/UX specs your team can build from directly."
     },
     "conceptFeedback": {
-      "title": "Game concept feedback & development",
+      "title": "Game concept or feedback",
       "summary": "Expert feedback on an existing concept, or a concept built from scratch for internal buy-in or a funding application.",
       "for": "Teams that need a second opinion on a concept, or need one built before committing to full production.",
       "done": "A written concept or feedback report you can take into a pitch, a funding application, or a green-light meeting."
     },
     "updatingRebranding": {
       "title": "Updating & rebranding",
-      "summary": "Refreshing or reskinning an existing game — new visuals, an IP swap, extending its usable life. Not a platform-porting service.",
+      "summary": "Refreshing or reskinning an existing game — new visuals, an IP swap, extending its usable life.",
       "for": "Anyone with an existing game that still works but looks dated, or that could be reskinned for a new IP or campaign.",
       "done": "The same game, refreshed — new visuals or a new IP applied without rebuilding the mechanic from scratch."
     },

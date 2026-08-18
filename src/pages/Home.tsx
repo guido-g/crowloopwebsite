@@ -65,8 +65,8 @@ export function Home() {
       <section className="section section--navy">
         <div className="container">
           <SectionHeading eyebrow={t("services.eyebrow")} title={t("services.title")} lede={t("services.lede")} />
-          <div className="card-grid card-grid--4">
-            {SERVICES.slice(0, 4).map((service, index) => (
+          <div className="card-grid card-grid--3">
+            {SERVICES.slice(0, 3).map((service, index) => (
               <ServiceCard key={service.id} service={service} index={index} compact />
             ))}
           </div>

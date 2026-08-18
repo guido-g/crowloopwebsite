@@ -55,6 +55,9 @@ const pngsIn = async (dir) =>
 
 const baseName = (file) => file.replace(/\.(png|jpe?g)$/i, "");
 
+// Figma exports these as "Games=<value>.png" (component=variant); keep only the variant name.
+const iconName = (file) => baseName(file.split("=").pop()).toLowerCase();
+
 async function main() {
   // Start clean so renamed or deleted originals never leave orphans behind.
   await rm(publish("brand"), { recursive: true, force: true });
@@ -90,6 +93,17 @@ async function main() {
       publish("brand", "brands", `${baseName(file).toLowerCase()}.webp`),
       { width: 200, quality: 80 },
     );
+  }
+
+  // Service card icons — `.service-card__icon` renders at 7.5rem (120px). Originals are
+  // 1024x1024; ship them full-size (as WebP) since they're flat two-tone vector exports and
+  // stay crisp at any card size or future layout change without needing a re-export.
+  console.log("icons");
+  for (const file of await pngsIn(asset("img", "icons"))) {
+    await emit(asset("img", "icons", file), publish("brand", "icons", `${iconName(file)}.webp`), {
+      width: 1024,
+      quality: 90,
+    });
   }
 
   // Studio wordmark — header renders at height 48, footer at 40; the original

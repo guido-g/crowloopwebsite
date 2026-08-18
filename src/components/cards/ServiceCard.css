@@ -10,6 +10,19 @@
   height: 100%;
 }
 
+.service-card__icon-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.service-card__icon {
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: contain;
+}
+
 .service-card__index {
   font-family: var(--font-display);
   font-size: 1.4rem;
