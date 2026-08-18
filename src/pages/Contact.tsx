@@ -32,6 +32,15 @@ export function Contact() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
+
+    // Honeypot: real users never see or fill this field, so a non-empty value means a bot.
+    // Pretend to succeed instead of erroring, so the bot doesn't learn it was caught.
+    if (String(form.get("website") ?? "") !== "") {
+      setStatus("submitting");
+      window.setTimeout(() => setStatus("confirmed"), 700);
+      return;
+    }
+
     const payload: ContactPayload = {
       name: String(form.get("name") ?? ""),
       company: String(form.get("company") ?? ""),
@@ -64,6 +73,11 @@ export function Contact() {
       <section className="section">
         <div className="container contact-layout">
           <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="contact-form__hp" aria-hidden="true">
+              <label htmlFor="website">Website</label>
+              <input id="website" type="text" name="website" tabIndex={-1} autoComplete="off" />
+            </div>
+
             <div className="contact-form__row">
               <label>
                 <span>{t("fields.name")}</span>
