@@ -38,7 +38,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="project-card__description">{t(project.descriptionKey)}</p>
 
         <ul className="project-card__tags">
-          <li>{project.tags.audience}</li>
           <li>{project.tags.genre}</li>
           <li>{project.tags.platform}</li>
         </ul>

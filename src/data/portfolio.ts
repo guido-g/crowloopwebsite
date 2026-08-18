@@ -2,7 +2,6 @@ export type ProjectType = "crowloop" | "reference";
 export type ProjectColorway = "orange" | "green" | "slate" | "navy";
 
 export interface ProjectTags {
-  audience: string;
   genre: string;
   platform: string;
 }
@@ -50,7 +49,7 @@ export const PROJECTS: Project[] = [
     brand: "Ghostbusters × Playmobil",
     type: "reference",
     date: "2024-11-19",
-    tags: { audience: "Kids ~8-12", genre: "Action / Co-op", platform: "HTML5" },
+    tags: { genre: "Action / Co-op", platform: "HTML5" },
     descriptionKey: "projects.ghostbusters.description",
     isCaseStudy: true,
     externalUrl: "https://guido.graphics/2024/11/19/ghostbusters-haunted-mansion-playmobil/",
@@ -74,7 +73,7 @@ export const PROJECTS: Project[] = [
     brand: "Cini Mini",
     type: "reference",
     date: "2024-05-21",
-    tags: { audience: "Preschool", genre: "Stacking / Skill", platform: "HTML5 microsite" },
+    tags: { genre: "Stacking / Skill", platform: "HTML5 microsite" },
     descriptionKey: "projects.ciniMini.description",
     isCaseStudy: true,
     externalUrl: "https://guido.graphics/2024/05/21/cini-mini-pyramide/",
@@ -97,7 +96,7 @@ export const PROJECTS: Project[] = [
     brand: "Idefix et les Romains (Toggo)",
     type: "reference",
     date: "2025-02-18",
-    tags: { audience: "Kids ~6-10", genre: "Stealth / Evade", platform: "HTML5" },
+    tags: { genre: "Stealth / Evade", platform: "HTML5" },
     descriptionKey: "projects.idefix.description",
     isCaseStudy: true,
     externalUrl: "https://guido.graphics/2025/02/18/idefix-vorsicht-romer/",
@@ -120,7 +119,7 @@ export const PROJECTS: Project[] = [
     brand: "Original IP",
     type: "reference",
     date: "2024-06-15",
-    tags: { audience: "All ages", genre: "Roguelite prototype", platform: "HTML5" },
+    tags: { genre: "Roguelite prototype", platform: "HTML5" },
     descriptionKey: "projects.knightsOfFortune.description",
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/06/15/knights-of-fortune-prototype/",
@@ -133,7 +132,7 @@ export const PROJECTS: Project[] = [
     brand: "iCandy Interactive",
     type: "reference",
     date: "2025-03-25",
-    tags: { audience: "Teens / Young adult", genre: "Life sim", platform: "HTML5" },
+    tags: { genre: "Life sim", platform: "HTML5" },
     descriptionKey: "projects.life30.description",
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2025/03/25/life-3-0-later-star-life-demo/",
@@ -146,7 +145,7 @@ export const PROJECTS: Project[] = [
     brand: "Original / team IP",
     type: "reference",
     date: "2025-01-28",
-    tags: { audience: "All ages", genre: "Farming / Cozy", platform: "HTML5" },
+    tags: { genre: "Farming / Cozy", platform: "HTML5" },
     descriptionKey: "projects.sunriseRoots.description",
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2025/01/28/sunrise-roots/",
@@ -159,7 +158,7 @@ export const PROJECTS: Project[] = [
     brand: "LEGO Ninjago × Toggo",
     type: "reference",
     date: "2024-06-09",
-    tags: { audience: "Kids ~7-12", genre: "Tournament / Action", platform: "HTML5" },
+    tags: { genre: "Tournament / Action", platform: "HTML5" },
     descriptionKey: "projects.ninjago.description",
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/06/09/ninjago-turnier-der-tapferen/",
@@ -172,7 +171,7 @@ export const PROJECTS: Project[] = [
     brand: "DreamWorks Dragons × Toggo",
     type: "reference",
     date: "2024-05-31",
-    tags: { audience: "Kids ~7-12", genre: "Racing", platform: "HTML5" },
+    tags: { genre: "Racing", platform: "HTML5" },
     descriptionKey: "projects.dragons.description",
     isCaseStudy: false,
     externalUrl: "https://guido.graphics/2024/05/31/dragons-das-grose-drachenrennen/",
