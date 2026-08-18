@@ -57,12 +57,16 @@ in the PR diff and the build itself stays fast. The hero image additionally ship
 Carried over from the design doc's Section 7 checklist — the site is fully built and functional with placeholders for these:
 
 - **Contact form** submits client-side only (mocked, see the `TODO(backend)` in `src/pages/Contact.tsx`) until a business email + AWS Amplify/SES backend exist.
-- **Legal pages**: Impressum now has real content (`src/i18n/locales/{en,de}/legal.json`), but three fields in it are placeholders and **must be updated by 01.09.2026**:
-  - **Umsatzsteuer-ID** is `000000000` — replace once a real VAT ID exists.
-  - **Business email** is the founder's personal Gmail (`guido.goe@gmail.com`) — replace once a company email is set up (same address is also used as the Contact page fallback and in `src/pages/Contact.tsx`).
+- **Legal pages**: Impressum and Datenschutzerklärung now have real content (`src/i18n/locales/{en,de}/legal.json`), both **due for revision by 01.09.2026**:
+  - **Umsatzsteuer-ID** (Impressum) is `000000000` — replace once a real VAT ID exists.
+  - **Business email** (Impressum + Datenschutz) is the founder's personal Gmail (`guido.goe@gmail.com`) — replace once a company email is set up (same address is also used as the Contact page fallback and in `src/pages/Contact.tsx`).
   - **Site URL** — verify `SITE_URL` in `src/seo/routes.ts` (currently `https://crowloopstudio.com`) is the actual production domain; it feeds canonical links, the sitemap, and OG image URLs.
+  - **Third-party services in Datenschutz** (AWS hosting, YouTube, Google Fonts, Google reCAPTCHA) were pre-emptively disclosed for future use, per the source doc. Before launch, confirm each is actually true for the live deployment:
+    - **Google Fonts** as written describes loading fonts from Google's CDN, but the site actually self-hosts them via `@fontsource/mclaren` and `@fontsource-variable/roboto-flex` (no request to Google's servers ever happens). Confirmed intentional — kept as-is for possible future use.
+    - **AWS hosting** — the section describes AWS as the host. Hosting provider is not yet decided (self-host on the founder's NAS via `Dockerfile`/`nginx.conf` vs. AWS); decision due by 01.09.2026 — update this section once the target is confirmed.
+    - **YouTube / reCAPTCHA** — neither is currently embedded in the code, but both are real planned features: YouTube video embeds in the Portfolio, and a CAPTCHA on the Contact form to reduce spam. Keep the disclosure; implement the features (or remove the section) before launch.
 
-  Datenschutzerklärung, Haftungsausschluss, and AGB still use clearly marked placeholder text — must not go live publicly until real, lawyer-reviewed copy replaces it.
+  Haftungsausschluss and AGB still use clearly marked placeholder text — must not go live publicly until real, lawyer-reviewed copy replaces it.
 - **German copy** is a first-pass draft, not a professionally reviewed translation.
 - **`game e.V.` footer badge** is inert/unlinked — activate only once membership is confirmed.
 - **Professional references on About** (Thomas Rössig, Robert Heil) are shown per plan, pending their sign-off before public launch.

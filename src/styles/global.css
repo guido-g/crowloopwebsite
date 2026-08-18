@@ -674,6 +674,19 @@ ol {
   font-size: 1.15rem;
 }
 
+.legal-page__subsection {
+  margin-top: 1.25rem;
+}
+
+.legal-page__subsection:first-child {
+  margin-top: 0.75rem;
+}
+
+.legal-page__subsection h3 {
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+}
+
 /* --- 404 --- */
 .not-found-russel {
   display: inline-flex;
