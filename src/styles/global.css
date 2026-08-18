@@ -502,6 +502,32 @@ ol {
   gap: 2rem;
 }
 
+.case-study-layout {
+  margin-bottom: 2rem;
+}
+
+.case-study-layout--with-video {
+  display: grid;
+  grid-template-columns: minmax(0, 42rem) minmax(0, 1fr);
+  align-items: start;
+  gap: 2.5rem;
+}
+
+.case-study-video {
+  position: sticky;
+  top: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .case-study-layout--with-video {
+    grid-template-columns: 1fr;
+  }
+
+  .case-study-video {
+    position: static;
+  }
+}
+
 .case-study-body h2 {
   font-size: 1.4rem;
 }

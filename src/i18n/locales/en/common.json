@@ -26,10 +26,11 @@
   },
   "cookies": {
     "ariaLabel": "Cookie consent",
-    "message": "I use essential cookies to run this site. Nothing non-essential loads until you say yes.",
+    "message": "I use essential cookies to run this site, plus embedded YouTube videos on some case studies that only load if you accept. Nothing non-essential loads until you say yes.",
     "learnMore": "Learn more",
     "necessaryOnly": "Necessary only",
-    "acceptAll": "Accept all"
+    "acceptAll": "Accept all",
+    "videoBlocked": "This video is hosted by YouTube. Accept cookies to load it."
   },
   "notFound": {
     "russel": "Huh. That page flew off somewhere. Let's get you back on track.",

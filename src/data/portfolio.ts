@@ -31,9 +31,14 @@ export interface Project {
    * (Section 7's reference-project links), self-hosted so the site doesn't depend on that
    * blog staying up. Falls back to the colorway gradient in ProjectCard when absent. */
   coverImage?: string;
+  /** CSS object-position for coverImage, for crops where the interesting part isn't centered. */
+  coverPosition?: string;
   /** Extra screenshots shown on the dedicated case-study page only (Section 4.2) — not used
    * for reference tiles, which link out instead of getting an on-site page. */
   gallery?: string[];
+  /** YouTube video ID (not a full URL) shown alongside the case-study body, gated on cookie
+   * consent — see YouTubeEmbed and Datenschutz §5 "YouTube with extended data protection". */
+  youtubeId?: string;
 }
 
 /**
@@ -59,13 +64,14 @@ export const PROJECTS: Project[] = [
       decisionKey: "projects.ghostbusters.decision",
       outcomeKey: "projects.ghostbusters.outcome",
     },
-    coverImage: "/portfolio/ghostbusters-haunted-mansion/cover.webp",
+    coverImage: "/portfolio/ghostbusters-haunted-mansion/gallery-1.webp",
+    coverPosition: "top",
     gallery: [
-      "/portfolio/ghostbusters-haunted-mansion/gallery-1.webp",
       "/portfolio/ghostbusters-haunted-mansion/gallery-2.webp",
       "/portfolio/ghostbusters-haunted-mansion/gallery-3.webp",
       "/portfolio/ghostbusters-haunted-mansion/gallery-4.webp",
     ],
+    youtubeId: "3WVgShIMLYQ",
   },
   {
     slug: "cini-mini-pyramide",

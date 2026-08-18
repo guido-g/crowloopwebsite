@@ -26,10 +26,11 @@
   },
   "cookies": {
     "ariaLabel": "Cookie-Einwilligung",
-    "message": "Ich verwende nur notwendige Cookies, um diese Seite zu betreiben. Nicht-essenzielle Inhalte laden erst, wenn du zustimmst.",
+    "message": "Ich verwende nur notwendige Cookies, um diese Seite zu betreiben, sowie eingebettete YouTube-Videos bei einigen Case Studies, die erst laden, wenn du zustimmst. Nicht-essenzielle Inhalte laden erst, wenn du zustimmst.",
     "learnMore": "Mehr erfahren",
     "necessaryOnly": "Nur notwendige",
-    "acceptAll": "Alle akzeptieren"
+    "acceptAll": "Alle akzeptieren",
+    "videoBlocked": "Dieses Video wird von YouTube gehostet. Akzeptiere Cookies, um es zu laden."
   },
   "notFound": {
     "russel": "Hoppla. Diese Seite ist wohl weggeflogen. Ich bringe dich zurück.",

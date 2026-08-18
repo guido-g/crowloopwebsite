@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LocalizedLink } from "../common/LocalizedLink";
-import { getStoredCookieConsent, storeCookieConsent, type CookieConsentValue } from "./cookieConsentStorage";
+import {
+  getStoredCookieConsent,
+  onCookieConsentChange,
+  storeCookieConsent,
+  type CookieConsentValue,
+} from "./cookieConsentStorage";
 import "./CookieConsent.css";
 
 /** TTDSG §25 opt-in banner (Section 9) — nothing non-essential loads until the visitor accepts.
- * No analytics/tracking is wired up yet, so "necessary only" and "accept all" behave the same
- * today; the storage hook is real so a future analytics/scheduling embed can gate on it. */
+ * Case-study YouTube embeds (see YouTubeEmbed) gate on this consent value via
+ * onCookieConsentChange; "necessary only" keeps them blocked. The banner also listens for that
+ * event so accepting from an embed's own prompt dismisses the banner too, not just vice versa. */
 export function CookieConsent() {
   const { t } = useTranslation("common");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     setVisible(getStoredCookieConsent() === null);
+    return onCookieConsentChange(() => setVisible(false));
   }, []);
 
   const choose = (value: CookieConsentValue) => {

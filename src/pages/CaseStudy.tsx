@@ -2,6 +2,7 @@ import { Navigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { getProjectBySlug } from "../data/portfolio";
 import { LocalizedLink } from "../components/common/LocalizedLink";
+import { YouTubeEmbed } from "../components/media/YouTubeEmbed";
 import { useLangPath } from "../hooks/useLangPath";
 
 export function CaseStudy() {
@@ -36,26 +37,37 @@ export function CaseStudy() {
               src={project.coverImage}
               alt={t(project.nameKey)}
               loading="eager"
+              style={project.coverPosition ? { objectPosition: project.coverPosition } : undefined}
             />
           </div>
         )}
       </section>
 
       <section className="section">
-        <div className="container case-study-body">
-          <article>
-            <h2>{t("caseStudy.challenge")}</h2>
-            <p>{t(caseStudy.challengeKey)}</p>
-          </article>
-          <article>
-            <h2>{t("caseStudy.decision")}</h2>
-            <p>{t(caseStudy.decisionKey)}</p>
-          </article>
-          <article>
-            <h2>{t("caseStudy.outcome")}</h2>
-            <p>{t(caseStudy.outcomeKey)}</p>
-          </article>
+        <div className={`container case-study-layout${project.youtubeId ? " case-study-layout--with-video" : ""}`}>
+          <div className="case-study-body">
+            <article>
+              <h2>{t("caseStudy.challenge")}</h2>
+              <p>{t(caseStudy.challengeKey)}</p>
+            </article>
+            <article>
+              <h2>{t("caseStudy.decision")}</h2>
+              <p>{t(caseStudy.decisionKey)}</p>
+            </article>
+            <article>
+              <h2>{t("caseStudy.outcome")}</h2>
+              <p>{t(caseStudy.outcomeKey)}</p>
+            </article>
+          </div>
 
+          {project.youtubeId && (
+            <aside className="case-study-video">
+              <YouTubeEmbed videoId={project.youtubeId} title={t(project.nameKey)} />
+            </aside>
+          )}
+        </div>
+
+        <div className="container case-study-body">
           {project.gallery && project.gallery.length > 0 && (
             <div className="case-study-gallery">
               {project.gallery.map((src) => (
