@@ -57,7 +57,12 @@ in the PR diff and the build itself stays fast. The hero image additionally ship
 Carried over from the design doc's Section 7 checklist — the site is fully built and functional with placeholders for these:
 
 - **Contact form** submits client-side only (mocked, see the `TODO(backend)` in `src/pages/Contact.tsx`) until a business email + AWS Amplify/SES backend exist.
-- **Legal pages** (Impressum, Datenschutzerklärung, Haftungsausschluss, AGB) use clearly marked placeholder text — must not go live publicly until real, lawyer-reviewed copy replaces it.
+- **Legal pages**: Impressum now has real content (`src/i18n/locales/{en,de}/legal.json`), but three fields in it are placeholders and **must be updated by 01.09.2026**:
+  - **Umsatzsteuer-ID** is `000000000` — replace once a real VAT ID exists.
+  - **Business email** is the founder's personal Gmail (`guido.goe@gmail.com`) — replace once a company email is set up (same address is also used as the Contact page fallback and in `src/pages/Contact.tsx`).
+  - **Site URL** — verify `SITE_URL` in `src/seo/routes.ts` (currently `https://crowloopstudio.com`) is the actual production domain; it feeds canonical links, the sitemap, and OG image URLs.
+
+  Datenschutzerklärung, Haftungsausschluss, and AGB still use clearly marked placeholder text — must not go live publicly until real, lawyer-reviewed copy replaces it.
 - **German copy** is a first-pass draft, not a professionally reviewed translation.
 - **`game e.V.` footer badge** is inert/unlinked — activate only once membership is confirmed.
 - **Professional references on About** (Thomas Rössig, Robert Heil) are shown per plan, pending their sign-off before public launch.

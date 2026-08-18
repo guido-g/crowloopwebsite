@@ -5,19 +5,23 @@
     "sections": [
       {
         "heading": "Angaben gemäß § 5 TMG / § 5 DDG",
-        "body": "Crow Loop Studio — Guido Göbbels [placeholder — full business address to be added before launch]. Registration/trade details, if applicable to a solo proprietorship, to be added once confirmed."
+        "body": "Guido Göbbels, Game Studio, Brüsseler Str. 84, 53117 Bonn, Germany."
       },
       {
         "heading": "Kontakt",
-        "body": "Phone: [placeholder]. Email: [placeholder — business email to be set up before launch]. Until the business email is live, please use the Contact page form."
+        "body": "Phone: 015771577108. Email: guido.goe@gmail.com."
       },
       {
         "heading": "Umsatzsteuer-ID",
-        "body": "[Placeholder — VAT ID to be added if/when applicable]."
+        "body": "VAT identification number pursuant to Section 27a of the German VAT Act (Umsatzsteuergesetz): 000000000"
       },
       {
         "heading": "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV",
-        "body": "Guido Göbbels, [placeholder address as above]."
+        "body": "Guido Göbbels, Brüsseler Str. 84, 53117 Bonn, Germany."
+      },
+      {
+        "heading": "Consumer dispute resolution / Universal Conciliation Body",
+        "body": "We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board."
       }
     ]
   },
