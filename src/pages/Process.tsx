@@ -11,8 +11,14 @@ export function Process() {
     <>
       <section className="section section--slate">
         <div className="container">
-          <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} lede={t("lede")} />
-          <p className="process-timeline">{t("timeline")}</p>
+          <SectionHeading
+            as="h1"
+            align="crow"
+            eyebrow={t("eyebrow")}
+            title={t("title")}
+            lede={t("lede")}
+            russel={<RusselGuide pose="pointing" message={t("timeline")} position="below" />}
+          />
         </div>
       </section>
 

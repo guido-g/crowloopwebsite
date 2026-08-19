@@ -857,12 +857,6 @@ ol {
 }
 
 /* --- Process --- */
-.process-timeline {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--accent-brown);
-}
-
 .process-list {
   list-style: none;
   margin: 0;
