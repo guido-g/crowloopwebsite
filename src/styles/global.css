@@ -555,12 +555,28 @@ ol {
   gap: 1rem;
 }
 
-.case-study-gallery img {
+.case-study-gallery__item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 6px 18px rgba(23, 25, 36, 0.12);
+  transition: transform var(--dur-fast) var(--ease-standard);
+}
+
+.case-study-gallery__item:hover {
+  transform: scale(1.02);
+}
+
+.case-study-gallery__item img {
+  display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: var(--radius-sm);
-  box-shadow: 0 6px 18px rgba(23, 25, 36, 0.12);
 }
 
 @media (max-width: 480px) {

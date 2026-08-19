@@ -23,7 +23,8 @@
     "decision": "The design decision",
     "outcome": "The outcome",
     "framingNote": "A note on the numbers: these are kids'-audience placements, so there's no funnel or retargeting data. \"Most-played\" is the platform's own ranking, not a marketing metric — I'd rather say that plainly than dress it up.",
-    "backToPortfolio": "Back to portfolio"
+    "backToPortfolio": "Back to portfolio",
+    "expandImage": "View full-size image"
   },
   "projects": {
     "ghostbusters": {

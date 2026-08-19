@@ -145,6 +145,18 @@ async function main() {
         publish("portfolio", slug, `${baseName(file)}.webp`),
         { width: 800, quality: 75 },
       );
+
+      // Gallery images also get a "-full" derivative at native resolution (no originals here
+      // exceed ~1024px wide, so 2400 + withoutEnlargement just means "as big as the source
+      // allows") for the case-study lightbox, at higher quality since there's no downscaling
+      // left to hide compression artifacts.
+      if (file.toLowerCase().startsWith("gallery")) {
+        await emit(
+          asset("portfolio", slug, file),
+          publish("portfolio", slug, `${baseName(file)}-full.webp`),
+          { width: 2400, quality: 85 },
+        );
+      }
     }
   }
 
