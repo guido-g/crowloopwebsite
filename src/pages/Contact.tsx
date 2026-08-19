@@ -115,10 +115,9 @@ export function Contact() {
                   </option>
                   {SERVICES.map((service) => (
                     <option key={service.id} value={service.id}>
-                      {t(service.titleKey, { ns: "services" })}
+                      {service.id === "other" ? t("fields.projectTypeOther") : t(service.titleKey, { ns: "services" })}
                     </option>
                   ))}
-                  <option value="other">{t("fields.projectTypeOther")}</option>
                 </select>
               </label>
 

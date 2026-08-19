@@ -1,6 +1,6 @@
 {
   "eyebrow": "Leistungen",
-  "title": "Fünf Wege, mit mir zu arbeiten",
+  "title": "6 Wege, mit mir zu arbeiten",
   "lede": "Passend zu eurer tatsächlichen Kapazität und eurem Budget — von der Komplettproduktion bis zur gezielten Lücke im eigenen Team.",
   "labels": {
     "whoFor": "Für wen geeignet",
@@ -41,6 +41,12 @@
       "summary": "Projektbasierte Kapazität als Game Designer:in, Art Director:in, UI/UX-Designer:in oder Producer:in, um Lücken, Spitzen oder Ausfälle im Team abzudecken.",
       "for": "Studios und Agenturen, die für einen definierten Zeitraum zusätzliche Senior-Kapazität brauchen, ohne fest einzustellen.",
       "done": "Eine konkrete Rolle abgedeckt, nach eurem Zeitplan, so lange das Projekt es braucht."
+    },
+    "openRequest": {
+      "title": "Offene Anfrage",
+      "summary": "Nicht sicher, welche Kategorie passt, oder etwas, das oben nicht aufgeführt ist? Erzähl mir davon — ich sage dir ehrlich, ob ich das umsetzen kann.",
+      "for": "Alle mit einem Projekt, das nicht klar in die Kategorien oben passt.",
+      "done": "Eine klare Antwort: entweder ein Vorschlag, wie ich es angehen würde, oder ein ehrliches „Nein“ mit einem Hinweis in die richtige Richtung."
     }
   }
 }

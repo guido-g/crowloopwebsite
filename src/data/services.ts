@@ -50,4 +50,15 @@ export const SERVICES: Service[] = [
     doneKey: "services.embeddedTeam.done",
     icon: "support",
   },
+  {
+    /** id "other" matches the Contact form's existing "not sure / other" projectType option
+     * (see fields.projectTypeOther in contact.json) — Contact.tsx shows that label instead of
+     * this card's own title when rendering the dropdown, so the two stay in sync by id. */
+    id: "other",
+    titleKey: "services.openRequest.title",
+    summaryKey: "services.openRequest.summary",
+    forKey: "services.openRequest.for",
+    doneKey: "services.openRequest.done",
+    icon: "open",
+  },
 ];

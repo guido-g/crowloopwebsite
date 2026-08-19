@@ -1,6 +1,6 @@
 {
   "eyebrow": "Services",
-  "title": "Five ways to work with me",
+  "title": "6 ways to work with me",
   "lede": "Matched to your actual capacity and budget — from a full build to filling a specific gap on your own team.",
   "labels": {
     "whoFor": "Who it's for",
@@ -41,6 +41,12 @@
       "summary": "Project-based game designer, art director, UI/UX designer, or producer capacity to cover gaps, spikes, or sickness within your team.",
       "for": "Studios and agencies that need extra senior capacity for a defined stretch, without a permanent hire.",
       "done": "A specific role covered, on your timeline, for as long as the project needs it."
+    },
+    "openRequest": {
+      "title": "Open request",
+      "summary": "Not sure which category fits, or need something that isn't listed above? Tell me about it and I'll let you know honestly if it's something I can deliver.",
+      "for": "Anyone with a project that doesn't fit neatly into the categories above.",
+      "done": "A clear answer: either a proposal for how I'd approach it, or an honest \"no\" pointing you in the right direction."
     }
   }
 }
