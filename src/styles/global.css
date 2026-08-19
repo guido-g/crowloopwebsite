@@ -113,7 +113,7 @@ ol {
 }
 
 .section {
-  padding: clamp(3rem, 6vw, 6rem) 0;
+  padding: 1.875rem 0; /* 30px */
 }
 
 .section--slate {
@@ -304,7 +304,7 @@ ol {
   position: relative;
   overflow: hidden;
   text-align: center;
-  padding-top: clamp(3rem, 8vw, 6rem);
+  padding-top: 1.875rem; /* 30px */
 }
 
 .hero__backdrop {
