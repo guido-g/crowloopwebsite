@@ -39,17 +39,17 @@ export function Process() {
 
       <section className="section">
         <div className="container process-topic">
-          <div>
+          <RusselGuide pose="computer" message={t("qa.russel")} />
+          <div className="process-topic__text">
             <h2>{t("qa.title")}</h2>
             <p>{t("qa.body")}</p>
           </div>
-          <RusselGuide pose="computer" message={t("qa.russel")} />
         </div>
       </section>
 
       <section className="section section--slate">
         <div className="container process-topic">
-          <div>
+          <div className="process-topic__text">
             <h2>{t("ai.title")}</h2>
             <p>{t("ai.body")}</p>
           </div>

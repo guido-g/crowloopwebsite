@@ -897,7 +897,7 @@ ol {
     justify-content: space-between;
   }
 
-  .process-topic > div:first-child {
+  .process-topic__text {
     max-width: 34rem;
   }
 }
