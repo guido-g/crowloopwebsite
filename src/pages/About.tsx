@@ -19,25 +19,28 @@ export function About() {
     <>
       <section className="section section--slate">
         <div className="container">
-          <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} lede={t("intro")} />
+          <SectionHeading as="h1" eyebrow={t("eyebrow")} title={t("title")} lede={t("lede")} />
         </div>
       </section>
 
       <section className="section">
         <div className="container about-grid">
           <div>
+            <h2>{t("intro.title")}</h2>
+            <p>{t("intro.body")}</p>
+
             <h2>{t("story.title")}</h2>
             <p>{t("story.p1")}</p>
             <p>{t("story.p2")}</p>
+            <p>{t("story.p3")}</p>
 
-            <h2>{t("flyingSheep.title")}</h2>
-            <p>{t("flyingSheep.body")}</p>
-            <p>{t("superRtl.body")}</p>
+            <h2>{t("whyCrowLoop.title")}</h2>
+            <p>{t("whyCrowLoop.p1")}</p>
+            <p>{t("whyCrowLoop.p2")}</p>
 
-            <h2>{t("pov.title")}</h2>
-            <p>{t("pov.body")}</p>
-
-            <p className="about-in-production">{t("inProductionEcho")}</p>
+            <h2>{t("expectations.title")}</h2>
+            <p>{t("expectations.p1")}</p>
+            <p>{t("expectations.p2")}</p>
           </div>
 
           <div className="about-sidebar">

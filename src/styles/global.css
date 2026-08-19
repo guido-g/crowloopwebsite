@@ -785,11 +785,6 @@ ol {
   gap: 2rem;
 }
 
-.about-in-production {
-  font-weight: 700;
-  color: var(--accent-brown);
-}
-
 .reference-quote {
   margin: 0;
   background: rgba(246, 245, 240, 0.06);

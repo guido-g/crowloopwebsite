@@ -1,24 +1,27 @@
 {
   "eyebrow": "About",
-  "title": "Crow Loop Studio was founded on one idea: solve the problem, not just skin the game.",
-  "intro": "Crows are one of the few non-primate species known to use — and craft — tools to solve problems. That's the studio's namesake, and it's a more honest parallel than \"crows like shiny things.\"",
+  "title": "Building clever game solutions",
+  "lede": "not just skinning a game with a brand",
+  "intro": {
+    "title": "Crow Loop Studio",
+    "body": "Behind the studio is Guido Göbbels, a game designer, creative producer, and design director with over a decade of experience developing digital games for brands and young audiences. From first ideas and game mechanics through production and delivery, he pairs creative game design with a solid feel for realistic budgets, timelines, and brand requirements."
+  },
   "story": {
-    "title": "The short version",
-    "p1": "Crow Loop Studio was founded by Guido Göbbels, a game designer and director with over a decade of experience turning licensed kids' and young-adult IP into HTML5 games that brands, broadcasters, and toy companies can actually ship. The studio is boutique by design: small enough to move fast and stay personally involved in every project, backed by a network of trusted freelancers and studio partners for anything bigger than one person can carry alone.",
-    "p2": "The name works on three levels that all genuinely apply to the work: the game loop, the core repeating unit every game is built from; the feedback loop, the collaborative process at the center of how a project actually runs; and the magic circle — Johan Huizinga's idea that play creates its own bounded space with its own rules. A small nod for anyone in the industry who catches it."
+    "title": "Experience that plays along",
+    "p1": "Guido studied at the Köln International School of Design and has worked professionally in the games industry since 2014. He co-founded Room 247 Studio, where he developed grant-funded prototypes and took on responsibility for concept, production, and teams early on.",
+    "p2": "At Flying Sheep Studios, he guided and led the development of more than 100 client projects over many years for international brands including LEGO, Mattel, and DreamWorks. From 2022 on, as Design Director, he owned the interface between design, art, and project management — including international productions with teams in Germany and Malaysia.",
+    "p3": "Further roles as Product Lead at PLAYT.net and as Creative Producer and Art Director at Wegesrand broadened that experience further: from game economy and live features, through QA and production processes, to storytelling, client communication, and leading interdisciplinary teams."
   },
-  "flyingSheep": {
-    "title": "Before Crow Loop: Flying Sheep Studios",
-    "body": "For nearly nine years (2014–2024), Guido was at Flying Sheep Studios in Cologne — joining as the studio's first hire and leaving as Design Director. In that time the studio delivered 220+ HTML5 games for brands including LEGO, Barbie, and DreamWorks, and was acquired by iCandy Interactive in 2022. Across a career spanning 150+ projects and 120+ games for 15+ brands, Guido has led international teams of up to 18 people — team-based, large-studio delivery experience that's distinct from the freelance reference work shown in the Portfolio."
+  "whyCrowLoop": {
+    "title": "Why Crow Loop?",
+    "p1": "Crows are intelligent, curious, and use tools to solve problems. That's exactly what Crow Loop Studio is about: finding the right playful solution for a brand, a format, and an audience.",
+    "p2": "\"Loop\" is a deliberate part of the name too. It stands for the core game loop — the repeating heartbeat of every game — for the feedback loop at the center of how a project runs, and for the magic circle: the special space where play works by its own rules. Or in short: good ideas, built cleanly, and fun to play."
   },
-  "superRtl": {
-    "body": "One relationship carries through both chapters: a multi-year working relationship with Super RTL / Toggo, spanning the Flying Sheep years and continuing into Crow Loop Studio's launch pipeline. It's a concrete, ongoing anchor for the kind of broadcaster-side trust this work depends on."
+  "expectations": {
+    "title": "What clients can expect",
+    "p1": "Crow Loop Studio develops tailor-made browser games for kids, teens, and family audiences. HTML5 makes games accessible directly in the browser with no download — on desktop, tablet, or smartphone. That lowers the barrier to entry and makes the format especially well suited to campaigns, broadcaster, and brand platforms.",
+    "p2": "The studio officially launches on 01.09.2026. But the standard is already set: clear communication, strong game ideas, and productions matched to project scope — so a brand ends up with a game people genuinely want to play."
   },
-  "pov": {
-    "title": "Why HTML5 games for brands",
-    "body": "HTML5 games run instantly, in a browser, on whatever device a kid happens to be holding — no app-store approval, no install friction, no platform lock-in. For a brand campaign with a launch date and a finite ad flight, that's the difference between a game people actually play and one that gets abandoned at the install prompt. It's also fast and affordable to produce well, which matters when the game is one piece of a bigger campaign, not the whole budget."
-  },
-  "inProductionEcho": "New Crow Loop Studio projects are underway ahead of the studio's official launch on 01.09.2026 — the Portfolio page has the details.",
   "russelOrigin": "Aviator goggles for spotting good ideas from up high, a scarf because a crow needs style — that's basically the whole origin story.",
   "stats": {
     "years": "10+",
