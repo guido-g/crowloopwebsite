@@ -1,8 +1,19 @@
 .site-footer {
+  position: relative;
   background: var(--bg-navy-deep);
   color: var(--text-khaki);
   padding: 3rem 0 2rem;
   font-size: 0.9rem;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--bg-navy-deep) 0%, var(--text-khaki) 50%, var(--bg-navy-deep) 100%);
 }
 
 .site-footer__inner {
