@@ -17,12 +17,15 @@
  */
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DIST = path.join(ROOT, "dist");
 
+// pathToFileURL is required on Windows: dynamic import() rejects a raw absolute path like
+// "C:\...\entry-server.js" (parsed as an unsupported "c:" URL scheme) unless it's a file:// URL.
 const { render, allRoutePairs } = await import(
-  path.join(ROOT, "dist-ssr", "entry-server.js")
+  pathToFileURL(path.join(ROOT, "dist-ssr", "entry-server.js")).href
 );
 
 /**
@@ -47,11 +50,17 @@ function splitHoistables(html) {
 }
 
 /** The template ships a default title and description for the SPA fallback. Per-route tags
- * replace them rather than joining them, or every page would carry two of each. */
+ * replace them rather than joining them, or every page would carry two of each.
+ *
+ * Trailing whitespace is consumed with \s* rather than a literal \n: a checkout with
+ * core.autocrlf on (default on Windows) gives index.html CRLF endings, and vite's own build-time
+ * HTML transform injects the bundled <script>/<link> tags right after these lines, leaving an
+ * inconsistent mix of stray \r and \n around them. Requiring one exact \n silently no-ops the
+ * replacement in that case — shipping a duplicate <title>/<meta description> on every page. */
 function stripDefaultMetadata(template) {
   return template
-    .replace(/^\s*<title>[\s\S]*?<\/title>\n/m, "")
-    .replace(/^\s*<meta\s+\n?\s*name="description"[\s\S]*?\/>\n/m, "");
+    .replace(/^\s*<title>[\s\S]*?<\/title>\s*/m, "")
+    .replace(/^\s*<meta\s+\n?\s*name="description"[\s\S]*?\/>\s*/m, "");
 }
 
 const template = stripDefaultMetadata(await readFile(path.join(DIST, "index.html"), "utf8"));

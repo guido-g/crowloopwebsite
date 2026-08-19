@@ -8,11 +8,14 @@
  */
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 
+// pathToFileURL is required on Windows: dynamic import() rejects a raw absolute path like
+// "C:\...\entry-server.js" (parsed as an unsupported "c:" URL scheme) unless it's a file:// URL.
 const { allRoutePairs, urlFor, SUPPORTED_LANGS, DEFAULT_LANG } = await import(
-  path.join(ROOT, "dist-ssr", "entry-server.js")
+  pathToFileURL(path.join(ROOT, "dist-ssr", "entry-server.js")).href
 );
 
 const escapeXml = (value) =>
