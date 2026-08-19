@@ -261,6 +261,27 @@ ol {
   text-align: center;
 }
 
+.section-heading--crow {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: none;
+}
+
+.section-heading--crow .section-heading__text {
+  flex: 1 1 28rem;
+  min-width: 0;
+  max-width: 46rem;
+}
+
+@media (max-width: 860px) {
+  .section-heading--crow {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
 .section-heading .eyebrow {
   margin-bottom: 0.6rem;
 }
@@ -416,10 +437,6 @@ ol {
 }
 
 /* --- Portfolio --- */
-.portfolio-note {
-  margin-top: 1.5rem;
-}
-
 .portfolio-filters {
   display: flex;
   flex-wrap: wrap;

@@ -76,6 +76,27 @@
   }
 }
 
+.russel-guide--below {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  max-width: 17.5rem; /* 280px, matches bubble width */
+}
+
+.russel-guide--below .russel-guide__bubble {
+  width: 17.5rem; /* 280px */
+  margin: 0;
+}
+
+.russel-guide--below .russel-guide__bubble::before {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: var(--bg-cream);
+  border-bottom-width: 0;
+}
+
 /* --- RusselHero: home-hero drop/bounce sequence (Section 4.1) --- */
 .russel-hero {
   display: flex;
