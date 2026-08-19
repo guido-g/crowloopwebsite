@@ -45,7 +45,7 @@ export function ServiceCard({ service, index, compact = false }: ServiceCardProp
         </dl>
       )}
 
-      <LocalizedLink to="/contact" className="service-card__cta">
+      <LocalizedLink to={`/contact?projectType=${service.id}`} className="service-card__cta">
         {t("nav.startProject", { ns: "common" })} →
       </LocalizedLink>
     </article>

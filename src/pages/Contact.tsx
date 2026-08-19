@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { SectionHeading } from "../components/common/SectionHeading";
 import { RUSSEL_POSES } from "../components/russel/poses";
@@ -28,6 +29,15 @@ const TIMELINE_KEYS = ["asap", "oneToThree", "threePlus", "flexible"];
 export function Contact() {
   const { t } = useTranslation(["contact", "services", "common"]);
   const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [searchParams] = useSearchParams();
+
+  // Service cards link here with ?projectType=<id> pre-filled; only trust it if it matches a
+  // real option, so an unrecognized value falls back to the normal empty placeholder.
+  const requestedProjectType = searchParams.get("projectType");
+  const initialProjectType =
+    requestedProjectType && SERVICES.some((service) => service.id === requestedProjectType)
+      ? requestedProjectType
+      : "";
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -99,7 +109,7 @@ export function Contact() {
             <div className="contact-form__row">
               <label>
                 <span>{t("fields.projectType")}</span>
-                <select name="projectType" required defaultValue="">
+                <select name="projectType" required defaultValue={initialProjectType}>
                   <option value="" disabled>
                     {t("fields.selectPlaceholder")}
                   </option>
