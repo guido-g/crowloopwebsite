@@ -5,6 +5,18 @@ import { LocalizedLink } from "../components/common/LocalizedLink";
 import { YouTubeEmbed } from "../components/media/YouTubeEmbed";
 import { useLangPath } from "../hooks/useLangPath";
 
+/** Case-study body text is a single i18n string that may hold multiple paragraphs separated by
+ * a blank line — rendered as one <p> each rather than one <p> holding everything. */
+function Paragraphs({ text }: { text: string }) {
+  return (
+    <>
+      {text.split("\n\n").map((paragraph, index) => (
+        <p key={index}>{paragraph}</p>
+      ))}
+    </>
+  );
+}
+
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>();
   const { t } = useTranslation(["portfolio", "common"]);
@@ -48,15 +60,15 @@ export function CaseStudy() {
           <div className="case-study-body">
             <article>
               <h2>{t("caseStudy.challenge")}</h2>
-              <p>{t(caseStudy.challengeKey)}</p>
+              <Paragraphs text={t(caseStudy.challengeKey)} />
             </article>
             <article>
               <h2>{t("caseStudy.decision")}</h2>
-              <p>{t(caseStudy.decisionKey)}</p>
+              <Paragraphs text={t(caseStudy.decisionKey)} />
             </article>
             <article>
               <h2>{t("caseStudy.outcome")}</h2>
-              <p>{t(caseStudy.outcomeKey)}</p>
+              <Paragraphs text={t(caseStudy.outcomeKey)} />
             </article>
           </div>
 

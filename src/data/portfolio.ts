@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "idefix-vorsicht-roemer",
     nameKey: "projects.idefix.name",
-    brand: "Idefix et les Romains (Toggo)",
+    brand: "Toggo",
     type: "reference",
     date: "2025-02-18",
     tags: { genre: "Stealth / Evade", platform: "HTML5" },
@@ -113,6 +113,7 @@ export const PROJECTS: Project[] = [
       outcomeKey: "projects.idefix.outcome",
     },
     coverImage: "/portfolio/idefix-vorsicht-roemer/cover.webp",
+    youtubeId: "GWRl4CNRqP4",
     gallery: [
       "/portfolio/idefix-vorsicht-roemer/gallery-1.webp",
       "/portfolio/idefix-vorsicht-roemer/gallery-2.webp",

@@ -42,9 +42,9 @@
     },
     "idefix": {
       "name": "Idefix – Vorsicht Römer",
-      "description": "Jede Figur aus dem Toggo-Spin-off bekommt einen funktionalen Grund, im Spiel zu existieren.",
-      "challenge": "Gebaut für den Start eines Toggo-Spin-offs, für ein jüngeres Publikum als bei den anderen beiden Case Studies. Das Spiel sollte jede Figur der Serie zeigen und dabei gewaltfrei bleiben — Idefix und Freunde entkommen römischen Patrouillen mit Cleverness statt Kampf.",
-      "decision": "Die individuelle Fähigkeit jeder Figur wird zu einem Weg, die Patrouillen auszutricksen — so bekommt jede Figur einen funktionalen Grund, im Spiel zu sein, statt nur ein kosmetischer Cameo zu bleiben.",
+      "description": "Jede Figur aus dem Asterix-Spin-off bekommt eine bedeutsame Aufgabe im Spiel.",
+      "challenge": "Entwickelt für Toggo und basierend auf dem Asterix-Spin-off Idefix und die Unbeugsamen, wurde dieses Spiel für ein jüngeres Publikum konzipiert. Alle vier Hauptfiguren brauchten eine eigene Spielmechanik, die zu ihrer Persönlichkeit und Rolle in der Serie passt — und dabei im Spiel tatsächlich nützlich ist, nicht nur als Cameo auftaucht.\n\nDazu kam eine praktische Herausforderung: Das Spiel musste in kurzer Zeit und mit kleinem Budget entwickelt werden. Ein großes 3D-Adventure mit vielfältigen Welten und Hindernissen lag schlicht außerhalb des Rahmens, während ein klassisches Puzzlespiel weder zur Zielgruppe noch zum energiegeladenen Charakter der Serie gepasst hätte.",
+      "decision": "Ich habe die Römer zu den Antagonisten gemacht und das Spiel darauf aufgebaut, ihren Patrouillen auszuweichen. Idefix und seine Truppe bewegen sich durch zunehmend anspruchsvollere Level, verbunden durch kleine Story-Momente.\n\nJede Figur bringt eine eigene Fähigkeit ins Team ein und hilft Spieler:innen auf ihre eigene Art, Wachen zu umgehen oder Levelabschnitte zu meistern. So bekam jede Figur eine bedeutsame Rolle im Gameplay — und ich konnte Action, Charakterfähigkeiten und einen realistischen Produktionsrahmen in einem fokussierten Spiel vereinen.",
       "outcome": "Top 10 der meistgespielten Spiele der Woche bei Toggo, mit der längsten Verweildauer der drei hier vorgestellten Case Studies."
     },
     "knightsOfFortune": {
