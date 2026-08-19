@@ -106,7 +106,7 @@ export function Home() {
 
       <section className="section section--navy-deep closing-cta">
         <div className="container closing-cta__inner">
-          <RusselGuide pose="pointing" message={t("closingCta.russel")} size="lg" />
+          <RusselGuide pose="pointing" message={t("closingCta.russel")} size="lg" side="right" />
           <LocalizedLink to="/contact" className="btn btn--primary">
             {t("nav.startProject", { ns: "common" })}
           </LocalizedLink>
