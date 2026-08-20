@@ -270,24 +270,82 @@
     "title": "Allgemeine Geschäftsbedingungen (AGB)",
     "sections": [
       {
-        "heading": "Geltungsbereich",
-        "body": "[Platzhalter] Diese Bedingungen gelten für Auftragsverhältnisse, die über den auf dieser Website beschriebenen Ablauf zustande kommen — vom Design-Briefing und Angebot bis zur finalen Auslieferung und Rechnungsstellung."
+        "heading": "Anbieter",
+        "body": [
+          "Crow Loop Studio (Einzelunternehmen), Guido Göbbels, Brüsseler Str. 84, 53117 Bonn.",
+          "E-Mail: guido.goe@gmail.com. Telefon: +49 1577 1577 108.",
+          "Stand: 20.08.2026"
+        ]
       },
       {
-        "heading": "Angebot und Vertragsschluss",
-        "body": "[Platzhalter] Ein Projekt beginnt, sobald ein schriftliches Angebot (MVP plus optionale Extras) angenommen und die vereinbarte Anzahlung von 50 % eingegangen ist."
+        "heading": "§ 1 Geltungsbereich",
+        "body": [
+          "(1) Diese Allgemeinen Geschäftsbedingungen gelten für alle Verträge zwischen Crow Loop Studio (nachfolgend „Anbieter“) und dem Kunden (nachfolgend „Kunde“), die über den Online-Shop des Anbieters geschlossen werden.",
+          "(2) Abweichende Bedingungen des Kunden werden nicht anerkannt, es sei denn, der Anbieter stimmt ihrer Geltung ausdrücklich schriftlich zu.",
+          "(3) Diese AGB gelten ausschließlich gegenüber Unternehmern (§ 14 BGB)."
+        ]
       },
       {
-        "heading": "Zahlungsbedingungen",
-        "body": "[Platzhalter] 50 % Anzahlung bei Annahme des Angebots, die restlichen 50 % fällig bei Auslieferung, gemäß der Ablauf-Seite."
+        "heading": "§ 2 Vertragsschluss",
+        "body": [
+          "(1) Die Darstellung der Produkte im Online-Shop stellt kein rechtlich bindendes Angebot dar, sondern eine unverbindliche Aufforderung zur Bestellung (invitatio ad offerendum).",
+          "(2) Der Kunde gibt durch die Bestellung ein verbindliches Angebot ab. Der Vertrag kommt erst durch die Auftragsbestätigung oder die Lieferung der Ware zustande.",
+          "(3) Der Vertragstext wird vom Anbieter gespeichert und dem Kunden nach Vertragsschluss per E-Mail zugesandt."
+        ]
       },
       {
-        "heading": "Gewährleistung nach Auslieferung",
-        "body": "[Platzhalter] Spielabbrechende Bugs, die innerhalb von 3 Monaten nach Launch auftreten, sind im ursprünglichen Vertrag ohne Mehrkosten abgedeckt — ausgenommen Probleme durch Plattform-Updates oder äußere Umstände außerhalb der Kontrolle des Studios."
+        "heading": "§ 3 Preise und Zahlung",
+        "body": [
+          "(1) Alle angegebenen Preise sind Nettopreise zuzüglich der gesetzlichen Mehrwertsteuer.",
+          "(2) Zusätzliche Liefer- und Versandkosten werden gesondert ausgewiesen.",
+          "(3) Folgende Zahlungsarten werden akzeptiert: Überweisung.",
+          "(4) Bei Zahlungsverzug ist der Anbieter berechtigt, Verzugszinsen in Höhe von 9 Prozentpunkten über dem Basiszinssatz zu verlangen (§ 288 BGB)."
+        ]
       },
       {
-        "heading": "Schlussbestimmungen",
-        "body": "[Platzhalter — finale Regelungen zu anwendbarem Recht und Salvatorischer Klausel werden mit der anwaltlich geprüften Fassung vor dem öffentlichen Launch ergänzt.]"
+        "heading": "§ 4 Lieferung und Versand",
+        "body": [
+          "(1) Die Lieferung erfolgt nach Vereinbarung nach Zahlungseingang.",
+          "(2) Das Liefergebiet umfasst: Weltweit.",
+          "(3) Die Gefahr des zufälligen Untergangs geht mit der Übergabe an den Spediteur über.",
+          "(4) Teillieferungen sind zulässig, soweit dies für den Kunden zumutbar ist."
+        ]
+      },
+      {
+        "heading": "§ 5 Kein Widerrufsrecht",
+        "body": "Bei Verträgen zwischen Unternehmern (B2B) besteht kein gesetzliches Widerrufsrecht."
+      },
+      {
+        "heading": "§ 6 Gewährleistung",
+        "body": [
+          "(1) Es gelten die gesetzlichen Gewährleistungsrechte.",
+          "(2) Die Gewährleistungsfrist beträgt 12 Monate ab Lieferung (nach Vereinbarung gemäß § 438 BGB).",
+          "(3) Offensichtliche Mängel sind innerhalb von 7 Werktagen nach Lieferung schriftlich zu rügen (§ 377 HGB)."
+        ]
+      },
+      {
+        "heading": "§ 7 Haftung",
+        "body": [
+          "(1) Der Anbieter haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit.",
+          "(2) Bei leichter Fahrlässigkeit haftet der Anbieter nur bei Verletzung wesentlicher Vertragspflichten (Kardinalpflichten), begrenzt auf den vorhersehbaren, vertragstypischen Schaden.",
+          "(3) Die vorstehenden Haftungsbeschränkungen gelten nicht für Schäden aus der Verletzung von Leben, Körper und Gesundheit sowie bei Ansprüchen nach dem Produkthaftungsgesetz."
+        ]
+      },
+      {
+        "heading": "§ 8 Datenschutz",
+        "body": "Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer [Datenschutzerklärung](/datenschutz) und in Übereinstimmung mit der DSGVO und dem BDSG."
+      },
+      {
+        "heading": "§ 9 Schlussbestimmungen",
+        "body": [
+          "(1) Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts (CISG).",
+          "(2) Gerichtsstand für alle Streitigkeiten ist Bonn, sofern der Kunde Kaufmann ist.",
+          "(3) Sollten einzelne Bestimmungen dieser AGB unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
+        ]
+      },
+      {
+        "heading": "§ 10 Online-Streitbeilegung",
+        "body": "Wir sind bereit, an einem außergerichtlichen Schlichtungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. Die zuständige Schlichtungsstelle ist die Allgemeine Verbraucherschlichtungsstelle des Zentrums für Schlichtung e.V."
       }
     ]
   }

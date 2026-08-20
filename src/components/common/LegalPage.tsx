@@ -1,4 +1,6 @@
+import type { ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { LocalizedLink } from "./LocalizedLink";
 
 interface LegalSubsection {
   heading: string;
@@ -7,7 +9,7 @@ interface LegalSubsection {
 
 interface LegalSection {
   heading: string;
-  body?: string;
+  body?: string | string[];
   subsections?: LegalSubsection[];
 }
 
@@ -17,14 +19,47 @@ interface LegalPageProps {
 
 const REAL_CONTENT_PAGES: LegalPageProps["pageKey"][] = ["impressum", "datenschutz"];
 
+/** Matches Markdown-style [text](/path) so a paragraph can link out (e.g. an AGB clause pointing
+ * to the Datenschutzerklärung) without needing react-i18next's Trans component for one link. */
+const INLINE_LINK = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderParagraph(text: string, key: number): ReactNode {
+  if (!text.includes("](")) return <p key={key}>{text}</p>;
+
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let linkIndex = 0;
+  for (const match of text.matchAll(INLINE_LINK)) {
+    if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index));
+    nodes.push(
+      <LocalizedLink key={linkIndex++} to={match[2]}>
+        {match[1]}
+      </LocalizedLink>,
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+
+  return <p key={key}>{nodes}</p>;
+}
+
+function renderBody(body: string | string[] | undefined): ReactNode {
+  if (!body) return null;
+  const paragraphs = Array.isArray(body) ? body : [body];
+  return paragraphs.map((paragraph, index) => renderParagraph(paragraph, index));
+}
+
 /**
  * Shared shell for the four footer-only legal pages (Section 9) — plain, compliant copy, no
- * Russel voice. Haftungsausschluss/AGB are still placeholder/blindtext until real legal text is
- * organized separately; Impressum and Datenschutzerklärung have real content (a few fields —
- * VAT ID/email/site URL/third-party services — still pending final setup, tracked in README),
- * so they skip the placeholder banner. A section is either flat (`body`) or grouped into named
- * `subsections` (used by Datenschutzerklärung's numbered structure); each subsection's `body` is
- * one or more paragraphs.
+ * Russel voice. Haftungsausschluss is still placeholder/blindtext until real legal text is
+ * organized separately; AGB has a real draft but still reads like a generic goods/online-shop
+ * template mismatched to the actual bespoke service business (Online-Shop, Warenkorb, Spediteur
+ * language) — kept out of REAL_CONTENT_PAGES until it's adapted and confirmed. Impressum and
+ * Datenschutzerklärung have real content (a few fields — VAT ID/email/site URL/third-party
+ * services — still pending final setup, tracked in README), so they skip the placeholder banner.
+ * A section is either flat (`body`, string or string[]) or grouped into named `subsections`
+ * (used by Datenschutzerklärung's numbered structure); each subsection's `body` is one or more
+ * paragraphs.
  */
 export function LegalPage({ pageKey }: LegalPageProps) {
   const { t } = useTranslation("legal");
@@ -40,13 +75,11 @@ export function LegalPage({ pageKey }: LegalPageProps) {
         {sections.map((section) => (
           <article key={section.heading}>
             <h2>{section.heading}</h2>
-            {section.body && <p>{section.body}</p>}
+            {renderBody(section.body)}
             {section.subsections?.map((sub) => (
               <div className="legal-page__subsection" key={sub.heading}>
                 <h3>{sub.heading}</h3>
-                {sub.body.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
+                {sub.body.map((paragraph, index) => renderParagraph(paragraph, index))}
               </div>
             ))}
           </article>

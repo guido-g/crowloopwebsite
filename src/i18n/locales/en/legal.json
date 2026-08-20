@@ -1,7 +1,7 @@
 {
   "placeholderNote": "Placeholder content for layout and testing purposes. This page will be replaced with final, lawyer-reviewed text before the site goes live publicly — it is not yet legally binding.",
   "impressum": {
-    "title": "Impressum",
+    "title": "Legal Notice",
     "sections": [
       {
         "heading": "Angaben gemäß § 5 TMG / § 5 DDG",
@@ -250,7 +250,7 @@
     ]
   },
   "haftungsausschluss": {
-    "title": "Haftungsausschluss",
+    "title": "Disclaimer",
     "sections": [
       {
         "heading": "Inhalte dieser Website",
@@ -267,27 +267,85 @@
     ]
   },
   "agb": {
-    "title": "Allgemeine Geschäftsbedingungen (AGB)",
+    "title": "General Terms and Conditions (AGB)",
     "sections": [
       {
-        "heading": "Geltungsbereich",
-        "body": "[Placeholder] These terms govern service engagements arranged via the Process described on this site — from the design brief and quote through to final delivery and invoicing."
+        "heading": "Provider",
+        "body": [
+          "Crow Loop Studio (sole proprietorship), Guido Göbbels, Brüsseler Str. 84, 53117 Bonn, Germany.",
+          "Email: guido.goe@gmail.com. Phone: +49 1577 1577 108.",
+          "Last updated: 20.08.2026"
+        ]
       },
       {
-        "heading": "Angebot und Vertragsschluss",
-        "body": "[Placeholder] A project begins once a written quote (MVP plus optional extras) is accepted and the agreed 50% deposit is received."
+        "heading": "§ 1 Scope of Application",
+        "body": [
+          "(1) These General Terms and Conditions apply to all contracts between Crow Loop Studio (hereinafter the \"Provider\") and the customer (hereinafter the \"Customer\") concluded via the Provider's online shop.",
+          "(2) Deviating terms proposed by the Customer are not recognized unless the Provider expressly agrees to them in writing.",
+          "(3) These Terms and Conditions apply exclusively to business customers (§ 14 BGB)."
+        ]
       },
       {
-        "heading": "Zahlungsbedingungen",
-        "body": "[Placeholder] 50% deposit on acceptance of the offer, remaining 50% due on delivery, per the Process page."
+        "heading": "§ 2 Conclusion of Contract",
+        "body": [
+          "(1) The presentation of products in the online shop does not constitute a legally binding offer, but a non-binding invitation for the Customer to place an order (invitatio ad offerendum).",
+          "(2) By placing an order, the Customer submits a binding offer. The contract is only concluded once the Provider confirms the order or delivers the goods.",
+          "(3) The Provider stores the contract text and sends it to the Customer by email after the contract is concluded."
+        ]
       },
       {
-        "heading": "Gewährleistung nach Auslieferung",
-        "body": "[Placeholder] Game-breaking bugs found within 3 months of launch are covered under the original contract at no extra cost, excluding issues caused by platform updates or external circumstances outside the studio's control."
+        "heading": "§ 3 Prices and Payment",
+        "body": [
+          "(1) All stated prices are net prices plus statutory value-added tax.",
+          "(2) Additional delivery and shipping costs are shown separately.",
+          "(3) The following payment method is accepted: bank transfer.",
+          "(4) In the event of late payment, the Provider is entitled to charge default interest of 9 percentage points above the base rate (§ 288 BGB)."
+        ]
       },
       {
-        "heading": "Schlussbestimmungen",
-        "body": "[Placeholder — final governing-law and severability clauses, to be added with the lawyer-reviewed version before public launch.]"
+        "heading": "§ 4 Delivery and Shipping",
+        "body": [
+          "(1) Delivery takes place by arrangement, after payment has been received.",
+          "(2) The delivery area covers: worldwide.",
+          "(3) The risk of accidental loss passes to the Customer upon handover to the carrier.",
+          "(4) Partial deliveries are permitted where reasonable for the Customer."
+        ]
+      },
+      {
+        "heading": "§ 5 No Right of Withdrawal",
+        "body": "For contracts between businesses (B2B), there is no statutory right of withdrawal."
+      },
+      {
+        "heading": "§ 6 Warranty",
+        "body": [
+          "(1) The statutory warranty rights apply.",
+          "(2) The warranty period is 12 months from delivery (by agreement, per § 438 BGB).",
+          "(3) Obvious defects must be reported in writing within 7 working days of delivery (§ 377 HGB)."
+        ]
+      },
+      {
+        "heading": "§ 7 Liability",
+        "body": [
+          "(1) The Provider is liable without limitation for intent and gross negligence.",
+          "(2) For slight negligence, the Provider is liable only for breach of material contractual obligations (cardinal obligations), limited to the foreseeable damage typical for this type of contract.",
+          "(3) The above limitations of liability do not apply to damages arising from injury to life, body, or health, or to claims under the Product Liability Act."
+        ]
+      },
+      {
+        "heading": "§ 8 Data Protection",
+        "body": "The processing of personal data is carried out in accordance with our [Privacy Policy](/datenschutz) and in compliance with the GDPR and the German Federal Data Protection Act (BDSG)."
+      },
+      {
+        "heading": "§ 9 Final Provisions",
+        "body": [
+          "(1) The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).",
+          "(2) The place of jurisdiction for all disputes is Bonn, provided the Customer is a merchant.",
+          "(3) Should individual provisions of these Terms and Conditions be invalid, the validity of the remaining provisions is unaffected."
+        ]
+      },
+      {
+        "heading": "§ 10 Online Dispute Resolution",
+        "body": "We are willing to take part in an out-of-court dispute resolution procedure before a consumer arbitration board. The competent body is the General Consumer Arbitration Board of the Center for Conciliation (Allgemeine Verbraucherschlichtungsstelle des Zentrums für Schlichtung e.V.)."
       }
     ]
   }

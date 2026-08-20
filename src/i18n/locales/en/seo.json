@@ -29,19 +29,19 @@
     "description": "Tell me about your IP, your audience, and your timeline — I'll come back with how I'd approach it and what it would take."
   },
   "impressum": {
-    "title": "Impressum",
+    "title": "Legal Notice",
     "description": "Legal disclosure for Crow Loop Studio, Cologne, Germany."
   },
   "datenschutz": {
-    "title": "Datenschutzerklärung",
+    "title": "Privacy Policy",
     "description": "How Crow Loop Studio handles personal data on this website."
   },
   "haftungsausschluss": {
-    "title": "Haftungsausschluss",
+    "title": "Disclaimer",
     "description": "Liability disclaimer for the Crow Loop Studio website."
   },
   "agb": {
-    "title": "AGB",
+    "title": "Terms & Conditions",
     "description": "General terms and conditions for working with Crow Loop Studio."
   },
   "notFound": {
