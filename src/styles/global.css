@@ -280,6 +280,13 @@ ol {
     align-items: center;
     text-align: center;
   }
+
+  /* flex-basis is read against the main axis, which switches to vertical once
+     flex-direction becomes column above — without this, the 28rem basis was read as a
+     minimum height instead of a width, forcing a large empty gap in the header section. */
+  .section-heading--crow .section-heading__text {
+    flex-basis: auto;
+  }
 }
 
 .section-heading .eyebrow {
