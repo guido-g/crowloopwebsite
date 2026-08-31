@@ -1,0 +1,45 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # The build scripts use `import.meta.dirname` (Node >= 20.11) and the toolchain is
+        # pinned to current Vite/TypeScript, so don't rely on the image's default Node.
+        - nvm install 22
+        - nvm use 22
+        - npm ci
+    build:
+      commands:
+        # Type-checks, bundles the client, bundles the SSR entry, prerenders every route to
+        # dist/<lang>/<path>.html and writes dist/sitemap.xml.
+        - npm run build
+  artifacts:
+    # dist/ holds the hashed assets, the prerendered pages and the SPA fallback index.html.
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
+      - ~/.npm/**/*
+
+# Mirrors the cache policy in nginx.conf so the Amplify deployment and the container image
+# behave the same. Patterns are listed broadest first: when several patterns match one
+# request Amplify applies them in order, so the later, more specific entry wins.
+customHeaders:
+  # Every document (prerendered pages, the SPA fallback, robots.txt, sitemap.xml) references
+  # build-hashed asset names that vanish on the next deploy, so documents must revalidate.
+  - pattern: '/**'
+    headers:
+      - key: Cache-Control
+        value: 'no-cache'
+  # Images and fonts served from public/ are unhashed but change rarely.
+  - pattern: '/**/*.@(png|jpg|jpeg|webp|gif|svg|ico|woff|woff2)'
+    headers:
+      - key: Cache-Control
+        value: 'public, max-age=2592000'
+  # Build-hashed: the name changes whenever the bytes do.
+  - pattern: '/assets/**'
+    headers:
+      - key: Cache-Control
+        value: 'public, max-age=31536000, immutable'
