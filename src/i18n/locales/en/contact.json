@@ -32,7 +32,7 @@
   "responseTime": "I reply within 1–3 business days.",
   "fallback": {
     "title": "Prefer email?",
-    "body": "The studio's business inbox goes live at launch. Until then, the form above is the fastest way to reach me — every submission lands directly in my inbox."
+    "body": "You can also reach the studio directly at project@crowloop.studio."
   },
   "confirmation": {
     "title": "Got it — thanks!",

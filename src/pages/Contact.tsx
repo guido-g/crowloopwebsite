@@ -62,8 +62,8 @@ export function Contact() {
     };
 
     setStatus("submitting");
-    // TODO(backend): replace with a real submission (AWS Amplify function -> SES) once the
-    // business email address is set up (Section 7 checklist). For now this is a mocked delay.
+    // TODO(backend): replace with a real submission (AWS Amplify function -> SES) delivering
+    // to project@crowloop.studio. For now this is a mocked delay.
     console.info("[contact-form] mock submission payload", payload);
     window.setTimeout(() => setStatus("confirmed"), 700);
   };
