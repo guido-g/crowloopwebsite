@@ -1,4 +1,14 @@
 version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - nvm install 22
+        - nvm use 22
+        - npm ci
+        # Deploys amplify/ (the contact-form Lambda + its Function URL) and writes
+        # amplify_outputs.json, which the frontend phase below reads.
+        - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
     preBuild:
@@ -8,6 +18,8 @@ frontend:
         - nvm install 22
         - nvm use 22
         - npm ci
+        # Surface the backend's Function URL to Vite as a build-time env var.
+        - export VITE_CONTACT_FORM_ENDPOINT=$(node -e "try{process.stdout.write(require('./amplify_outputs.json').custom.contactFormEndpoint)}catch(e){}")
     build:
       commands:
         # Type-checks, bundles the client, bundles the SSR entry, prerenders every route to

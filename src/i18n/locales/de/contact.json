@@ -30,6 +30,7 @@
     "submitting": "Wird gesendet…"
   },
   "responseTime": "Ich antworte innerhalb von 1–3 Werktagen.",
+  "error": "Beim Senden ist etwas schiefgelaufen. Versucht es noch einmal oder schreibt direkt an project@crowloop.studio.",
   "fallback": {
     "title": "Lieber per E-Mail?",
     "body": "Ihr erreicht das Studio auch direkt unter project@crowloop.studio."
@@ -37,7 +38,7 @@
   "confirmation": {
     "title": "Angekommen — danke!",
     "responseTime": "Ich melde mich innerhalb von 1–3 Werktagen bei euch.",
-    "emailSent": "Eine Bestätigungs-E-Mail ist gerade an die angegebene Adresse rausgegangen.",
-    "troubleshooting": "Nach etwa 10 Minuten noch keine E-Mail? Prüft die Adresse auf Tippfehler und schaut in den Spam-Ordner — meine echte Antwort landet auf derselben Adresse."
+    "emailSent": "Eure Nachricht ist gerade im Postfach des Studios gelandet.",
+    "troubleshooting": "Nach ein paar Werktagen noch keine Antwort? Prüft die eingegebene E-Mail-Adresse auf Tippfehler oder schreibt direkt an project@crowloop.studio."
   }
 }

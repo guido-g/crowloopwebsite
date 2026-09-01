@@ -20,15 +20,12 @@ interface ContactPayload {
 const BUDGET_KEYS = ["underFive", "fiveToFifteen", "fifteenToForty", "fortyPlus", "notSure"];
 const TIMELINE_KEYS = ["asap", "oneToThree", "threePlus", "flexible"];
 
-/**
- * v1 backend behavior (per project decision): submission is validated and mocked client-side —
- * no business email/Amplify backend exists yet (Section 7 checklist). Wire handleSubmit to a real
- * endpoint (AWS Amplify function + SES) once the business email is live; the confirmation UX
- * below is already the real, final UX either way.
- */
+const CONTACT_FORM_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT;
+
 export function Contact() {
   const { t } = useTranslation(["contact", "services", "common"]);
   const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [error, setError] = useState(false);
   const [searchParams] = useSearchParams();
 
   // Service cards link here with ?projectType=<id> pre-filled; only trust it if it matches a
@@ -39,7 +36,7 @@ export function Contact() {
       ? requestedProjectType
       : "";
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
 
@@ -61,11 +58,29 @@ export function Contact() {
       message: String(form.get("message") ?? ""),
     };
 
+    setError(false);
     setStatus("submitting");
-    // TODO(backend): replace with a real submission (AWS Amplify function -> SES) delivering
-    // to project@crowloop.studio. For now this is a mocked delay.
-    console.info("[contact-form] mock submission payload", payload);
-    window.setTimeout(() => setStatus("confirmed"), 700);
+
+    if (!CONTACT_FORM_ENDPOINT) {
+      console.error("[contact-form] VITE_CONTACT_FORM_ENDPOINT is not configured");
+      setStatus("idle");
+      setError(true);
+      return;
+    }
+
+    try {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error(`submission failed with status ${response.status}`);
+      setStatus("confirmed");
+    } catch (submitError) {
+      console.error("[contact-form] submission failed", submitError);
+      setStatus("idle");
+      setError(true);
+    }
   };
 
   if (status === "confirmed") {
@@ -158,6 +173,8 @@ export function Contact() {
             <button type="submit" className="btn btn--primary" disabled={status === "submitting"}>
               {status === "submitting" ? t("fields.submitting") : t("fields.submit")}
             </button>
+
+            {error && <p className="contact-form__error">{t("error")}</p>}
 
             <p className="contact-form__response-time">{t("responseTime")}</p>
           </form>

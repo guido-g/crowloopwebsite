@@ -25,3 +25,7 @@ dist-ssr
 
 # SSR bundle, built only as prerender input
 dist-ssr
+
+# Amplify Gen 2: local sandbox state and per-environment generated outputs
+.amplify
+amplify_outputs*
