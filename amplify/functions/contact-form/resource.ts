@@ -10,6 +10,6 @@ export const contactForm = defineFunction({
     // Must be an SES-verified identity on the crowloop.studio domain (SES verification is
     // separate from the Google Workspace MX/DKIM setup used for receiving mail).
     CONTACT_FORM_FROM_ADDRESS: "noreply@crowloop.studio",
-    CONTACT_FORM_ALLOWED_ORIGIN: "https://crowloop.studio",
+    CONTACT_FORM_ALLOWED_ORIGINS: "https://crowloop.studio,https://www.crowloop.studio",
   },
 });
