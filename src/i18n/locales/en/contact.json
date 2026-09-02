@@ -39,6 +39,7 @@
     "title": "Got it — thanks!",
     "responseTime": "I'll get back to you within 1–3 business days.",
     "emailSent": "Your message just landed in the studio's inbox.",
-    "troubleshooting": "No reply after a few business days? Double-check the email address you entered for typos, or reach out directly at project@crowloop.studio."
+    "yourEmail": "I'll reply to: {{email}}",
+    "troubleshooting": "No reply after a few business days? Check the address above for typos, or reach out directly at project@crowloop.studio."
   }
 }

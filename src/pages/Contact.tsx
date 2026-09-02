@@ -26,6 +26,7 @@ export function Contact() {
   const { t } = useTranslation(["contact", "services", "common"]);
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [error, setError] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState("");
   const [searchParams] = useSearchParams();
 
   // Service cards link here with ?projectType=<id> pre-filled; only trust it if it matches a
@@ -75,6 +76,7 @@ export function Contact() {
         body: JSON.stringify(payload),
       });
       if (!response.ok) throw new Error(`submission failed with status ${response.status}`);
+      setSubmittedEmail(payload.email);
       setStatus("confirmed");
     } catch (submitError) {
       console.error("[contact-form] submission failed", submitError);
@@ -84,7 +86,7 @@ export function Contact() {
   };
 
   if (status === "confirmed") {
-    return <ContactConfirmation />;
+    return <ContactConfirmation email={submittedEmail} />;
   }
 
   return (
@@ -189,7 +191,7 @@ export function Contact() {
   );
 }
 
-function ContactConfirmation() {
+function ContactConfirmation({ email }: { email: string }) {
   const { t } = useTranslation(["contact", "common"]);
 
   return (
@@ -206,6 +208,7 @@ function ContactConfirmation() {
         <ul className="contact-confirmation__points">
           <li>{t("confirmation.responseTime")}</li>
           <li>{t("confirmation.emailSent")}</li>
+          {email && <li>{t("confirmation.yourEmail", { email })}</li>}
           <li>{t("confirmation.troubleshooting")}</li>
         </ul>
       </div>
