@@ -273,79 +273,127 @@
         "heading": "Provider",
         "body": [
           "Crow Loop Studio (sole proprietorship), Guido Göbbels, Brüsseler Str. 84, 53117 Bonn, Germany.",
-          "Email: info@crowloop.studio. Phone: +49 1577 1577 108.",
-          "Last updated: 20.08.2026"
+          "Email: info@crowloop.studio · Phone: +49 1577 1577 108.",
+          "Last updated: 03.09.2026"
         ]
       },
       {
         "heading": "§ 1 Scope of Application",
         "body": [
-          "(1) These General Terms and Conditions apply to all contracts between Crow Loop Studio (hereinafter the \"Provider\") and the customer (hereinafter the \"Customer\") concluded via the Provider's online shop.",
-          "(2) Deviating terms proposed by the Customer are not recognized unless the Provider expressly agrees to them in writing.",
-          "(3) These Terms and Conditions apply exclusively to business customers (§ 14 BGB)."
+          "(1) These General Terms and Conditions (hereinafter the \"Terms\") apply to all contracts between Crow Loop Studio (hereinafter the \"Provider\") and the customer concerning the conception, design, and technical implementation of interactive game and media formats (in particular HTML5 games, mini-games, and interactive microsites), as well as related services such as reworking existing games or developing game concepts.",
+          "(2) These Terms apply exclusively to businesses within the meaning of § 14 BGB (hereinafter the \"Customer\"). The Provider offers its services exclusively to businesses, not to consumers (§ 13 BGB).",
+          "(3) Deviating, conflicting, or supplementary terms proposed by the Customer do not become part of the contract unless the Provider expressly agrees to them in writing.",
+          "(4) Individual arrangements in the offer, contract, or design brief (e.g. deviating payment, delivery, or usage terms) take precedence over the provisions of these Terms."
         ]
       },
       {
-        "heading": "§ 2 Conclusion of Contract",
+        "heading": "§ 2 Conclusion of Contract and Project Process",
         "body": [
-          "(1) The presentation of products in the online shop does not constitute a legally binding offer, but a non-binding invitation for the Customer to place an order (invitatio ad offerendum).",
-          "(2) By placing an order, the Customer submits a binding offer. The contract is only concluded once the Provider confirms the order or delivers the goods.",
-          "(3) The Provider stores the contract text and sends it to the Customer by email after the contract is concluded."
+          "(1) Every engagement is based on an individual, written offer from the Provider, which typically follows an initial call (discovery call) and/or a design brief, and describes the scope of services, timeline, and fee.",
+          "(2) The contract is concluded either by the Customer's written acceptance of the offer (including by email) or by payment of the agreed deposit — whichever occurs first.",
+          "(3) Services are typically delivered in successive project phases (including a concept phase, implementation of the game mechanics, polish, quality assurance, and acceptance), each with agreed feedback rounds. The specific process and number of feedback rounds are set out in the individual offer; the production process described on the website (crowloop.studio/en/process) describes the standard process and becomes part of the offer on request.",
+          "(4) The Provider stores the contract text and makes it available to the Customer on request."
         ]
       },
       {
-        "heading": "§ 3 Prices and Payment",
+        "heading": "§ 3 Scope of Services and Changes",
         "body": [
-          "(1) All stated prices are net prices plus statutory value-added tax.",
-          "(2) Additional delivery and shipping costs are shown separately.",
-          "(3) The following payment method is accepted: bank transfer.",
-          "(4) In the event of late payment, the Provider is entitled to charge default interest of 9 percentage points above the base rate (§ 288 BGB)."
+          "(1) The scope of services owed is conclusively determined by the individual offer or design brief.",
+          "(2) Change requests from the Customer that go beyond the agreed scope of services (e.g. additional feedback rounds, subsequent changes to already-approved content, new features) will only be implemented after a separate written agreement on the additional effort and fee."
         ]
       },
       {
-        "heading": "§ 4 Delivery and Shipping",
+        "heading": "§ 4 Prices and Payment Terms",
         "body": [
-          "(1) Delivery takes place by arrangement, after payment has been received.",
-          "(2) The delivery area covers: worldwide.",
-          "(3) The risk of accidental loss passes to the Customer upon handover to the carrier.",
-          "(4) Partial deliveries are permitted where reasonable for the Customer."
+          "(1) All stated prices are net prices plus statutory VAT.",
+          "(2) Unless otherwise agreed in the offer, the following payment terms apply: 50% of the agreed fee is due as a deposit upon acceptance of the offer; production begins once payment is received. The remaining 50% is due upon delivery of the finished product (final invoice).",
+          "(3) For projects with agreed milestones, the payment schedule set out in the offer applies instead of paragraph (2).",
+          "(4) Bank transfer is the accepted payment method, unless otherwise agreed.",
+          "(5) In the event of late payment, the Provider is entitled to charge default interest of 9 percentage points above the base rate (§ 288(2) BGB)."
         ]
       },
       {
-        "heading": "§ 5 No Right of Withdrawal",
-        "body": "For contracts between businesses (B2B), there is no statutory right of withdrawal."
-      },
-      {
-        "heading": "§ 6 Warranty",
+        "heading": "§ 5 Customer's Duties to Cooperate, Dates, and Deadlines",
         "body": [
-          "(1) The statutory warranty rights apply.",
-          "(2) The warranty period is 12 months from delivery (by agreement, per § 438 BGB).",
-          "(3) Obvious defects must be reported in writing within 7 working days of delivery (§ 377 HGB)."
+          "(1) Agreed dates, milestones, and delivery deadlines (e.g. an agreed launch deadline) can only be met if both parties fulfil their respective duties to cooperate on time.",
+          "(2) The Customer provides requested material (e.g. brand guidelines, text, graphics, access credentials) as well as requested feedback and approvals within the deadlines stated in the offer or project plan, but no later than 3 business days after the request, unless otherwise agreed.",
+          "(3) If the Customer delays providing feedback, approvals, or material, agreed dates shift accordingly. The Provider is not responsible for any resulting delay in delivery.",
+          "(4) In such cases, new dates are negotiated by mutual agreement between the parties during the ongoing project."
         ]
       },
       {
-        "heading": "§ 7 Liability",
+        "heading": "§ 6 Termination by the Customer Before Project Completion",
+        "body": [
+          "(1) If the Customer terminates an ongoing engagement before it is fully completed, without an important reason attributable to the Provider, the Provider's statutory claim to remuneration under § 648 BGB remains unaffected.",
+          "(2) For simplicity of billing, the Customer owes at least 50% of the agreed total fee in this case. The reason for this minimum fee is that, as a sole proprietor, the Provider regularly has to decline or postpone other inquiries and projects because of the engagement, and this tying-up of capacity is incurred regardless of the project's actual progress.",
+          "(3) If the sum of (a) the fee for the work days actually performed and documented up to termination — calculated on the basis of the daily rate stated in the offer, or, if no daily rate is stated there, the daily rate arithmetically derived from the agreed fixed price and the project duration estimated in the offer — and (b) a flat-rate compensation of 10% of the agreed total fee exceeds the minimum amount under paragraph (2), this higher amount is owed instead.",
+          "(4) The fee owed under this section is in any case capped at the amount of the agreed total fee.",
+          "(5) Payments already made by the Customer are credited against the fee owed under this section.",
+          "(6) The Customer remains free to prove that the Provider incurred no effort or damage, or a significantly lower effort or damage, than calculated under paragraphs (2)–(4). The Provider remains free to assert a higher, specifically evidenced claim to remuneration under § 648 BGB in an individual case instead of the fee under this section."
+        ]
+      },
+      {
+        "heading": "§ 7 Delivery",
+        "body": [
+          "(1) The finished product is delivered in digital form (e.g. via download link, repository access, or email) in accordance with the scope of services described in the offer. As the services are provided digitally, there is no delivery area in a geographic sense.",
+          "(2) Interim versions provided for feedback (partial deliveries) are customary and permitted within the agreed production process."
+        ]
+      },
+      {
+        "heading": "§ 8 No Right of Withdrawal",
+        "body": "As the Provider enters into contracts exclusively with businesses (§ 14 BGB), there is no statutory right of withdrawal under the provisions applicable to consumer contracts."
+      },
+      {
+        "heading": "§ 9 Warranty",
+        "body": [
+          "(1) The statutory warranty rights under the law governing contracts for work (§§ 633 et seq. BGB) apply, unless otherwise provided below.",
+          "(2) \"Bugs\" within the meaning of this warranty are exclusively general, game-breaking errors in the code delivered by the Provider that prevent or significantly impair the intended use of the product.",
+          "(3) In particular, the following do not count as bugs within the meaning of this warranty:",
+          "a) errors resulting from changes or updates to the end user's hardware, software, browser, or operating system after delivery;",
+          "b) errors caused by the end user's technical situation (e.g. inadequate Wi-Fi/internet quality, defective or unsupported output devices);",
+          "c) errors that only arise from software, browser, or operating-system updates released after delivery of the product;",
+          "d) errors resulting from subsequent changes made to the delivered code by the Customer or third parties;",
+          "e) discrepancies on devices, browsers, or environments that were not agreed as target platforms in the offer.",
+          "(4) The warranty period is 12 months from delivery, unless otherwise agreed in the offer.",
+          "(5) Obvious defects must be reported in writing within 7 business days of delivery (analogous to § 377 HGB); otherwise, the product is deemed accepted in that respect.",
+          "(6) Independent of paragraphs (1)–(5), the Provider may set out in the offer a supplementary, voluntary arrangement for the free-of-charge fixing of game-breaking bugs within a certain period after launch (e.g. in line with the production process described on the website). Any such arrangement supplements, but does not replace, the statutory warranty under the preceding paragraphs."
+        ]
+      },
+      {
+        "heading": "§ 10 Usage and Exploitation Rights, Copyright",
+        "body": [
+          "(1) Upon full payment of the agreed fee, the Customer receives spatially, temporally, and substantively unrestricted, worldwide usage and exploitation rights to the finished, delivered product in the form delivered, in particular for use, publication, reproduction, editing, and distribution as part of the Customer's own brand and business activities.",
+          "(2) Content created specifically for the Customer (e.g. customer-specific graphics, text, characters, and brand applications) is available to the Customer exclusively within the scope of paragraph (1).",
+          "(3) The Provider may reuse and further develop, in whole or in part, the underlying, non-customer-specific source code as well as generic program components, frameworks, tools, and reusable technical solutions (e.g. game mechanics, engine components) created during the project, for other, future projects — provided this does not involve brand-specific content or creative assets created exclusively for the Customer.",
+          "(4) The grant of rights under paragraph (1) is subject to full payment of the agreed fee.",
+          "(5) The Customer warrants that it holds the necessary rights to all material it provides or commissions (e.g. images, text, music, fonts, licensed brand assets, or third-party characters) and is entitled to use it within the project. Where the Provider uses licensed third-party material on the Customer's instructions, it may assume that the Customer holds the necessary usage rights for this, without independently verifying it.",
+          "(6) The grant of rights under paragraph (1) does not extend beyond the rights the Customer itself holds in third-party material incorporated into the product (e.g. licensed brand IP). If the Customer's entitlement to use such third-party material lapses, ends, or is restricted, the Customer is not entitled to continue using or exploiting the product beyond its own remaining rights in that respect. The Provider gives no warranty as to the continued existence of third-party rights on which the product is based."
+        ]
+      },
+      {
+        "heading": "§ 11 Reference and Portfolio Use",
+        "body": "Unless expressly agreed otherwise in writing, the Provider is entitled to use the completed project as a reference after its publication — in particular by naming the Customer or the brand, and by displaying screenshots, gameplay excerpts, or videos in its own portfolio, on its website, in applications for new engagements, and on social media channels. The Customer may specify a deviating arrangement (e.g. no attribution, or an embargo period) in the offer or contract."
+      },
+      {
+        "heading": "§ 12 Liability",
         "body": [
           "(1) The Provider is liable without limitation for intent and gross negligence.",
           "(2) For slight negligence, the Provider is liable only for breach of material contractual obligations (cardinal obligations), limited to the foreseeable damage typical for this type of contract.",
-          "(3) The above limitations of liability do not apply to damages arising from injury to life, body, or health, or to claims under the Product Liability Act."
+          "(3) The above limitations of liability do not apply to damages arising from injury to life, body, or health, or to claims under the Product Liability Act.",
+          "(4) The Provider assumes no liability for content, material, or specifications provided by the Customer (e.g. third-party brand or image rights); the Customer ensures that it is entitled to use and pass on this content, and indemnifies the Provider against third-party claims in this respect."
         ]
       },
       {
-        "heading": "§ 8 Data Protection",
+        "heading": "§ 13 Data Protection",
         "body": "The processing of personal data is carried out in accordance with our [Privacy Policy](/datenschutz) and in compliance with the GDPR and the German Federal Data Protection Act (BDSG)."
       },
       {
-        "heading": "§ 9 Final Provisions",
+        "heading": "§ 14 Final Provisions",
         "body": [
           "(1) The law of the Federal Republic of Germany applies, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).",
           "(2) The place of jurisdiction for all disputes is Bonn, provided the Customer is a merchant.",
-          "(3) Should individual provisions of these Terms and Conditions be invalid, the validity of the remaining provisions is unaffected."
+          "(3) Should individual provisions of these Terms be invalid, the validity of the remaining provisions is unaffected."
         ]
-      },
-      {
-        "heading": "§ 10 Online Dispute Resolution",
-        "body": "We are willing to take part in an out-of-court dispute resolution procedure before a consumer arbitration board. The competent body is the General Consumer Arbitration Board of the Center for Conciliation (Allgemeine Verbraucherschlichtungsstelle des Zentrums für Schlichtung e.V.)."
       }
     ]
   }
