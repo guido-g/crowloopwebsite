@@ -36,13 +36,12 @@
   "references": {
     "title": "Was ehemalige Kolleg:innen sagen",
     "intro": "Referenzen aus Guidos beruflicher Laufbahn — zu unterscheiden von Kundenstimmen, die auf der Testimonials-Seite erscheinen werden, sobald Crow Loop Studio erste Kunden betreut.",
-    "signoffNote": "Hier gezeigt mit dem Plan, die öffentliche Nutzung mit Thomas und Robert zu bestätigen, sobald die Seite bereit ist, ihnen gezeigt zu werden — vor dem öffentlichen Launch.",
     "thomasRoessig": {
       "role": "Ehemaliger Geschäftsführer, Flying Sheep Studios",
       "quote": "Ich kann gar nicht genug betonen, wie entscheidend Herr Göbbels für den Erfolg von Flying Sheep über die 9 Jahre seiner Tätigkeit war. Unsere zehnjährige Beziehung zu unserem größten Kunden SUPER RTL wäre ohne sein Geschick, langfristige Beziehungen zu pflegen, nicht möglich gewesen."
     },
     "robertHeil": {
-      "role": "Head of Operations, Wegesrand GmbH & Co. KG",
+      "role": "Ehemaliger Head of Operations, Wegesrand GmbH & Co. KG",
       "quote": "Außergewöhnliche Kreativität, starke Fachkompetenz und ein herausragendes strategisches Verständnis — er hat komplexe Anforderungen erfasst und in präzise, überzeugend präsentierte Konzepte übersetzt."
     }
   }

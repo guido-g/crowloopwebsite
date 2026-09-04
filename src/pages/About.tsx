@@ -64,7 +64,6 @@ export function About() {
               </blockquote>
             ))}
           </div>
-          <p className="reference-quote__note">{t("references.signoffNote")}</p>
         </div>
       </section>
 

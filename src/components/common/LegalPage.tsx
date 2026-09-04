@@ -17,7 +17,7 @@ interface LegalPageProps {
   pageKey: "impressum" | "datenschutz" | "haftungsausschluss" | "agb";
 }
 
-const REAL_CONTENT_PAGES: LegalPageProps["pageKey"][] = ["impressum", "datenschutz"];
+const REAL_CONTENT_PAGES: LegalPageProps["pageKey"][] = ["impressum", "datenschutz", "agb"];
 
 /** Matches Markdown-style [text](/path) so a paragraph can link out (e.g. an AGB clause pointing
  * to the Datenschutzerklärung) without needing react-i18next's Trans component for one link. */
@@ -51,12 +51,10 @@ function renderBody(body: string | string[] | undefined): ReactNode {
 
 /**
  * Shared shell for the four footer-only legal pages (Section 9) — plain, compliant copy, no
- * Russel voice. Haftungsausschluss is still placeholder/blindtext until real legal text is
- * organized separately; AGB has a real draft but still reads like a generic goods/online-shop
- * template mismatched to the actual bespoke service business (Online-Shop, Warenkorb, Spediteur
- * language) — kept out of REAL_CONTENT_PAGES until it's adapted and confirmed. Impressum and
- * Datenschutzerklärung have real content (a few fields — VAT ID/email/site URL/third-party
- * services — still pending final setup, tracked in README), so they skip the placeholder banner.
+ * Russell voice. Haftungsausschluss is still placeholder/blindtext until real legal text is
+ * organized separately, so it keeps the placeholder banner. Impressum, Datenschutzerklärung, and
+ * AGB have real content (a few Impressum fields — VAT ID — still pending final setup, tracked in
+ * README), so they skip the placeholder banner.
  * A section is either flat (`body`, string or string[]) or grouped into named `subsections`
  * (used by Datenschutzerklärung's numbered structure); each subsection's `body` is one or more
  * paragraphs.

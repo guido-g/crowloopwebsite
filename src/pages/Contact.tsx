@@ -199,7 +199,7 @@ function ContactConfirmation({ email }: { email: string }) {
       <div className="container contact-confirmation__inner">
         <img
           src={RUSSEL_POSES.computer}
-          alt="Russel the crow at a computer, giving a thumbs up"
+          alt="Russell the crow at a computer, giving a thumbs up"
           width={140}
           height={140}
           className="contact-confirmation__portrait"

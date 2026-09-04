@@ -827,13 +827,6 @@ ol {
   opacity: 0.75;
 }
 
-.reference-quote__note {
-  margin-top: 2rem;
-  font-size: 0.8rem;
-  opacity: 0.65;
-  max-width: 40rem;
-}
-
 @media (min-width: 900px) {
   .about-grid {
     grid-template-columns: 1.6fr 1fr;

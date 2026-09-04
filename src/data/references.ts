@@ -7,8 +7,7 @@ export interface ProfessionalReference {
 
 /**
  * Professional references/endorsements (Section 4.3) — distinct from client Testimonials.
- * Sign-off from both is an open item (Section 7): plan is to show the finished site to Thomas
- * and Robert and confirm before public launch, not to block the build on it.
+ * Both Thomas and Robert have confirmed public use (Section 7 sign-off item, closed).
  */
 export const PROFESSIONAL_REFERENCES: ProfessionalReference[] = [
   {
