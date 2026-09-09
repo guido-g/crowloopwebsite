@@ -26,7 +26,7 @@
   },
   "cookies": {
     "ariaLabel": "Cookie-Einwilligung",
-    "message": "Ich verwende nur notwendige Cookies, um diese Seite zu betreiben, sowie eingebettete YouTube-Videos bei einigen Case Studies, die erst laden, wenn du zustimmst. Nicht-essenzielle Inhalte laden erst, wenn du zustimmst.",
+    "message": "Ich verwende nur notwendige Cookies, um diese Seite zu betreiben, sowie cookielose, anonyme Analyse-Software (Plausible), die keine Einwilligung erfordert. Eingebettete YouTube-Videos bei einigen Case Studies laden erst, wenn du zustimmst.",
     "learnMore": "Mehr erfahren",
     "necessaryOnly": "Nur notwendige",
     "acceptAll": "Alle akzeptieren",

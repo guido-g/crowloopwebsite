@@ -225,6 +225,15 @@
             ]
           },
           {
+            "heading": "Plausible Analytics",
+            "body": [
+              "This website uses Plausible Analytics, a privacy-friendly web analytics service. The provider is Plausible Insights OÜ, Västriku tn 2, 50403 Tartu, Estonia.",
+              "Plausible does not use cookies or any other technique to recognize individual visitors across multiple visits or devices. It only collects aggregated, anonymous information such as the number of page views, the page visited, the referring website (e.g. a search engine or social network), and coarse geographic and technical data (country, device type, browser). Raw IP addresses and User-Agent data are never stored, and individual visitors cannot be identified.",
+              "Since no personal data is processed, using Plausible does not require consent under Section 25 TDDDG (the German Telecommunications-Digital-Services-Data-Protection Act). It is used on the basis of our legitimate interest (Art. 6(1)(f) GDPR) in the statistical evaluation of usage behavior to improve our offering.",
+              "Data is processed and stored exclusively on servers within the European Union. Further information can be found in Plausible's privacy policy: https://plausible.io/data-policy."
+            ]
+          },
+          {
             "heading": "Google Fonts",
             "body": [
               "This site uses so-called Google Fonts, provided by Google, for the uniform display of typefaces. When you open a page, your browser loads the required fonts into its browser cache in order to display text and typefaces correctly.",

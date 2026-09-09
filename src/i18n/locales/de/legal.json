@@ -225,6 +225,15 @@
             ]
           },
           {
+            "heading": "Plausible Analytics",
+            "body": [
+              "Diese Website nutzt Plausible Analytics, einen datenschutzfreundlichen Webanalysedienst. Anbieter ist Plausible Insights OÜ, Västriku tn 2, 50403 Tartu, Estland.",
+              "Plausible verwendet keine Cookies und keine anderen Techniken zur Wiedererkennung einzelner Besucher:innen über mehrere Besuche oder Geräte hinweg. Erfasst werden ausschließlich aggregierte, anonyme Informationen wie die Anzahl der Seitenaufrufe, die aufgerufene Seite, die verweisende Website (z. B. Suchmaschine oder soziales Netzwerk) sowie grobe geografische und technische Angaben (Land, Gerätetyp, Browser). Rohe IP-Adressen und User-Agent-Daten werden nicht gespeichert; einzelne Besucher:innen können nicht identifiziert werden.",
+              "Da hierbei keine personenbezogenen Daten verarbeitet werden, ist für den Einsatz von Plausible keine Einwilligung nach § 25 TDDDG erforderlich. Die Nutzung erfolgt auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der statistischen Auswertung des Nutzungsverhaltens zur Verbesserung unseres Angebots.",
+              "Die Daten werden ausschließlich auf Servern innerhalb der Europäischen Union verarbeitet und gespeichert. Weitere Informationen finden Sie in der Datenschutzerklärung von Plausible: https://plausible.io/data-policy."
+            ]
+          },
+          {
             "heading": "Google Fonts",
             "body": [
               "Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so genannte Google Fonts, die von Google bereitgestellt werden. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren Browsercache, um Texte und Schriftarten korrekt anzuzeigen.",
