@@ -34,6 +34,7 @@ interface ContactPayload {
   budget: string;
   timeline: string;
   message: string;
+  howHeard: string;
 }
 
 function isValidPayload(value: unknown): value is ContactPayload {
@@ -52,7 +53,9 @@ function isValidPayload(value: unknown): value is ContactPayload {
     typeof p.timeline === "string" &&
     p.timeline.trim() !== "" &&
     typeof p.message === "string" &&
-    p.message.trim() !== ""
+    p.message.trim() !== "" &&
+    // Optional, like company: present as a string (possibly empty), never required.
+    typeof p.howHeard === "string"
   );
 }
 
@@ -82,7 +85,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (event) => {
     return jsonResponse(headers, 400, { error: "Missing or invalid required fields" });
   }
 
-  const { name, company, email, projectType, budget, timeline, message } = payload;
+  const { name, company, email, projectType, budget, timeline, message, howHeard } = payload;
 
   const textBody = [
     `Name: ${name}`,
@@ -91,6 +94,7 @@ export const handler: APIGatewayProxyHandlerV2 = async (event) => {
     `Project type: ${projectType}`,
     `Budget: ${budget}`,
     `Timeline: ${timeline}`,
+    `How they heard about us: ${howHeard || "—"}`,
     "",
     "Message:",
     message,

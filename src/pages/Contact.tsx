@@ -15,10 +15,12 @@ interface ContactPayload {
   budget: string;
   timeline: string;
   message: string;
+  howHeard: string;
 }
 
 const BUDGET_KEYS = ["underFive", "fiveToFifteen", "fifteenToForty", "fortyPlus", "notSure"];
 const TIMELINE_KEYS = ["asap", "oneToThree", "threePlus", "flexible"];
+const HOW_HEARD_KEYS = ["linkedin", "searchEngine", "friend", "event"];
 
 const CONTACT_FORM_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT;
 
@@ -57,6 +59,7 @@ export function Contact() {
       budget: String(form.get("budget") ?? ""),
       timeline: String(form.get("timeline") ?? ""),
       message: String(form.get("message") ?? ""),
+      howHeard: String(form.get("howHeard") ?? ""),
     };
 
     setError(false);
@@ -76,6 +79,10 @@ export function Contact() {
         body: JSON.stringify(payload),
       });
       if (!response.ok) throw new Error(`submission failed with status ${response.status}`);
+      // The confirmation view is a state swap, not a route change, so Plausible's automatic
+      // pageview tracking never sees it — fire the conversion as a custom event instead. No
+      // `props` (e.g. the howHeard value): that needs a plan above Starter.
+      window.plausible?.("Contact Form Submitted");
       setSubmittedEmail(payload.email);
       setStatus("confirmed");
     } catch (submitError) {
@@ -162,6 +169,18 @@ export function Contact() {
                 {TIMELINE_KEYS.map((key) => (
                   <option key={key} value={key}>
                     {t(`fields.timelineOptions.${key}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label>
+              <span>{t("fields.howHeard")}</span>
+              <select name="howHeard" defaultValue="">
+                <option value="">{t("fields.selectPlaceholder")}</option>
+                {HOW_HEARD_KEYS.map((key) => (
+                  <option key={key} value={key}>
+                    {t(`fields.howHeardOptions.${key}`)}
                   </option>
                 ))}
               </select>

@@ -25,6 +25,13 @@
       "threePlus": "3+ months",
       "flexible": "Flexible"
     },
+    "howHeard": "How did you hear about Crow Loop? (optional)",
+    "howHeardOptions": {
+      "linkedin": "LinkedIn",
+      "searchEngine": "Search engine",
+      "friend": "Friend",
+      "event": "Event"
+    },
     "message": "Message",
     "submit": "Send inquiry",
     "submitting": "Sending…"

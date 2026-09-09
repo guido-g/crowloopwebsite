@@ -8,3 +8,9 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+interface Window {
+  /** Defined unconditionally by the Plausible snippet in index.html — safe to call anywhere,
+   * but still optional-chained since it wouldn't exist if that script were ever removed. */
+  plausible?: (eventName: string, options?: { props?: Record<string, string | number | boolean> }) => void;
+}

@@ -25,6 +25,13 @@
       "threePlus": "3+ Monate",
       "flexible": "Flexibel"
     },
+    "howHeard": "Wie bist du auf Crow Loop aufmerksam geworden? (optional)",
+    "howHeardOptions": {
+      "linkedin": "LinkedIn",
+      "searchEngine": "Suchmaschine",
+      "friend": "Bekannte:r",
+      "event": "Event"
+    },
     "message": "Nachricht",
     "submit": "Anfrage senden",
     "submitting": "Wird gesendet…"
