@@ -67,10 +67,20 @@ jobs:
 
             Requested ticket (may be empty, meaning "pick the top one"): "${{ inputs.ticket }}"
 
+            HOW TO LABEL A TICKET (you will need this below)
+            orboto_update_ticket CANNOT set labels - it has no labels field. Use
+            orboto_api_call instead:
+              GET  /projects/{projectId}/labels                  -> find the label id by name
+              POST /projects/tickets/{ticketId}/labels/{labelId} -> apply it
+            The label must already exist in the project. This account cannot create one
+            (that needs project:edit, which the service-account role does not carry). If
+            `needs-human` does not exist, say so explicitly in your ticket comment rather
+            than silently skipping it - an unlabelled ticket looks like an unreviewed one.
+
             STEP 1 - PICK THE TICKET
             Call orboto_session_start, then orboto_get_project_primer("CLW").
             If a ticket key was requested above, work that one. Otherwise list open CLW
-            tickets, skip any labelled `fix-proposed` or `needs-human`, and take the
+            tickets, skip any labelled `needs-human`, and take the
             highest priority one (blocker > high > normal > low > trivial; oldest first
             on ties). If there is nothing to work on, write
             {"action":"none"} to "$RUNNER_TEMP/fixer-result.json" and stop immediately.
