@@ -30,6 +30,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Test
+        run: npm test
+
       # Same tolerant lookup amplify.yml uses: amplify_outputs.json only exists after a
       # backend deploy, so outside Amplify this resolves to an empty string and the build
       # still succeeds. Do not make this step fail on a missing file.
