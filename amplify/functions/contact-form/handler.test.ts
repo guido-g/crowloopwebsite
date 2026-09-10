@@ -113,7 +113,13 @@ describe("contact-form handler", () => {
     expect(JSON.parse(String(result.body))).toEqual({ ok: true });
     expect(send).toHaveBeenCalledTimes(1);
 
-    const { input } = send.mock.calls[0][0] as { input: Record<string, never> };
+    // `any`, not `never` — this cast exists only so the assertions below can dot into the
+    // mocked SESv2 command's shape (Content.Simple.*) without TypeScript narrowing every
+    // property to `never`. That mistake was invisible to `npm test` (vitest doesn't
+    // type-check test files) and to `npm run build`'s `tsc -b` (this file sits outside
+    // tsconfig.app.json's `src` scope) — but `ampx pipeline-deploy` type-checks the whole
+    // `amplify/` backend directory on every deploy, and it does catch it (CLW-3).
+    const { input } = send.mock.calls[0][0] as { input: Record<string, any> };
     expect(input.Destination).toEqual({ ToAddresses: ["project@crowloop.studio"] });
     // Reply-to must be the enquirer, or answering a lead means copying the address by hand.
     expect(input.ReplyToAddresses).toEqual([VALID_PAYLOAD.email]);
