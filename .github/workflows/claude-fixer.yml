@@ -77,30 +77,58 @@ jobs:
 
             STEP 2 - CONFIRM IT IS REAL
             Reproduce or verify the problem in this checkout before changing anything.
-            Read the actual files. If the ticket is stale or already fixed, comment on
-            the ticket saying so, close it with orboto_close_ticket, write
-            {"action":"none"} to "$RUNNER_TEMP/fixer-result.json" and stop.
+            Read the actual files. If the ticket turns out to be stale, already fixed,
+            a duplicate or out of scope, comment on it explaining exactly what you
+            checked, then resolve it as `wont_fix` - NOT `done`. Workspace rules reserve
+            `done` for work that was actually carried out; duplicate, superseded and
+            no-longer-applicable tickets are `wont_fix`, because closing them as done
+            falsifies burndown and velocity. Then write {"action":"none"} to
+            "$RUNNER_TEMP/fixer-result.json" and stop.
 
-            STEP 3 - FIX IT
-            Make the smallest correct change. Do not refactor, do not reformat unrelated
-            code, do not bump dependencies unless the ticket is specifically about that.
-            Work on a new branch named `fix/<TICKET-KEY>-<short-slug>`.
+            STEP 3 - CLAIM IT, THEN FIX IT
+            Claim the ticket first - workspace rules require claiming before touching
+            code - using orboto_claim with noTimer: true.
+
+            NEVER start a timer, here or anywhere else in this run. Automated CI runs are
+            machine time, not billable work, and this workspace does not track them. The
+            hazard is concrete: a run that crashes or is cancelled leaves a timer running,
+            which silently inflates the ticket and then gets re-attributed to whatever is
+            claimed next. If you somehow find a timer running under this account, stop it
+            before doing anything else.
+
+            Then make the smallest correct change. Do not refactor, do not reformat
+            unrelated code, do not bump dependencies unless the ticket is specifically
+            about that. Work on a new branch named `fix/<TICKET-KEY>-<short-slug>`.
 
             STEP 4 - PROVE IT
             Run, in order, and do not proceed if any of them fail:
               npm run lint
               npm run build
             `npm run build` typechecks, bundles the client and the SSR entry, prerenders
-            every route and emits the sitemap. If it fails, DO NOT commit. Instead comment
-            on the ticket explaining exactly what you tried and why it failed, label the
-            ticket `needs-human`, write {"action":"none"} to "$RUNNER_TEMP/fixer-result.json"
-            and stop.
+            every route and emits the sitemap. If it fails, DO NOT commit. Instead:
+            comment on the ticket explaining exactly what you tried and why it failed,
+            label it `needs-human`, hand it back by moving it out of in_progress to its
+            todo status and unassigning yourself (leaving it claimed by a bot that isn't
+            working on it makes the board lie), then write {"action":"none"} to
+            "$RUNNER_TEMP/fixer-result.json" and stop.
 
             STEP 5 - COMMIT AND PUSH
-            Commit only the files your fix actually needed. Commit message: a one-line
-            summary, then a blank line, then why (not what). End the message with:
+            Commit only the files your fix actually needed. One ticket = one commit.
+
+            The commit subject MUST follow the workspace convention exactly:
+              type(scope): short description (TICKET-KEY)
+            with the ticket key in parentheses at the END of the subject, e.g.
+              fix(i18n): add missing DE key for contact form label (CLW-7)
+            orboto's git parser links commits to tickets by that trailing key - get the
+            format wrong and the commit never shows up on the ticket.
+
+            Then a blank line, then why the change was needed (not what it does - the
+            diff already says what). End the message with:
               Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
-            Push the branch.
+            Push the branch immediately after committing.
+
+            Write everything - commit message, ticket comments - in English, the
+            workspace language.
 
             STEP 6 - HAND OFF
             Write "$RUNNER_TEMP/fixer-result.json" containing exactly:
@@ -235,6 +263,13 @@ jobs:
             What was done: ${{ steps.result.outputs.summary }}
 
             Post that as a comment on the ticket. Then:
-            - if the outcome was "auto", close the ticket with orboto_close_ticket, noting
-              that it shipped and linking the PR.
-            - if the outcome was "review", leave the ticket open and label it `needs-human`.
+            - if the outcome was "auto": the change was verified (lint + full build:
+              typecheck, both bundles, prerender of every route, sitemap), merged to
+              master and is deploying. Close the ticket with orboto_close_ticket, and in
+              the closing comment state explicitly HOW each acceptance criterion was
+              verified and link the PR - workspace rules require that a closing comment
+              stands on its own to a reviewer reading it cold. If the ticket had
+              acceptance criteria that the build alone does NOT prove, do not close it:
+              leave it open, say which criterion is unproven, and label it `needs-human`.
+            - if the outcome was "review": leave the ticket open and label it
+              `needs-human`. Do not close it.
