@@ -1,0 +1,98 @@
+name: Ticket sync
+
+# The fixer leaves a gap open on purpose: when it can't safely auto-merge (STEP 6 in
+# claude-fixer.yml), it opens a PR, labels the ticket `needs-human`, and waits. A human
+# reviewing and merging that PR *is* the missing verification step - this workflow just
+# closes the loop by reflecting that back onto the ticket, instead of leaving it sitting
+# in orboto until someone remembers to close it by hand.
+#
+# Deliberately mechanical about WHEN it acts (a real PR merge, a ticket key parsed
+# straight out of the PR title) but leaves the "is this really done" judgment to Claude
+# reading the ticket, same as the fixer's own "Report back to the ticket" step - a blind
+# close-on-merge would happily close a ticket that a given merge doesn't actually resolve.
+
+on:
+  pull_request:
+    types: [closed]
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to sync (for testing against an already-merged PR)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
+    timeout-minutes: 10
+
+    steps:
+      - name: Resolve PR and ticket key
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.inputs.pr_number || github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+          data=$(gh pr view "$PR_NUMBER" --repo "${{ github.repository }}" --json title,url,number,mergedBy)
+          title=$(echo "$data" | jq -r '.title')
+          ticket=$(echo "$title" | grep -oE '[A-Z]{2,}-[0-9]+' | tail -1 || true)
+
+          echo "PR #$PR_NUMBER: \"$title\""
+          if [ -z "$ticket" ]; then
+            echo "No ticket key in the title - nothing to sync."
+            echo "ticket=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "Ticket key: $ticket"
+          echo "ticket=$ticket" >> "$GITHUB_OUTPUT"
+          echo "url=$(echo "$data" | jq -r '.url')" >> "$GITHUB_OUTPUT"
+          echo "number=$(echo "$data" | jq -r '.number')" >> "$GITHUB_OUTPUT"
+          echo "merger=$(echo "$data" | jq -r '.mergedBy.login // "unknown"')" >> "$GITHUB_OUTPUT"
+
+      - name: Write orboto MCP config
+        if: steps.pr.outputs.ticket != ''
+        env:
+          ORBOTO_MCP_URL: ${{ vars.ORBOTO_MCP_URL }}
+          ORBOTO_API_KEY: ${{ secrets.ORBOTO_API_KEY }}
+        run: |
+          cat > "$RUNNER_TEMP/orboto-mcp.json" <<EOF
+          {"mcpServers":{"orboto":{"type":"http","url":"$ORBOTO_MCP_URL","headers":{"Authorization":"Bearer $ORBOTO_API_KEY"}}}}
+          EOF
+
+      - name: Close the ticket if it was waiting on this PR
+        if: steps.pr.outputs.ticket != ''
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: >-
+            --allowedTools "mcp__orboto"
+            --mcp-config ${{ runner.temp }}/orboto-mcp.json
+          prompt: |
+            PR #${{ steps.pr.outputs.number }} (${{ steps.pr.outputs.url }}) was just
+            merged by ${{ steps.pr.outputs.merger }}. Its title references ticket
+            ${{ steps.pr.outputs.ticket }}.
+
+            Call orboto_get_ticket on ${{ steps.pr.outputs.ticket }}.
+
+            - If it does not exist, or its status is already done or wont_fix: do
+              nothing. Not every merged PR maps to an open ticket - that is expected,
+              not an error.
+            - If it is open and labelled `needs-human`: this merge is the human review
+              the fixer's risk gate required before it could act. Post a comment
+              stating the PR was reviewed and merged by
+              ${{ steps.pr.outputs.merger }}, link ${{ steps.pr.outputs.url }}, and
+              close the ticket with orboto_close_ticket as done.
+            - If it is open but NOT labelled `needs-human`: leave it alone and say why
+              in your output - this workflow only closes the loop the fixer itself
+              opened, it does not guess at unrelated open tickets that happen to share
+              a key format.
+
+            Never modify any ticket other than ${{ steps.pr.outputs.ticket }}.
