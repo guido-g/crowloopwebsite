@@ -50,6 +50,22 @@ jobs:
           git config user.name  "crowloop-maintenance-bot"
           git config user.email "noreply@anthropic.com"
 
+      # Writing the MCP config to a file (instead of passing it as inline JSON inside
+      # claude_args) sidesteps a real failure mode: claude_args is a YAML folded scalar
+      # that gets handed to a shell, and that shell strips the double quotes out of an
+      # inline {"mcpServers":...} blob. The mangled, no-longer-valid-JSON string then
+      # gets treated by the Claude CLI as a *file path* instead - normalizing the "//" in
+      # the URL along the way - and fails with "MCP config file not found". A file path
+      # in claude_args has no quotes to lose, so it can't happen here.
+      - name: Write orboto MCP config
+        env:
+          ORBOTO_MCP_URL: ${{ vars.ORBOTO_MCP_URL }}
+          ORBOTO_API_KEY: ${{ secrets.ORBOTO_API_KEY }}
+        run: |
+          cat > "$RUNNER_TEMP/orboto-mcp.json" <<EOF
+          {"mcpServers":{"orboto":{"type":"http","url":"$ORBOTO_MCP_URL","headers":{"Authorization":"Bearer $ORBOTO_API_KEY"}}}}
+          EOF
+
       - name: Run fixer
         uses: anthropics/claude-code-action@v1
         with:
@@ -57,7 +73,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: >-
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,mcp__orboto"
-            --mcp-config {"mcpServers":{"orboto":{"type":"http","url":"${{ vars.ORBOTO_MCP_URL }}","headers":{"Authorization":"Bearer ${{ secrets.ORBOTO_API_KEY }}"}}}}
+            --mcp-config ${{ runner.temp }}/orboto-mcp.json
           prompt: |
             You are the maintenance fixer for crowloop.studio. You work ONE ticket per run.
 
@@ -262,7 +278,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           claude_args: >-
             --allowedTools "mcp__orboto"
-            --mcp-config {"mcpServers":{"orboto":{"type":"http","url":"${{ vars.ORBOTO_MCP_URL }}","headers":{"Authorization":"Bearer ${{ secrets.ORBOTO_API_KEY }}"}}}}
+            --mcp-config ${{ runner.temp }}/orboto-mcp.json
           prompt: |
             Update orboto ticket ${{ steps.result.outputs.ticket }} with the outcome of an
             automated fix. Do not change any other ticket.
