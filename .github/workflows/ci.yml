@@ -1,0 +1,56 @@
+name: CI
+
+# Build check for every PR and every push to master.
+# Mirrors what amplify.yml does at deploy time, so a red CI here means a red deploy there.
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: lint + typecheck + build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # amplify.yml pins Node 22 (the build scripts use import.meta.dirname, Node >= 20.11).
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # Same tolerant lookup amplify.yml uses: amplify_outputs.json only exists after a
+      # backend deploy, so outside Amplify this resolves to an empty string and the build
+      # still succeeds. Do not make this step fail on a missing file.
+      - name: Resolve contact form endpoint (best effort)
+        run: |
+          echo "VITE_CONTACT_FORM_ENDPOINT=$(node -e "try{process.stdout.write(require('./amplify_outputs.json').custom.contactFormEndpoint)}catch(e){}")" >> "$GITHUB_ENV"
+
+      # tsc -b && vite build && build:ssr && prerender every route && emit sitemap.xml
+      - name: Build
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          set -e
+          test -f dist/index.html || { echo "::error::dist/index.html missing"; exit 1; }
+          test -f dist/sitemap.xml || { echo "::error::dist/sitemap.xml missing"; exit 1; }
+          pages=$(find dist -name '*.html' | wc -l)
+          echo "Prerendered HTML files: $pages"
+          # The site prerenders 28 routes (EN + DE). A sharp drop means prerendering
+          # silently skipped routes - exactly the kind of failure that ships green otherwise.
+          if [ "$pages" -lt 20 ]; then
+            echo "::error::Only $pages prerendered pages (expected ~28). Prerender likely broke."
+            exit 1
+          fi

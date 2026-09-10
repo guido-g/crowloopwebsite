@@ -1,0 +1,240 @@
+name: Maintenance fixer
+
+# Autonomous "fixer" half of the maintenance loop.
+#
+# The scout (running on a schedule in Claude/Cowork) files tickets into the orboto
+# project CLW. This workflow picks up the top ticket, fixes it, proves the fix builds,
+# and then either merges it (content-only changes) or leaves a PR for a human.
+#
+# The merge gate is enforced mechanically in the "Risk gate" step below - it inspects the
+# actual diff, not the model's opinion of the diff. Claude cannot merge past it.
+
+on:
+  schedule:
+    - cron: '23 */6 * * *'   # every 6 hours, off the hour to avoid the scheduling stampede
+  workflow_dispatch:
+    inputs:
+      ticket:
+        description: 'Specific CLW ticket key to work (optional, e.g. CLW-12)'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: maintenance-fixer
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure git identity
+        run: |
+          git config user.name  "crowloop-maintenance-bot"
+          git config user.email "noreply@anthropic.com"
+
+      - name: Run fixer
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: >-
+            --allowedTools "Bash,Read,Edit,Write,Glob,Grep,mcp__orboto"
+            --mcp-config {"mcpServers":{"orboto":{"type":"http","url":"${{ vars.ORBOTO_MCP_URL }}","headers":{"Authorization":"Bearer ${{ secrets.ORBOTO_API_KEY }}"}}}}
+          prompt: |
+            You are the maintenance fixer for crowloop.studio. You work ONE ticket per run.
+
+            Project: React + TypeScript + Vite marketing site, bilingual EN/DE via
+            react-i18next, deployed by AWS Amplify from `master`. Merging to master
+            deploys to production. There is NO test suite - the build is the safety net.
+
+            Requested ticket (may be empty, meaning "pick the top one"): "${{ inputs.ticket }}"
+
+            STEP 1 - PICK THE TICKET
+            Call orboto_session_start, then orboto_get_project_primer("CLW").
+            If a ticket key was requested above, work that one. Otherwise list open CLW
+            tickets, skip any labelled `fix-proposed` or `needs-human`, and take the
+            highest priority one (blocker > high > normal > low > trivial; oldest first
+            on ties). If there is nothing to work on, write
+            {"action":"none"} to "$RUNNER_TEMP/fixer-result.json" and stop immediately.
+
+            STEP 2 - CONFIRM IT IS REAL
+            Reproduce or verify the problem in this checkout before changing anything.
+            Read the actual files. If the ticket is stale or already fixed, comment on
+            the ticket saying so, close it with orboto_close_ticket, write
+            {"action":"none"} to "$RUNNER_TEMP/fixer-result.json" and stop.
+
+            STEP 3 - FIX IT
+            Make the smallest correct change. Do not refactor, do not reformat unrelated
+            code, do not bump dependencies unless the ticket is specifically about that.
+            Work on a new branch named `fix/<TICKET-KEY>-<short-slug>`.
+
+            STEP 4 - PROVE IT
+            Run, in order, and do not proceed if any of them fail:
+              npm run lint
+              npm run build
+            `npm run build` typechecks, bundles the client and the SSR entry, prerenders
+            every route and emits the sitemap. If it fails, DO NOT commit. Instead comment
+            on the ticket explaining exactly what you tried and why it failed, label the
+            ticket `needs-human`, write {"action":"none"} to "$RUNNER_TEMP/fixer-result.json"
+            and stop.
+
+            STEP 5 - COMMIT AND PUSH
+            Commit only the files your fix actually needed. Commit message: a one-line
+            summary, then a blank line, then why (not what). End the message with:
+              Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+            Push the branch.
+
+            STEP 6 - HAND OFF
+            Write "$RUNNER_TEMP/fixer-result.json" containing exactly:
+              {"action":"fixed","ticket":"<TICKET-KEY>","branch":"<branch name>",
+               "title":"<one line PR title>","risk":"content|code",
+               "summary":"<2-4 sentences: what was wrong, what you changed, how you verified>"}
+            Set "risk" to "content" ONLY if every changed file is copy, translations,
+            SEO metadata, documentation or image assets. Any change to application logic,
+            configuration, dependencies, the Amplify backend or build scripts is "code".
+            When in doubt use "code" - a human will look at it, which costs nothing.
+
+            A later step decides whether this merges. Do not open or merge a pull request
+            yourself, and never push to master.
+
+      - name: Read fixer result
+        id: result
+        run: |
+          f="$RUNNER_TEMP/fixer-result.json"
+          if [ ! -f "$f" ]; then
+            echo "No result file written - treating as no-op."
+            echo "action=none" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          cat "$f"
+          for k in action ticket branch title risk summary; do
+            v=$(node -e "try{const r=require('$f');process.stdout.write(String(r.$k??''))}catch(e){}")
+            printf '%s<<__EOF__\n%s\n__EOF__\n' "$k" "$v" >> "$GITHUB_OUTPUT"
+          done
+
+      # ---------------------------------------------------------------------------
+      # Mechanical merge gate. This inspects the real diff. Claude's own "risk" field
+      # can only ever DOWNGRADE to review - it can never grant a merge on its own.
+      # ---------------------------------------------------------------------------
+      - name: Risk gate
+        id: gate
+        if: steps.result.outputs.action == 'fixed'
+        env:
+          # Everything Claude produced enters the shell as data, never as script text.
+          BRANCH: ${{ steps.result.outputs.branch }}
+          SELF_RISK: ${{ steps.result.outputs.risk }}
+        run: |
+          set -uo pipefail
+          git fetch origin master "$BRANCH"
+
+          files=$(git diff --name-only "origin/master..origin/$BRANCH")
+          added=$(git diff --numstat "origin/master..origin/$BRANCH" | awk '{s+=$1+$2} END {print s+0}')
+          count=$(printf '%s\n' "$files" | grep -c . || true)
+          echo "Changed files ($count files, $added lines):"
+          printf '%s\n' "$files"
+
+          # Paths considered content. Everything else requires a human.
+          ALLOW='^(src/i18n/locales/|public/|assets/|docs/|src/seo/meta\.ts$|.*\.md$)'
+          # Never auto-merged even if some allowlist pattern would match. `.github/` is
+          # here so the fixer can never quietly widen its own guard rails.
+          DENY='(^|/)\.\.(/|$)|^\.github/|^amplify|^scripts/|^package(-lock)?\.json$|^Dockerfile|^nginx\.conf$|\.config\.(ts|js|mjs)$|^tsconfig'
+
+          verdict=auto
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            if printf '%s\n' "$f" | grep -qE "$DENY"; then
+              echo "  -> '$f' is on the never-auto-merge denylist"
+              verdict=review
+            elif ! printf '%s\n' "$f" | grep -qE "$ALLOW"; then
+              echo "  -> '$f' is outside the content allowlist"
+              verdict=review
+            fi
+          done <<< "$files"
+
+          # Size guards: a large "content" change still deserves a pair of eyes.
+          if [ "$count" -gt 5 ]; then
+            echo "  -> touches $count files (>5)"; verdict=review
+          fi
+          if [ "$added" -gt 120 ]; then
+            echo "  -> changes $added lines (>120)"; verdict=review
+          fi
+          if [ "$SELF_RISK" != "content" ]; then
+            echo "  -> fixer self-classified as '$SELF_RISK'"; verdict=review
+          fi
+
+          echo "VERDICT: $verdict"
+          echo "verdict=$verdict" >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        id: pr
+        if: steps.result.outputs.action == 'fixed'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: ${{ steps.result.outputs.branch }}
+          TITLE: ${{ steps.result.outputs.title }}
+          SUMMARY: ${{ steps.result.outputs.summary }}
+          TICKET: ${{ steps.result.outputs.ticket }}
+        run: |
+          set -uo pipefail
+          body=$(printf '%s\n\nTicket: %s\nVerified with `npm run lint` and `npm run build` (typecheck, both bundles, prerender, sitemap).\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n' "$SUMMARY" "$TICKET")
+          url=$(gh pr create --base master --head "$BRANCH" --title "$TITLE" --body "$body")
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Opened $url"
+
+      - name: Auto-merge (content-only changes)
+        if: steps.gate.outputs.verdict == 'auto'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          gh pr merge "$PR_URL" --squash --delete-branch
+          echo "Merged - Amplify will deploy from master."
+
+      - name: Flag for human review
+        if: steps.gate.outputs.verdict == 'review'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ steps.pr.outputs.url }}
+        run: |
+          gh pr edit "$PR_URL" --add-label "needs-human" || true
+          echo "::notice::Left open for review: $PR_URL"
+
+      - name: Report back to the ticket
+        if: steps.result.outputs.action == 'fixed'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          claude_args: >-
+            --allowedTools "mcp__orboto"
+            --mcp-config {"mcpServers":{"orboto":{"type":"http","url":"${{ vars.ORBOTO_MCP_URL }}","headers":{"Authorization":"Bearer ${{ secrets.ORBOTO_API_KEY }}"}}}}
+          prompt: |
+            Update orboto ticket ${{ steps.result.outputs.ticket }} with the outcome of an
+            automated fix. Do not change any other ticket.
+
+            Outcome: ${{ steps.gate.outputs.verdict }}
+            ("auto" = merged to master and deploying; "review" = PR open, awaiting a human)
+            Pull request: ${{ steps.pr.outputs.url }}
+            What was done: ${{ steps.result.outputs.summary }}
+
+            Post that as a comment on the ticket. Then:
+            - if the outcome was "auto", close the ticket with orboto_close_ticket, noting
+              that it shipped and linking the PR.
+            - if the outcome was "review", leave the ticket open and label it `needs-human`.
