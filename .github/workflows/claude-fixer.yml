@@ -74,13 +74,12 @@ jobs:
       - name: Run fixer
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Subscription auth (see `claude setup-token`), not a pay-per-token API key -
+          # runs draw from the Claude subscription's usage instead of an API credit
+          # balance. `anthropic_api_key` and `claude_code_oauth_token` are mutually
+          # exclusive; the ANTHROPIC_API_KEY secret is no longer used here.
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Temporary: the last two scheduled runs (#8, #9) failed instantly (<1s,
-          # $0 cost) with the real error hidden by the action's default output
-          # redaction. This surfaces the actual error so it can be diagnosed instead
-          # of guessed at. Safe to remove once the failure is understood - it only
-          # prints Claude's own conversation, never secrets.
           show_full_output: true
           claude_args: >-
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,mcp__orboto"
@@ -285,7 +284,7 @@ jobs:
         if: steps.result.outputs.action == 'fixed'
         uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           show_full_output: true
           claude_args: >-
