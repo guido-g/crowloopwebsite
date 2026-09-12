@@ -11,7 +11,12 @@ name: Maintenance fixer
 
 on:
   schedule:
-    - cron: '23 */6 * * *'   # every 6 hours, off the hour to avoid the scheduling stampede
+    # 11:00 Europe/Berlin. GitHub Actions cron is UTC-only and does not observe DST, so
+    # this is 09:00 UTC during CEST (roughly late March - late October); once Berlin
+    # falls back to CET (UTC+1) in late October, the same '0 9 * * *' becomes 10:00
+    # local until the next DST change. Adjust by an hour around the spring/autumn
+    # clock changes if it needs to stay pinned to 11:00 local year-round.
+    - cron: '0 9 * * *'
   workflow_dispatch:
     inputs:
       ticket:
@@ -71,6 +76,12 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Temporary: the last two scheduled runs (#8, #9) failed instantly (<1s,
+          # $0 cost) with the real error hidden by the action's default output
+          # redaction. This surfaces the actual error so it can be diagnosed instead
+          # of guessed at. Safe to remove once the failure is understood - it only
+          # prints Claude's own conversation, never secrets.
+          show_full_output: true
           claude_args: >-
             --allowedTools "Bash,Read,Edit,Write,Glob,Grep,mcp__orboto"
             --mcp-config ${{ runner.temp }}/orboto-mcp.json
@@ -276,6 +287,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          show_full_output: true
           claude_args: >-
             --allowedTools "mcp__orboto"
             --mcp-config ${{ runner.temp }}/orboto-mcp.json
