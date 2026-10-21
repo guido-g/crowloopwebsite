@@ -22,6 +22,40 @@
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
       plausible.init()
     </script>
+
+    <!-- Structured data for search/AI crawlers (schema.org ProfessionalService). Lives in this
+         shared template rather than the per-route metadata layer (src/seo) because the facts here
+         are site-wide, not per-page: scripts/prerender.mjs reuses this file's <head> for every
+         prerendered route, so this block ships on all of them without touching that pipeline. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Crow Loop Studio",
+        "url": "https://crowloop.studio",
+        "logo": "https://crowloop.studio/brand/logo/apple-touch-icon-180.png",
+        "image": "https://crowloop.studio/brand/og/og-default.png",
+        "description": "Crow Loop Studio designs and develops custom HTML5 browser games for brands, agencies, and broadcasters targeting children, teens, and families — from concept through delivery.",
+        "founder": {
+          "@type": "Person",
+          "name": "Guido Göbbels",
+          "jobTitle": "Game Designer, Creative Producer, Design Director"
+        },
+        "email": "info@crowloop.studio",
+        "telephone": "+4915771577108",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Brüsseler Str. 84",
+          "postalCode": "53117",
+          "addressLocality": "Bonn",
+          "addressRegion": "NRW",
+          "addressCountry": "DE"
+        },
+        "areaServed": "DE",
+        "serviceType": "HTML5 browser game development for brand and entertainment companies",
+        "foundingDate": "2026-09-01"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
