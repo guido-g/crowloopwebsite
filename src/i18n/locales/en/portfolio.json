@@ -2,7 +2,7 @@
   "eyebrow": "Portfolio",
   "title": "Work built for brands with a young audience",
   "lede": "A mix of Crow Loop Studio case studies and reference work from before the studio existed — clearly labeled, always.",
-  "inProductionNote": "New Crow Loop Studio projects are currently in production — check back soon. Everything below is reference work from before the studio's official 01.09.2026 launch.",
+  "inProductionNote": "Lucky Punk is the first Crow Loop Studio project — more are in production, so check back soon. Everything else below is reference work from before the studio's official 01.09.2026 launch.",
   "filters": {
     "typeLabel": "Filter by type",
     "all": "All",
@@ -24,9 +24,35 @@
     "outcome": "The outcome",
     "framingNote": "A note on the numbers: these are kids'-audience placements, so there's no funnel or retargeting data. \"Most-played\" is the platform's own ranking, not a marketing metric — I'd rather say that plainly than dress it up.",
     "backToPortfolio": "Back to portfolio",
-    "expandImage": "View full-size image"
+    "expandImage": "View full-size image",
+    "before": "Before",
+    "after": "After",
+    "playLink": "Play it now"
   },
   "projects": {
+    "luckyPunk": {
+      "name": "Lucky Punk",
+      "description": "A two-day UI review for Green Parrot Games: making Lucky Punk's battle screen and buttons readable without sanding off its punk attitude.",
+      "article": {
+        "intro": "Crow Loop Studio's very first client project wasn't a game built from scratch. It was a UI review: helping Green Parrot Games make the battle screen and buttons of **Lucky Punk** readable, without sanding off a single bit of its punk attitude.\n\n[Lucky Punk](https://store.steampowered.com/app/4508290) is a push-your-luck roguelike deckbuilder. Every turn you decide: draw another card and risk it, or stop and play it safe. Where most card battlers hide the randomness, Lucky Punk always shows you the odds. Its own tagline nails it: 1% chance. 100% choice. It's set in a vibrant punk-pocalypse full of strange plants and creatures, with a rebellious hope-punk attitude, and the art is fantastic. It launched on Steam on 4 November 2026, and you should go play it.\n\nBuilding a game around a brand-new mechanic is hard, and so is making its user experience feel right. After months of work on it, project blindness sets in. That's when a fresh look from someone focused purely on UI and UX pays off. Green Parrot Games brought me in for exactly that: a two-day UI review. Plain old craft, by the way: no AI was involved anywhere in this project.\n\nI got the call thanks to Thomas Rössig, my former boss at Flying Sheep Studios, who brought me into the project. Honestly, that one means a lot. When someone who has shipped games with you for years puts your name forward, it says your work held up. For a brand-new studio, there's no better start.",
+        "problemHeading": "The problem: great style, hard to read",
+        "problemText": "Lucky Punk's UI style fit the theme perfectly: wild, punky, rocky, full of tactile paper and tape textures. That's also what made it hard to read. In a card game, the player constantly scans for odds, damage, health and card text, and every texture competes with that information.\n\nThe team had two concrete pain points:\n\n1. **Players couldn't tell what was clickable.** Interactive areas didn't read as interactive.\n2. **The battle screen was hard to parse.** That's where cards are played and where most of the game happens.",
+        "step1Heading": "Step 1: buttons you can actually find",
+        "step1Text": "I started with the buttons, because the cause was simple once I lined them up: nearly every button had its own shape and its own colour. With no common pattern, nothing told the player \"this is the thing you click\".\n\nSo I built a few button styles that stayed true to the game's handmade look, from comic print to paper cut to a chunky cut-out. I mocked them up as first drafts on a real screen and picked the best fit together with the team.\n\nThe final style ended up as a mix of comic and paper cut, combining their colours, halftone dots and borders. It took several more rounds of iteration with the team to get there.",
+        "step1Rules": "From there I set a few small rules:\n\n- **One shape language.** Buttons look like buttons, everywhere in the game.\n- **A clear colour role.** A defined palette for what's clickable, and for which action matters most.\n- **A contrasting outline.** A thin border lifts each button off whatever is behind it, so it works on any background.\n- **A halftone dot pattern.** The raster-dot print effect keeps buttons comic-book and punk, so readable never turns into generic.",
+        "step2Heading": "Step 2: a battle screen you can read from a stream",
+        "step2Text": "The brief for the battle screen came with a great test: if someone shows Lucky Punk on a stream, a card-game fan watching should find their way around instantly. Where's my draw pile? Where's the enemy? Where are the stats? Where's my hand?\n\n**Research first.** I looked at how a range of card games lay out their battle screens, because players carry those conventions with them. Then I looked at Lucky Punk itself. Its rules shape the UI as much as any convention does, so I read them and played the game several times before moving anything.\n\n**Then a wireframe.** Before touching art, I blocked out where each kind of information lives: meta info up top, player and enemy facing off with the current action between them, and piles, hand and the end-round button along the bottom.",
+        "step2Changes": "**Then the rebuild,** together with the team, reusing their existing elements wherever possible. The key changes:\n\n- **Edge cases handled.** With lots of cards in hand, the hand used to run off the screen, the kind of edge case that's easy to miss. It now stays in its area, with arrows to scroll through it.\n- **Clear health bars.** It's always obvious which bar is yours and which is the enemy's.\n- **Clearer piles and round controls.** Draw pile, discards and End Round are easy to spot.\n- **Overkill moved centre stage.** Overkill is a key mechanic for earning resources, but it was tucked away on the enemy's side. It now sits right in the middle, under the damage counter.\n- **Bigger character art.** The team's character illustrations are superb, and the feedback was to show them large. Your own character never changes during a fight; the enemies do. So the enemy got more room, with space for its description.\n- **A tintable background.** I cleaned up the play area so the background behind the zones can be recoloured. Green Parrot can now vary it per enemy, say a different mood for a boss, and add variety at almost no cost.",
+        "takeawayHeading": "What I took away",
+        "takeawayText": "A strong art style and a readable UI aren't opposites. You don't fix readability by toning the punk down. You fix it by giving the punk a voice players can understand: one button language, a clear layout grounded in genre conventions, and room for the parts that matter. All of that fit into two days.\n\nBig thanks to Green Parrot Games for trusting a brand-new studio with their baby. The game is a blast."
+      },
+      "gallery": {
+        "buttonDrafts": "My first drafts: three button directions on the same run-prep screen (comic, paper cut, cut-out). The final buttons were refined from here together with the team.",
+        "wireframe": "The wireframe: meta, player, action, enemy, piles, cards, round.",
+        "delivered": "My design: the reworked battle screen as I delivered it, still with placeholder values.",
+        "shipped": "In the game: the battle screen as Green Parrot built it after further iterations. Same punk, much easier to read."
+      }
+    },
     "ghostbusters": {
       "name": "Ghostbusters – Haunted Mansion",
       "description": "A cooperative ghost hunt with a competitive layer on top, built for Playmobil's Ghostbusters line.",

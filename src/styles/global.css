@@ -556,6 +556,13 @@ ol {
   font-size: 1.4rem;
 }
 
+/* Article mode (Section 4.2 addendum) stacks every block as siblings inside one <article>, so a
+ * heading after the opening text needs its own top margin — simple mode's h2 is always the first
+ * child of its own <article> and already gets spacing from .case-study-body's flex `gap`. */
+.case-study-body article > h2:not(:first-child) {
+  margin-top: 2.5rem;
+}
+
 .case-study-gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -598,6 +605,41 @@ ol {
   opacity: 0.75;
   border-left: 3px solid var(--accent-orange);
   padding-left: 1rem;
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.case-study-story-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.case-study-story-group {
+  margin: 0;
+}
+
+.case-study-story-group__images--row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.case-study-story-group__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.case-study-story-group figcaption {
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.75;
+  text-align: center;
 }
 
 .text-center {

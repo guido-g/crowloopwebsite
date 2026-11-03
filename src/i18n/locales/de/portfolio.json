@@ -2,7 +2,7 @@
   "eyebrow": "Portfolio",
   "title": "Arbeiten für Marken mit jungem Publikum",
   "lede": "Ein Mix aus Crow-Loop-Studio-Case-Studies und Referenzarbeiten von vor der Studiogründung — klar gekennzeichnet, immer.",
-  "inProductionNote": "Neue Crow-Loop-Studio-Projekte sind aktuell in Produktion — schaut bald wieder vorbei. Alles unten ist Referenzarbeit von vor dem offiziellen Studio-Start am 01.09.2026.",
+  "inProductionNote": "Lucky Punk ist das erste Crow-Loop-Studio-Projekt — weitere sind in Produktion, schaut bald wieder vorbei. Alles andere unten ist Referenzarbeit von vor dem offiziellen Studio-Start am 01.09.2026.",
   "filters": {
     "typeLabel": "Nach Typ filtern",
     "all": "Alle",
@@ -24,9 +24,35 @@
     "outcome": "Das Ergebnis",
     "framingNote": "Ein Hinweis zu den Zahlen: Das sind Platzierungen für ein Kinderpublikum, also gibt es keine Funnel- oder Retargeting-Daten. „Meistgespielt“ ist das eigene Ranking der Plattform, keine Marketing-Kennzahl — das sage ich lieber offen, statt es zu beschönigen.",
     "backToPortfolio": "Zurück zum Portfolio",
-    "expandImage": "Bild in voller Größe ansehen"
+    "expandImage": "Bild in voller Größe ansehen",
+    "before": "Vorher",
+    "after": "Nachher",
+    "playLink": "Jetzt spielen"
   },
   "projects": {
+    "luckyPunk": {
+      "name": "Lucky Punk",
+      "description": "Ein zweitägiges UI-Review für Green Parrot Games: Lucky Punks Kampfbildschirm und Buttons lesbar machen, ohne der Punk-Attitüde etwas wegzunehmen.",
+      "article": {
+        "intro": "Crow Loop Studios allererstes Kundenprojekt war kein von Grund auf neu gebautes Spiel. Es war ein UI-Review: Ich habe Green Parrot Games geholfen, den Kampfbildschirm und die Buttons von **Lucky Punk** lesbar zu machen, ohne der Punk-Attitüde ein Stück wegzunehmen.\n\n[Lucky Punk](https://store.steampowered.com/app/4508290) ist ein Push-your-luck-Roguelike-Deckbuilder. Jede Runde entscheidest du: noch eine Karte ziehen und das Risiko eingehen, oder aufhören und auf Nummer sicher gehen. Wo die meisten Kartenspiele den Zufall verstecken, zeigt Lucky Punk dir immer die Quoten. Der eigene Claim trifft es genau: 1% Chance. 100% Entscheidung. Es spielt in einer lebendigen Punk-Pocalypse voller seltsamer Pflanzen und Kreaturen, mit einer aufsässigen Hope-Punk-Attitüde, und die Art ist fantastisch. Es ist am 4. November 2026 auf Steam erschienen, und ihr solltet es unbedingt spielen.\n\nEin Spiel um eine brandneue Mechanik herum zu bauen ist schwer, und das Nutzererlebnis dazu passend zu gestalten ist es genauso. Nach Monaten Arbeit daran stellt sich Betriebsblindheit ein. Genau dann zahlt sich ein frischer Blick von jemandem aus, der sich nur auf UI und UX konzentriert. Green Parrot Games hat mich genau dafür geholt: ein zweitägiges UI-Review. Und zwar reines altes Handwerk — in diesem Projekt kam an keiner Stelle KI zum Einsatz.\n\nDen Auftrag bekam ich dank Thomas Rössig, meinem früheren Chef bei Flying Sheep Studios, der mich ins Projekt gebracht hat. Ehrlich gesagt bedeutet mir das viel. Wenn jemand, der jahrelang mit dir gemeinsam Spiele ausgeliefert hat, deinen Namen vorschlägt, heißt das, dass deine Arbeit sich bewährt hat. Für ein brandneues Studio gibt es keinen besseren Start.",
+        "problemHeading": "Das Problem: toller Stil, schwer lesbar",
+        "problemText": "Lucky Punks UI-Stil traf das Thema perfekt: wild, punkig, rau, voller fühlbarer Papier- und Tape-Texturen. Genau das machte es aber auch schwer lesbar. In einem Kartenspiel sucht man als Spieler:in ständig nach Quoten, Schaden, Leben und Kartentext, und jede Textur konkurriert mit dieser Information.\n\nDas Team hatte zwei konkrete Problemstellen:\n\n1. **Spieler:innen erkannten nicht, was klickbar war.** Interaktive Bereiche lasen sich nicht als interaktiv.\n2. **Der Kampfbildschirm war schwer zu erfassen.** Genau dort werden Karten gespielt, dort findet der Großteil des Spiels statt.",
+        "step1Heading": "Schritt 1: Buttons, die man tatsächlich findet",
+        "step1Text": "Ich habe bei den Buttons angefangen, weil die Ursache klar war, sobald ich sie nebeneinanderlegte: Fast jeder Button hatte seine eigene Form und seine eigene Farbe. Ohne gemeinsames Muster sagte nichts der Spielerin „das hier ist klickbar“.\n\nAlso habe ich ein paar Button-Stile gebaut, die dem handgemachten Look des Spiels treu blieben, von Comic-Print über Paper Cut bis zu einem wuchtigen Cut-out. Ich habe sie als erste Entwürfe direkt auf einem echten Screen gemockt und gemeinsam mit dem Team den besten ausgewählt.\n\nDer finale Stil wurde eine Mischung aus Comic und Paper Cut, die deren Farben, Halbtonraster und Rahmen kombiniert. Bis dahin brauchte es noch einige weitere Iterationsrunden mit dem Team.",
+        "step1Rules": "Daraus habe ich ein paar kleine Regeln abgeleitet:\n\n- **Eine Formsprache.** Buttons sehen überall im Spiel wie Buttons aus.\n- **Eine klare Farbrolle.** Eine festgelegte Palette dafür, was klickbar ist und welche Aktion am wichtigsten ist.\n- **Ein kontrastierender Rand.** Ein dünner Rand hebt jeden Button von seinem Hintergrund ab, sodass er auf jedem Untergrund funktioniert.\n- **Ein Halbton-Punktraster.** Der Raster-Punkt-Druckeffekt hält Buttons Comic-artig und punkig, sodass lesbar nie generisch wird.",
+        "step2Heading": "Schritt 2: ein Kampfbildschirm, den man auch im Stream lesen kann",
+        "step2Text": "Das Briefing für den Kampfbildschirm kam mit einem guten Test: Wenn jemand Lucky Punk im Stream zeigt, sollte ein zuschauender Kartenspiel-Fan sich sofort zurechtfinden. Wo ist mein Nachziehstapel? Wo ist der Gegner? Wo stehen die Werte? Wo ist meine Hand?\n\n**Zuerst Recherche.** Ich habe mir angesehen, wie verschiedene Kartenspiele ihre Kampfbildschirme aufbauen, weil Spieler:innen diese Konventionen mitbringen. Dann habe ich mir Lucky Punk selbst angesehen. Seine Regeln prägen die UI genauso wie jede Konvention, also habe ich sie gelesen und das Spiel mehrfach gespielt, bevor ich irgendetwas verschoben habe.\n\n**Dann ein Wireframe.** Bevor ich Art angefasst habe, habe ich festgelegt, wo welche Art von Information lebt: Meta-Infos oben, Spieler und Gegner einander gegenüber mit der aktuellen Aktion dazwischen, und Stapel, Hand und der End-Round-Button unten.",
+        "step2Changes": "**Dann der Rebuild,** gemeinsam mit dem Team, so weit wie möglich mit den bestehenden Elementen des Teams. Die wichtigsten Änderungen:\n\n- **Edge Cases abgefangen.** Bei vielen Karten auf der Hand lief die Hand früher über den Bildschirmrand hinaus — genau die Art von Edge Case, die leicht übersehen wird. Sie bleibt jetzt in ihrem Bereich, mit Pfeilen zum Durchscrollen.\n- **Klare Lebensbalken.** Es ist immer eindeutig, welcher Balken dir gehört und welcher dem Gegner.\n- **Klarere Stapel- und Rundensteuerung.** Nachziehstapel, Ablagestapel und End Round sind leicht zu finden.\n- **Overkill ins Zentrum gerückt.** Overkill ist eine Schlüsselmechanik, um Ressourcen zu verdienen, war aber auf der Gegnerseite versteckt. Jetzt sitzt es mittig, direkt unter der Schadensanzeige.\n- **Größere Charakterkunst.** Die Charakterillustrationen des Teams sind hervorragend, und das Feedback war, sie groß zu zeigen. Der eigene Charakter ändert sich während eines Kampfes nie; die Gegner schon. Also bekam der Gegner mehr Platz, inklusive Raum für seine Beschreibung.\n- **Eintönbarer Hintergrund.** Ich habe die Spielfläche so aufgeräumt, dass der Hintergrund hinter den Zonen umgefärbt werden kann. Green Parrot kann ihn jetzt pro Gegner variieren, etwa eine andere Stimmung für einen Boss, und bekommt damit Abwechslung fast zum Nulltarif.",
+        "takeawayHeading": "Was ich mitgenommen habe",
+        "takeawayText": "Ein starker Artstyle und eine lesbare UI sind kein Widerspruch. Man repariert Lesbarkeit nicht, indem man den Punk zurückdreht. Man repariert sie, indem man dem Punk eine Stimme gibt, die Spieler:innen verstehen: eine Button-Sprache, ein klares Layout mit Verankerung in den Genre-Konventionen, und Platz für die Dinge, die zählen. Das alles passte in zwei Tage.\n\nGroßer Dank an Green Parrot Games dafür, einem brandneuen Studio ihr Baby anzuvertrauen. Das Spiel macht richtig Spaß."
+      },
+      "gallery": {
+        "buttonDrafts": "Meine ersten Entwürfe: drei Button-Richtungen auf demselben Run-Prep-Screen (Comic, Paper Cut, Cut-out). Die finalen Buttons wurden gemeinsam mit dem Team von hier aus verfeinert.",
+        "wireframe": "Das Wireframe: Meta, Player, Action, Enemy, Piles, Cards, Round.",
+        "delivered": "Mein Entwurf: der überarbeitete Kampfbildschirm, so wie ich ihn geliefert habe — noch mit Platzhalterwerten.",
+        "shipped": "Im Spiel: der Kampfbildschirm, wie Green Parrot ihn nach weiteren Iterationen gebaut hat. Derselbe Punk, deutlich leichter lesbar."
+      }
+    },
     "ghostbusters": {
       "name": "Ghostbusters – Haunted Mansion",
       "description": "Eine kooperative Geisterjagd mit kompetitiver Ebene obendrauf, gebaut für Playmobils Ghostbusters-Linie.",
