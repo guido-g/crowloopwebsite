@@ -6,10 +6,35 @@ export interface ProjectTags {
   platform: string;
 }
 
+/** A captioned figure, usable standalone (in `storyGallery`) or inline (in a `CaseStudyBlock`):
+ * one or more images shown in a row. `captionKeys` has either one entry (one caption shared
+ * under the whole row, for a set of variants like the button-style drafts) or one entry per
+ * image (each image gets its own caption, for a sequential pair like "my design" → "shipped"). */
+export interface StoryGalleryGroup {
+  images: string[];
+  alt: string[];
+  captionKeys: string[];
+}
+
+/** One block of an article-style case study (`CaseStudyContent.blocks`): a sub-heading, a text
+ * block (supports "\n\n"-separated paragraphs, "- "/"1. " lists, and inline **bold** / [link](url)
+ * markdown — see `renderInline`/`TextBlock` in CaseStudy.tsx), or an inline figure. Used instead
+ * of the plain challenge/decision/outcome triad when the source text has images placed at
+ * specific points in its own narrative, rather than a short summary per section. */
+export type CaseStudyBlock =
+  | { kind: "heading"; textKey: string }
+  | { kind: "text"; textKey: string }
+  | { kind: "figure"; group: StoryGalleryGroup }
+  /** Renders the project's `beforeAfter` slider at this point in the article. */
+  | { kind: "beforeAfter" };
+
 export interface CaseStudyContent {
-  challengeKey: string;
-  decisionKey: string;
-  outcomeKey: string;
+  /** Simple mode: three short sections, each under a fixed site-wide heading (Section 4.2). */
+  challengeKey?: string;
+  decisionKey?: string;
+  outcomeKey?: string;
+  /** Article mode: renders these blocks in order instead of the simple mode above. */
+  blocks?: CaseStudyBlock[];
 }
 
 export interface Project {
@@ -39,15 +64,87 @@ export interface Project {
   /** YouTube video ID (not a full URL) shown alongside the case-study body, gated on cookie
    * consent — see YouTubeEmbed and Datenschutz §5 "YouTube with extended data protection". */
   youtubeId?: string;
+  /** Interactive before/after comparison shown on the case-study page, above the gallery.
+   * Paths point at the "-full" gallery derivatives so dragging stays crisp. */
+  beforeAfter?: { before: string; after: string };
+  /** Captioned narrative figures, rendered in order instead of the plain `gallery` grid when
+   * present (Section 4.2 addendum) — for a case study whose images only make sense with the
+   * story text next to them, e.g. "three drafts we considered" or "delivered vs. shipped". */
+  storyGallery?: StoryGalleryGroup[];
+  /** Suppresses the standard "a note on the numbers" framing note (Section 4.2), which talks
+   * about kids'-audience rankings — wrong framing for a non-Toggo project with no such claim. */
+  hideFramingNote?: boolean;
 }
 
 /**
- * v1 has no Crow Loop Studio-branded projects yet (studio launches 2026-09-01) — every tile is
+ * v1 had no Crow Loop Studio-branded projects (studio launched 2026-09-01) — every tile was
  * "reference" work: three flagship case studies with dedicated on-site pages, plus five external
- * reference tiles (Section 7/8). As real Crow Loop projects ship, add `type: "crowloop"` entries;
- * the grid and filters already key off `type`/`isCaseStudy`, so no restructuring is needed.
+ * reference tiles (Section 7/8). Lucky Punk is the first genuine `type: "crowloop"` entry; the
+ * grid and filters already key off `type`/`isCaseStudy`, so no restructuring was needed.
  */
 export const PROJECTS: Project[] = [
+  {
+    slug: "lucky-punk",
+    nameKey: "projects.luckyPunk.name",
+    brand: "Green Parrot Games",
+    type: "crowloop",
+    date: "2026-11-04",
+    tags: { genre: "Push-your-luck deckbuilder", platform: "PC (Steam)" },
+    descriptionKey: "projects.luckyPunk.description",
+    isCaseStudy: true,
+    externalUrl: "https://store.steampowered.com/app/4508290",
+    colorway: "orange",
+    caseStudy: {
+      blocks: [
+        { kind: "text", textKey: "projects.luckyPunk.article.intro" },
+        { kind: "beforeAfter" },
+        { kind: "heading", textKey: "projects.luckyPunk.article.problemHeading" },
+        { kind: "text", textKey: "projects.luckyPunk.article.problemText" },
+        { kind: "heading", textKey: "projects.luckyPunk.article.step1Heading" },
+        { kind: "text", textKey: "projects.luckyPunk.article.step1Text" },
+        {
+          kind: "figure",
+          group: {
+            images: [
+              "/portfolio/lucky-punk/gallery-4.webp",
+              "/portfolio/lucky-punk/gallery-5.webp",
+              "/portfolio/lucky-punk/gallery-7.webp",
+            ],
+            alt: ["", "", ""],
+            captionKeys: ["projects.luckyPunk.gallery.buttonDrafts"],
+          },
+        },
+        { kind: "text", textKey: "projects.luckyPunk.article.step1Rules" },
+        { kind: "heading", textKey: "projects.luckyPunk.article.step2Heading" },
+        { kind: "text", textKey: "projects.luckyPunk.article.step2Text" },
+        {
+          kind: "figure",
+          group: {
+            images: ["/portfolio/lucky-punk/gallery-3.webp"],
+            alt: [""],
+            captionKeys: ["projects.luckyPunk.gallery.wireframe"],
+          },
+        },
+        { kind: "text", textKey: "projects.luckyPunk.article.step2Changes" },
+        {
+          kind: "figure",
+          group: {
+            images: ["/portfolio/lucky-punk/gallery-6.webp", "/portfolio/lucky-punk/gallery-2.webp"],
+            alt: ["", ""],
+            captionKeys: ["projects.luckyPunk.gallery.delivered", "projects.luckyPunk.gallery.shipped"],
+          },
+        },
+        { kind: "heading", textKey: "projects.luckyPunk.article.takeawayHeading" },
+        { kind: "text", textKey: "projects.luckyPunk.article.takeawayText" },
+      ],
+    },
+    coverImage: "/portfolio/lucky-punk/cover.webp",
+    beforeAfter: {
+      before: "/portfolio/lucky-punk/gallery-1-full.webp",
+      after: "/portfolio/lucky-punk/gallery-2-full.webp",
+    },
+    hideFramingNote: true,
+  },
   {
     slug: "ghostbusters-haunted-mansion",
     nameKey: "projects.ghostbusters.name",
