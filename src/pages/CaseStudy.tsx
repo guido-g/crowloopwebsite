@@ -12,14 +12,17 @@ import { useLangPath } from "../hooks/useLangPath";
  * alongside it (native resolution, see scripts/optimize-images.mjs) for the highest-res view. */
 const toFullRes = (src: string) => src.replace(/\.webp$/, "-full.webp");
 
-/** Minimal inline markdown for case-study body text: **bold** and [label](url). Just enough to
- * reproduce source articles (Section 4.2 addendum) without pulling in a full markdown renderer. */
-const INLINE_MARKDOWN = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
+/** Minimal inline markdown for case-study body text: **bold**, *italic* and [label](url). Just
+ * enough to reproduce source articles (Section 4.2 addendum) without a full markdown renderer. */
+const INLINE_MARKDOWN = /(\*\*[^*]+\*\*|\*[^*]+\*|\[[^\]]+\]\([^)]+\))/g;
 
 function renderInline(text: string): ReactNode[] {
   return text.split(INLINE_MARKDOWN).map((part, i) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (part.startsWith("*") && part.endsWith("*")) {
+      return <em key={i}>{part.slice(1, -1)}</em>;
     }
     const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(part);
     if (link) {
@@ -89,11 +92,11 @@ function FigureGroup({
             >
               <img src={src} alt={group.alt[i] ?? ""} loading="lazy" />
             </button>
-            {!sharedCaption && <figcaption>{t(group.captionKeys[i])}</figcaption>}
+            {!sharedCaption && group.captionKeys[i] && <figcaption>{t(group.captionKeys[i])}</figcaption>}
           </div>
         ))}
       </div>
-      {sharedCaption && <figcaption>{t(group.captionKeys[0])}</figcaption>}
+      {sharedCaption && group.captionKeys[0] && <figcaption>{t(group.captionKeys[0])}</figcaption>}
     </figure>
   );
 }
@@ -164,6 +167,12 @@ export function CaseStudy() {
                   if (block.kind === "text") return <Paragraphs key={index} text={t(block.textKey)} />;
                   if (block.kind === "beforeAfter")
                     return <BeforeAfterComparison key={index} project={project} t={t} />;
+                  if (block.kind === "video")
+                    return (
+                      <div className="case-study-inline-video" key={index}>
+                        <YouTubeEmbed videoId={block.videoId} title={t(project.nameKey)} />
+                      </div>
+                    );
                   return (
                     <FigureGroup key={index} group={block.group} t={t} onExpand={setLightboxSrc} />
                   );

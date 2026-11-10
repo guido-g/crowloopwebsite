@@ -30,6 +30,22 @@
     "playLink": "Play it now"
   },
   "projects": {
+    "kombiChaos": {
+      "name": "Kombi-Chaos",
+      "description": "A merge game for TOGGO based on Weihnachtsmann & Co. KG — twelve levels of Christmas rescue, built in four weeks.",
+      "article": {
+        "intro": "Christmas came early this year: **Kombi-Chaos**, a merge game based on the animated series *Weihnachtsmann & Co. KG*, is now live on TOGGO. Crow Loop Studio built it in four weeks of working time.\n\nThe setup will feel familiar to anyone who knows the show. Grantelbart has crashed Santa's sleigh. Now the elves have to help Santa repair the sleigh, find the runaway reindeer, fix the landing strip and load every last present. By the end, even Grantelbart can't believe they pulled it off.\n\n[Play Kombi-Chaos on TOGGO](https://www.toggo.de/games/weihnachtsmann--co-kg-games-gmc33/spiel/kombi-chaos-gam345). It runs right in the browser, on phone or desktop.",
+        "gameHeading": "The game: merge your way through the chaos",
+        "gameText": "Kombi-Chaos is built around a merge mechanic. Combine matching items on the board to turn scrap into something useful, and keep merging until you've built what the level asks for: a sleigh part, a wrapped present, whatever the rescue needs next.\n\n- **Clear level goals.** Each level shows exactly what you need to build, with a counter that ticks up as you go.\n- **12 levels.** Each one moves the rescue forward, and each is scored with up to three stars.\n- **A real story.** The levels follow the rescue step by step: sleigh, reindeer, landing strip, presents. An animated intro tells how the crash happened, and the outro shows Grantelbart's surprise.\n- **Made for kids on any device.** Big, readable items, simple taps and a portrait layout that works on a phone as well as on a desktop.\n\nThe story itself came from TOGGO. My part was shaping the 12 levels around it and adding an intro that tells the backstory. One thing years of kids' games have taught me: kids often skip long texts. So the intro uses a small animation, and every bit of dialogue comes in short, bite-sized pieces instead of one big wall of text.",
+        "madeHeading": "How it was made: four weeks, AI in the loop, hands on everything",
+        "madeText": "About 20 working days, roughly four weeks of actual work, spread over six calendar weeks while feedback rounds with the client came in. That covered everything: the merge system, the 12 levels, the animated intro and the outro, all the UI and the art.\n\nThat pace was possible because AI was part of the workflow. To be clear about what that means: AI never ran on autopilot here. Every step was closely guided with very direct input, graphics and UI included. And in the end, I went over practically everything by hand, because a licensed kids' brand deserves that level of care.\n\nIf you read my post on tracking AI in a real production: this is that project. I logged every hour, and the whole game took about 20 person-days with AI in the loop, against an estimated 60+ without it. The gains were very uneven, though: huge for project management and code, smaller for graphics, almost none for music and balancing.\n\nThe result is what Crow Loop Studio is about: a real game built around a brand, not a reskinned template, delivered on a timeline that used to take a whole team.",
+        "playHeading": "Play it",
+        "playText": "Kombi-Chaos is free to play on TOGGO, just in time for the holidays: [Play Kombi-Chaos](https://www.toggo.de/games/weihnachtsmann--co-kg-games-gmc33/spiel/kombi-chaos-gam345).\n\nGot a brand that deserves its own game, maybe even before next Christmas? [Let's talk](https://crowloop.studio)."
+      },
+      "gallery": {
+        "screens": "From title screen to three stars: start screen, a story moment, the merge board and the level result."
+      }
+    },
     "luckyPunk": {
       "name": "Lucky Punk",
       "description": "A two-day UI review for Green Parrot Games: making Lucky Punk's battle screen and buttons readable without sanding off its punk attitude.",

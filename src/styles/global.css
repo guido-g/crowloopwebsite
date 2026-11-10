@@ -619,6 +619,10 @@ ol {
   gap: 2rem;
 }
 
+.case-study-inline-video {
+  margin: 1rem 0;
+}
+
 .case-study-story-group {
   margin: 0;
 }

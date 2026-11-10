@@ -17,16 +17,19 @@ export interface StoryGalleryGroup {
 }
 
 /** One block of an article-style case study (`CaseStudyContent.blocks`): a sub-heading, a text
- * block (supports "\n\n"-separated paragraphs, "- "/"1. " lists, and inline **bold** / [link](url)
- * markdown — see `renderInline`/`TextBlock` in CaseStudy.tsx), or an inline figure. Used instead
- * of the plain challenge/decision/outcome triad when the source text has images placed at
- * specific points in its own narrative, rather than a short summary per section. */
+ * block (supports "\n\n"-separated paragraphs, "- "/"1. " lists, and inline **bold** / *italic* /
+ * [link](url) markdown — see `renderInline`/`Paragraphs` in CaseStudy.tsx), an inline figure, or
+ * an inline video. Used instead of the plain challenge/decision/outcome triad when the source
+ * text has media placed at specific points in its own narrative, rather than a short summary. */
 export type CaseStudyBlock =
   | { kind: "heading"; textKey: string }
   | { kind: "text"; textKey: string }
   | { kind: "figure"; group: StoryGalleryGroup }
   /** Renders the project's `beforeAfter` slider at this point in the article. */
-  | { kind: "beforeAfter" };
+  | { kind: "beforeAfter" }
+  /** Inline YouTube embed (gated on cookie consent, see YouTubeEmbed), for a teaser clip placed
+   * at a specific point in the article rather than in the sticky sidebar (`Project.youtubeId`). */
+  | { kind: "video"; videoId: string };
 
 export interface CaseStudyContent {
   /** Simple mode: three short sections, each under a fixed site-wide heading (Section 4.2). */
@@ -79,10 +82,57 @@ export interface Project {
 /**
  * v1 had no Crow Loop Studio-branded projects (studio launched 2026-09-01) — every tile was
  * "reference" work: three flagship case studies with dedicated on-site pages, plus five external
- * reference tiles (Section 7/8). Lucky Punk is the first genuine `type: "crowloop"` entry; the
- * grid and filters already key off `type`/`isCaseStudy`, so no restructuring was needed.
+ * reference tiles (Section 7/8). Lucky Punk was the first genuine `type: "crowloop"` entry; the
+ * grid and filters already key off `type`/`isCaseStudy`, so no restructuring was needed as more
+ * were added.
+ *
+ * Kombi-Chaos is NOT YET CLEARED TO PUBLISH (as of 2026-11-10) — SRTL still needs to confirm
+ * whether the article may mention AI use publicly. Keep this entry off master/production until
+ * Guido says it's cleared; see the draft article in his Nextcloud folder for the full context.
  */
 export const PROJECTS: Project[] = [
+  {
+    slug: "kombi-chaos",
+    nameKey: "projects.kombiChaos.name",
+    brand: "Weihnachtsmann & Co. KG × TOGGO",
+    type: "crowloop",
+    date: "2026-11-10",
+    tags: { genre: "Merge puzzle", platform: "HTML5 (TOGGO)" },
+    descriptionKey: "projects.kombiChaos.description",
+    isCaseStudy: true,
+    externalUrl: "https://www.toggo.de/games/weihnachtsmann--co-kg-games-gmc33/spiel/kombi-chaos-gam345",
+    colorway: "green",
+    caseStudy: {
+      blocks: [
+        { kind: "text", textKey: "projects.kombiChaos.article.intro" },
+        {
+          kind: "figure",
+          group: {
+            images: ["/portfolio/kombi-chaos/gallery-1.webp"],
+            alt: [""],
+            captionKeys: [],
+          },
+        },
+        { kind: "heading", textKey: "projects.kombiChaos.article.gameHeading" },
+        { kind: "text", textKey: "projects.kombiChaos.article.gameText" },
+        {
+          kind: "figure",
+          group: {
+            images: ["/portfolio/kombi-chaos/gallery-2.webp"],
+            alt: [""],
+            captionKeys: ["projects.kombiChaos.gallery.screens"],
+          },
+        },
+        { kind: "video", videoId: "DunPSeXu2lw" },
+        { kind: "heading", textKey: "projects.kombiChaos.article.madeHeading" },
+        { kind: "text", textKey: "projects.kombiChaos.article.madeText" },
+        { kind: "heading", textKey: "projects.kombiChaos.article.playHeading" },
+        { kind: "text", textKey: "projects.kombiChaos.article.playText" },
+      ],
+    },
+    coverImage: "/portfolio/kombi-chaos/gallery-1.webp",
+    hideFramingNote: true,
+  },
   {
     slug: "lucky-punk",
     nameKey: "projects.luckyPunk.name",

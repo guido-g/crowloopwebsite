@@ -30,6 +30,22 @@
     "playLink": "Jetzt spielen"
   },
   "projects": {
+    "kombiChaos": {
+      "name": "Kombi-Chaos",
+      "description": "Ein Merge-Spiel für TOGGO zu Weihnachtsmann & Co. KG — zwölf Level weihnachtliche Rettungsaktion, gebaut in vier Wochen.",
+      "article": {
+        "intro": "Weihnachten kam dieses Jahr früher: **Kombi-Chaos**, ein Merge-Spiel zur Zeichentrickserie *Weihnachtsmann & Co. KG*, ist jetzt bei TOGGO live. Crow Loop Studio hat es in vier Wochen Arbeitszeit gebaut.\n\nDie Ausgangslage kennt jeder, der die Serie kennt: Grantelbart hat den Schlitten des Weihnachtsmanns zum Absturz gebracht. Jetzt müssen die Wichtel dem Weihnachtsmann helfen, den Schlitten zu reparieren, die ausgebüxten Rentiere zu finden, die Landebahn instand zu setzen und jedes letzte Geschenk zu verladen. Am Ende kann es sogar Grantelbart kaum glauben, dass sie es geschafft haben.\n\n[Kombi-Chaos bei TOGGO spielen](https://www.toggo.de/games/weihnachtsmann--co-kg-games-gmc33/spiel/kombi-chaos-gam345). Läuft direkt im Browser, am Handy wie am Desktop.",
+        "gameHeading": "Das Spiel: sich durch das Chaos mergen",
+        "gameText": "Kombi-Chaos dreht sich um eine Merge-Mechanik. Kombiniere passende Gegenstände auf dem Feld, um aus Schrott etwas Nützliches zu machen, und merge so lange weiter, bis du gebaut hast, was das Level verlangt: ein Schlittenteil, ein eingepacktes Geschenk, was auch immer die Rettung als Nächstes braucht.\n\n- **Klare Levelziele.** Jedes Level zeigt genau, was gebaut werden muss, mit einem Zähler, der mitläuft.\n- **12 Level.** Jedes bringt die Rettung ein Stück weiter, bewertet mit bis zu drei Sternen.\n- **Eine echte Geschichte.** Die Level folgen der Rettung Schritt für Schritt: Schlitten, Rentiere, Landebahn, Geschenke. Ein animiertes Intro erzählt, wie es zum Absturz kam, und das Outro zeigt Grantelbarts Überraschung.\n- **Für Kinder gemacht, auf jedem Gerät.** Große, gut lesbare Objekte, einfache Taps und ein Hochformat-Layout, das am Handy genauso funktioniert wie am Desktop.\n\nDie Geschichte selbst kam von TOGGO. Mein Teil war, die 12 Level drumherum zu gestalten und ein Intro zu ergänzen, das die Vorgeschichte erzählt. Eine Sache, die mir jahrelange Arbeit an Kinderspielen beigebracht hat: Kinder überspringen oft lange Texte. Also nutzt das Intro eine kleine Animation, und jeder Dialog kommt in kurzen, mundgerechten Häppchen statt als eine große Textwand.",
+        "madeHeading": "Wie es entstanden ist: vier Wochen, KI im Workflow, überall Handarbeit",
+        "madeText": "Etwa 20 Arbeitstage, also rund vier Wochen tatsächliche Arbeit, verteilt über sechs Kalenderwochen, während Feedbackrunden mit dem Kunden reinkamen. Das deckte alles ab: das Merge-System, die 12 Level, das animierte Intro und Outro, die komplette UI und die Art.\n\nDieses Tempo war möglich, weil KI Teil des Workflows war. Um klarzustellen, was das bedeutet: KI lief hier zu keinem Zeitpunkt im Autopilot. Jeder Schritt wurde eng geführt, mit sehr direkter Eingabe, Grafik und UI eingeschlossen. Und am Ende bin ich praktisch alles noch einmal von Hand durchgegangen, weil eine lizenzierte Kindermarke genau diese Sorgfalt verdient.\n\nWer meinen Beitrag übers Tracking von KI in einer echten Produktion gelesen hat: Das hier ist dieses Projekt. Ich habe jede Stunde geloggt, und das gesamte Spiel brauchte etwa 20 Personentage mit KI im Workflow, gegenüber geschätzt 60+ ohne. Der Gewinn war allerdings sehr ungleich verteilt: riesig bei Projektmanagement und Code, kleiner bei Grafik, fast null bei Musik und Balancing.\n\nDas Ergebnis ist genau das, wofür Crow Loop Studio steht: ein echtes Spiel rund um eine Marke, kein umgeskinntes Template, geliefert in einer Zeit, für die früher ein ganzes Team gebraucht wurde.",
+        "playHeading": "Jetzt spielen",
+        "playText": "Kombi-Chaos ist kostenlos bei TOGGO spielbar, pünktlich zur Weihnachtszeit: [Kombi-Chaos spielen](https://www.toggo.de/games/weihnachtsmann--co-kg-games-gmc33/spiel/kombi-chaos-gam345).\n\nHabt ihr eine Marke, die ein eigenes Spiel verdient hat, vielleicht sogar noch vor nächsten Weihnachten? [Lasst uns reden](https://crowloop.studio)."
+      },
+      "gallery": {
+        "screens": "Vom Startbildschirm bis zu drei Sternen: Startscreen, ein Story-Moment, das Merge-Feld und das Levelergebnis."
+      }
+    },
     "luckyPunk": {
       "name": "Lucky Punk",
       "description": "Ein zweitägiges UI-Review für Green Parrot Games: Lucky Punks Kampfbildschirm und Buttons lesbar machen, ohne der Punk-Attitüde etwas wegzunehmen.",
