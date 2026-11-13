@@ -85,10 +85,6 @@ export interface Project {
  * reference tiles (Section 7/8). Lucky Punk was the first genuine `type: "crowloop"` entry; the
  * grid and filters already key off `type`/`isCaseStudy`, so no restructuring was needed as more
  * were added.
- *
- * Kombi-Chaos is NOT YET CLEARED TO PUBLISH (as of 2026-11-10) — SRTL still needs to confirm
- * whether the article may mention AI use publicly. Keep this entry off master/production until
- * Guido says it's cleared; see the draft article in his Nextcloud folder for the full context.
  */
 export const PROJECTS: Project[] = [
   {
